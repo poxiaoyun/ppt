@@ -1,0 +1,251 @@
+/* =========================================
+   Slide 02: 市场挑战 (slide-02-challenges.css)
+   风格：浅色背景、左右分栏（左数据，右痛点）、底部高亮结论
+   ========================================= */
+
+#slide-2 {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-main);
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 页面标题 */
+.slide-02-header {
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.slide-02-title {
+    font-size: 54px;
+    font-weight: bold;
+    color: #0A1128;
+    position: relative;
+    display: inline-block;
+}
+
+/* 标题底部的一个科技感装饰线 */
+.slide-02-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; left: 0;
+    width: 60px; height: 6px;
+    background: var(--color-primary);
+    border-radius: 3px;
+}
+
+/* 主要内容区：左右分栏 */
+.slide-02-body {
+    display: flex;
+    flex: 1;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+/* 左侧：核心数据网格 */
+.slide-02-left {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+}
+
+.data-card {
+    background: var(--color-bg-white);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 4px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.data-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.data-card:nth-child(1) { border-left-color: var(--color-primary); transition: all 0.6s ease 0.4s; }
+.data-card:nth-child(2) { border-left-color: var(--color-secondary); transition: all 0.6s ease 0.5s; }
+.data-card:nth-child(3) { border-left-color: var(--color-accent); transition: all 0.6s ease 0.6s; }
+.data-card:nth-child(4) { border-left-color: #EAB308; transition: all 0.6s ease 0.7s; }
+
+.data-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.data-desc {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.data-source {
+    font-size: 16px;
+    color: #64748B;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+/* 右侧：痛点分析容器 */
+.slide-02-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.insight-pain-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    padding: 24px 32px; /* 间距微调以容纳4个卡片 */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 15px; /* 卡片之间的间隔缩小 */
+    
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s ease 0.6s;
+}
+
+#slide-2.active .insight-pain-container {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 核心洞察文字在上方 */
+.insight-text-top {
+    font-size: 20px; /* 文字稍微缩小以防占高过多 */
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-text-main);
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.insight-title {
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.insight-highlight {
+    color: #EF4444; /* 警示红 */
+    font-weight: bold;
+}
+
+.pain-points-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #070707;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.pain-points-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.pain-point-card {
+    background: #F8FAFC;
+    border-radius: 12px;
+    padding: 16px 20px; /* 内边距调小应对4张卡片 */
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pain-point-card:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-sm);
+    background: white;
+}
+
+/* 警示性渐变边框效果 */
+.pain-point-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 4px; height: 100%;
+    background: linear-gradient(to bottom, #EF4444, #F59E0B);
+}
+
+.pain-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #FEF2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #EF4444;
+}
+
+.pain-icon svg {
+    width: 18px; height: 18px; fill: currentColor;
+}
+
+.pain-content h3 {
+    font-size: 20px;
+    color: #0A1128;
+    margin-bottom: 4px;
+}
+
+.pain-content p {
+    font-size: 18px;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+}
+
+/* 底部：核心结论横幅单独展现 */
+.slide-02-footer.conclusion-only {
+    background: linear-gradient(135deg, var(--color-primary), #0A1128);
+    border-radius: 12px;
+    padding: 25px 40px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    letter-spacing: 2px;
+    
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease 1s, transform 0.8s ease 1s;
+}
+
+/* 激活状态动画 */
+#slide-2.active .slide-02-header,
+#slide-2.active .data-card,
+#slide-2.active .slide-02-footer.conclusion-only {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}

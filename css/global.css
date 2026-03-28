@@ -1,0 +1,73 @@
+/* =========================================
+   全局样式变量与重置 (global.css)
+   基于 slideweb-visual.md 定义
+   ========================================= */
+
+:root {
+    /* 品牌与其延展色 */
+    --color-primary: #1E60F8; /* 科技蓝 */
+    --color-secondary: #00B976; /* 活力绿 */
+    --color-accent: #6C5DD3; /* 辅色紫，用于强调或渐变 */
+    
+    /* 背景色体系 */
+    --color-bg-light: #F8F9FB; /* 浅灰色背景 */
+    --color-bg-white: #FFFFFF; /* 纯白背景/卡片 */
+    --color-bg-dark: #0A1128; /* 深色背景，针对 Slide1/25 等 */
+    
+    /* 文字色体系 */
+    --color-text-main: #1A1D27; /* 正文深色 */
+    --color-text-muted: #64748B; /* 辅助文字灰色 */
+    --color-text-light: #FFFFFF; /* 深色背景上的浅色文字 */
+    
+    /* 边框与阴影 */
+    --color-border: #E2E8F0;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 24px rgba(0,0,0,0.12);
+    
+    /* 字体定义 (方案1: 极致现代科技风) */
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", sans-serif;
+    
+    /* 幻灯片标准尺寸 (16:9比例) */
+    --slide-width: 1920px;
+    --slide-height: 1080px;
+    
+    /* 过渡时间 */
+    --transition-speed: 0.6s;
+    --transition-easing: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 基础重置 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 防止出现外层滚动条 */
+    font-family: var(--font-body);
+    color: var(--color-text-main);
+    background-color: #000; /* 视口外区域全黑 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}

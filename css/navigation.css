@@ -1,0 +1,155 @@
+/* =========================================
+   UI 与导航控件 (navigation.css)
+   ========================================= */
+
+.nav-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* 让鼠标事件穿透到下一层(viewport) */
+    z-index: 100;
+}
+
+.nav-btn {
+    pointer-events: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    width: 60px;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    transition: background 0.3s, transform 0.3s, opacity 0.3s;
+    border-radius: 8px;
+    opacity: 0; /* 默认隐藏 */
+}
+
+/* 只有鼠标直接移动到控制区域(两侧或者底部)才显示对应按钮块，
+   不再是移入整个 presentation 都能看见 */
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1 !important;
+}
+
+/* 为触发区域增加不可见的感应辅助(通过伪元素扩大hover区) */
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: -100px; bottom: -100px; 
+    left: -50px; right: -50px;
+    /* width: 200px; height: 300px; 扩大触发面积 */
+}
+.nav-btn:hover {
+    opacity: 1;
+}
+.nav-prev:hover, .nav-next:hover {
+    opacity: 1;
+}
+/* 给一个相对独立的热区捕获 */
+.nav-prev-zone, .nav-next-zone {
+    pointer-events: auto;
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 90;
+}
+.nav-prev-zone { left: 0; }
+.nav-next-zone { right: 0; }
+
+.nav-prev-zone:hover ~ .nav-prev,
+.nav-next-zone:hover ~ .nav-next,
+.nav-prev:hover,
+.nav-next:hover {
+    opacity: 1; /* 只有移到边缘15%区域或者按钮身上时才显示 */
+}
+
+.nav-btn svg {
+    fill: rgba(255,255,255,0.7);
+    width: 40px;
+    height: 40px;
+}
+
+.nav-prev { left: 20px; z-index: 91; pointer-events: auto; }
+.nav-next { right: 20px; z-index: 91; pointer-events: auto; }
+
+/* 底部状态栏 */
+.footer-bar-zone {
+    pointer-events: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* 增大底部热区 */
+    z-index: 90;
+}
+
+.footer-bar {
+    pointer-events: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0; /* 默认隐藏 */
+    transition: opacity 0.3s;
+    z-index: 91;
+}
+
+.footer-bar-zone:hover ~ .footer-bar,
+.footer-bar:hover {
+    opacity: 1; /* 鼠标靠底才显示进度条 */
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--color-primary);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.status-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 36px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.fullscreen-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.fullscreen-btn:hover {
+    opacity: 1;
+}
+
+.fullscreen-btn svg {
+    fill: #FFF;
+}
