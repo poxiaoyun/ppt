@@ -79,23 +79,6 @@
     transition: opacity 0.75s ease 0.12s, transform 0.75s ease 0.12s;
 }
 
-.slide-04-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 18px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(30, 96, 248, 0.14);
-    box-shadow: 0 12px 28px rgba(30, 96, 248, 0.08);
-    color: var(--color-primary);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin-bottom: 14px;
-}
-
 .slide-04-title {
     position: relative;
     display: inline-block;

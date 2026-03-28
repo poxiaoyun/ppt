@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
     let currentSlideIndex = 0;
+    let lastWheelNavigationAt = 0;
 
     // UI 元素
     const btnPrev = document.getElementById('btn-prev');
@@ -14,25 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const pageCounter = document.getElementById('current-page');
     const elTotalPages = document.getElementById('total-pages');
     const slideTitle = document.getElementById('slide-title');
+    const globalWatermark = document.getElementById('global-watermark');
 
     elTotalPages.textContent = totalSlides;
-
-    function ensureSlideWatermarks() {
-        slides.forEach((slide) => {
-            if (slide.classList.contains('no-watermark') || slide.querySelector('.slide-watermark')) {
-                return;
-            }
-
-            const watermark = document.createElement('div');
-            watermark.className = 'slide-watermark';
-            watermark.innerHTML = `
-                <img src="assets/images/logo.png" alt="Rune AI Logo" onerror="this.style.display='none'">
-                <span>晓石云</span>
-            `;
-            slide.appendChild(watermark);
-        });
-    }
-
     /**
      * 更新幻灯片状态
      */
@@ -53,9 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[index].classList.add('active');
         currentSlideIndex = index;
 
-        document.querySelectorAll('.slide-watermark').forEach((watermark) => {
-            watermark.classList.toggle('on-dark', slides[index].classList.contains('theme-dark'));
-        });
+        if (globalWatermark) {
+            const shouldShowWatermark = !slides[index].classList.contains('no-watermark');
+            globalWatermark.classList.toggle('show', shouldShowWatermark);
+            globalWatermark.classList.toggle('on-dark', slides[index].classList.contains('theme-dark'));
+        }
 
         // 更新 UI
         pageCounter.textContent = index + 1;
@@ -92,12 +79,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 绑定键盘事件
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === ' ') {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
             nextSlide();
-        } else if (e.key === 'ArrowLeft') {
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') {
             prevSlide();
         }
     });
+
+    // 处理鼠标滚轮 / 触控板滚动翻页
+    document.addEventListener('wheel', (e) => {
+        const deltaY = e.deltaY;
+        const threshold = 60;
+        const cooldown = 650;
+
+        if (e.ctrlKey || Math.abs(deltaY) < threshold) {
+            return;
+        }
+
+        const now = Date.now();
+        if (now - lastWheelNavigationAt < cooldown) {
+            e.preventDefault();
+            return;
+        }
+
+        lastWheelNavigationAt = now;
+        e.preventDefault();
+
+        if (deltaY > 0) {
+            nextSlide();
+            return;
+        }
+
+        prevSlide();
+    }, { passive: false });
 
     // 处理触摸滑动 (移动端)
     let touchStartX = 0;
@@ -137,6 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlide(0); // 默认第一页
     }
 
-    ensureSlideWatermarks();
     initFromHash();
+    window.addEventListener('hashchange', initFromHash);
 });

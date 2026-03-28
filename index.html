@@ -11,16 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- 全局样式 -->
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/slide-framework.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/global.css?v=20260328-2">
+    <link rel="stylesheet" href="css/slide-framework.css?v=20260328-2">
+    <link rel="stylesheet" href="css/navigation.css?v=20260328-2">
+    <link rel="stylesheet" href="css/animations.css?v=20260328-2">
     
     <!-- 单页样式占位 -->
-    <link rel="stylesheet" href="css/slides/slide-01-cover.css">
-    <link rel="stylesheet" href="css/slides/slide-02-challenges.css">
-    <link rel="stylesheet" href="css/slides/slide-03-genesis.css">
-    <link rel="stylesheet" href="css/slides/slide-04-landscape.css">
+    <link rel="stylesheet" href="css/slides/slide-01-cover.css?v=20260328-2">
+    <link rel="stylesheet" href="css/slides/slide-02-challenges.css?v=20260328-2">
+    <link rel="stylesheet" href="css/slides/slide-03-genesis.css?v=20260328-2">
+    <link rel="stylesheet" href="css/slides/slide-04-landscape.css?v=20260328-2">
 </head>
 <body>
     <!-- 整体演示容器 -->
@@ -247,7 +247,6 @@
                     <div class="slide-04-bg-orbit"></div>
 
                     <div class="slide-04-header">
-                        <div class="slide-04-eyebrow">Full-Stack Enterprise AI Platform</div>
                         <h2 class="slide-04-title">Rune AI 产品全景图</h2>
                         <p class="slide-04-subtitle">从底层异构算力到平台服务、资产沉淀与安全治理，Rune AI 以一套统一架构承接企业 AI 的研发、部署与规模化运营。</p>
                     </div>
@@ -352,6 +351,14 @@
                 <!-- 预留用于补充后续 21 页结构的占位 -->
                 
             </div>
+
+            <div class="slides-overlay">
+                <!-- 全局右上角水印（固定锚定于 viewport 右上角） -->
+                <div class="global-watermark show" id="global-watermark">
+                    <img src="assets/images/logo.png" alt="Rune AI Logo" onerror="this.style.display='none'">
+                    <span>晓石云</span>
+                </div>
+            </div>
         </div>
 
         <!-- 导航与 UI 控制 -->
@@ -386,7 +393,7 @@
     </div>
 
     <!-- 逻辑脚本 -->
-    <script src="js/navigation.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/navigation.js?v=20260328-2"></script>
+    <script src="js/app.js?v=20260328-2"></script>
 </body>
 </html>
