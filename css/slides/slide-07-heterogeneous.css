@@ -1,0 +1,396 @@
+/* =========================================
+   Slide 07: 异构算力统一调度与管理 (slide-07-heterogeneous.css)
+   风格：白底科技流程图，突出三段式算力治理链路
+   ========================================= */
+
+#slide-7 {
+    position: relative;
+    overflow: hidden;
+    padding: 76px 92px 42px;
+    color: var(--color-text-main);
+    background:
+        radial-gradient(circle at 14% 14%, rgba(30, 96, 248, 0.12) 0%, rgba(30, 96, 248, 0) 26%),
+        radial-gradient(circle at 84% 18%, rgba(15, 118, 110, 0.11) 0%, rgba(15, 118, 110, 0) 30%),
+        linear-gradient(180deg, #FCFEFF 0%, #F4F8FF 55%, #EEF4FB 100%);
+}
+
+.slide-07-bg-grid,
+.slide-07-bg-glow,
+.slide-07-bg-orbit {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.slide-07-bg-grid {
+    background-image:
+        linear-gradient(rgba(30, 96, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 96, 248, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.94) 36%, rgba(0, 0, 0, 0.3) 74%, transparent 100%);
+}
+
+.slide-07-bg-glow {
+    background:
+        radial-gradient(circle at 50% 42%, rgba(96, 165, 250, 0.14) 0%, rgba(96, 165, 250, 0) 34%),
+        radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.44) 0%, rgba(255, 255, 255, 0) 46%);
+}
+
+.slide-07-bg-orbit::before,
+.slide-07-bg-orbit::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 1px solid rgba(30, 96, 248, 0.08);
+}
+
+.slide-07-bg-orbit::before {
+    top: 188px;
+    width: 1240px;
+    height: 480px;
+}
+
+.slide-07-bg-orbit::after {
+    top: 232px;
+    width: 920px;
+    height: 360px;
+    border-style: dashed;
+}
+
+.slide-07-header,
+.slide-07-insight-strip,
+.slide-07-pipeline,
+.slide-07-footer {
+    position: relative;
+    z-index: 2;
+}
+
+.slide-07-header {
+    max-width: 1220px;
+    margin-bottom: 18px;
+    opacity: 0;
+    transform: translateY(-22px);
+    transition: opacity 0.75s ease 0.12s, transform 0.75s ease 0.12s;
+}
+
+.slide-07-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 52px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.slide-07-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+    width: 60px;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--color-primary);
+}
+
+.slide-07-subtitle {
+    max-width: 1160px;
+    margin-top: 14px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.slide-07-insight-strip {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    padding: 18px 22px;
+    border-radius: 22px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(241, 245, 249, 0.88)),
+        linear-gradient(135deg, rgba(30, 96, 248, 0.12), rgba(16, 185, 129, 0.1));
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    box-shadow: 0 18px 34px rgba(15, 23, 42, 0.06);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.75s ease 0.26s, transform 0.75s ease 0.26s;
+}
+
+.slide-07-insight-label {
+    flex-shrink: 0;
+    min-width: 112px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #1E60F8, #4F8BFF);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.slide-07-insight-strip p {
+    font-size: 20px;
+    line-height: 1.55;
+    color: #334155;
+}
+
+.slide-07-pipeline {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 88px minmax(0, 1fr) 88px minmax(0, 1fr);
+    align-items: stretch;
+    gap: 0;
+}
+
+.slide-07-stage {
+    position: relative;
+    min-height: 450px;
+    padding: 24px 24px 22px;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    box-shadow: 0 26px 50px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(22px) scale(0.985);
+    transition:
+        opacity 0.72s ease,
+        transform 0.72s ease,
+        box-shadow 0.35s ease;
+}
+
+.slide-07-stage:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 56px rgba(15, 23, 42, 0.11);
+}
+
+.slide-07-stage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0) 48%);
+    pointer-events: none;
+}
+
+.stage-access {
+    background: linear-gradient(180deg, rgba(239, 246, 255, 0.96), rgba(219, 234, 254, 0.84));
+    color: #2563EB;
+    transition-delay: 0.42s;
+}
+
+.stage-pool {
+    background: linear-gradient(180deg, rgba(240, 253, 250, 0.96), rgba(204, 251, 241, 0.86));
+    color: #0F766E;
+    transition-delay: 0.56s;
+}
+
+.stage-schedule {
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.98), rgba(226, 232, 240, 0.9));
+    color: #334155;
+    transition-delay: 0.70s;
+}
+
+.slide-07-stage-topline {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.slide-07-stage-index {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.62);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.slide-07-stage-kicker {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(15, 23, 42, 0.52);
+}
+
+.slide-07-stage h3 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 12px;
+    font-size: 34px;
+    color: #0F172A;
+}
+
+.slide-07-stage-desc {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 18px;
+    font-size: 19px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.slide-07-chip-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.slide-07-chip-grid span,
+.slide-07-tag-row span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.64);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    font-size: 15px;
+    font-weight: 700;
+    color: #1E3A8A;
+    text-align: center;
+}
+
+.slide-07-metrics {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.slide-07-metric-card {
+    padding: 16px 14px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.64);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.slide-07-metric-card strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 24px;
+    color: #0F172A;
+}
+
+.slide-07-metric-card span {
+    font-size: 15px;
+    line-height: 1.45;
+    color: #475569;
+}
+
+.slide-07-tag-row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.slide-07-stage ul {
+    position: relative;
+    z-index: 1;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.slide-07-stage li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 17px;
+    line-height: 1.55;
+    color: #475569;
+}
+
+.slide-07-stage li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.slide-07-pipeline-arrow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scaleX(0.8);
+    transition: opacity 0.7s ease 0.48s, transform 0.7s ease 0.48s;
+}
+
+.slide-07-pipeline-arrow span {
+    position: relative;
+    display: block;
+    width: 62px;
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(30, 96, 248, 0.24), rgba(30, 96, 248, 0.92));
+    box-shadow: 0 10px 20px rgba(30, 96, 248, 0.1);
+}
+
+.slide-07-pipeline-arrow span::after {
+    content: '';
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    border-top: 4px solid rgba(30, 96, 248, 0.92);
+    border-right: 4px solid rgba(30, 96, 248, 0.92);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.slide-07-footer {
+    margin-top: 24px;
+    padding: 22px 34px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #1E60F8 0%, #0F172A 100%);
+    box-shadow: 0 22px 40px rgba(15, 23, 42, 0.12);
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 0.03em;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.75s ease 0.9s, transform 0.75s ease 0.9s;
+}
+
+#slide-7.active .slide-07-header,
+#slide-7.active .slide-07-insight-strip,
+#slide-7.active .slide-07-stage,
+#slide-7.active .slide-07-pipeline-arrow,
+#slide-7.active .slide-07-footer {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}

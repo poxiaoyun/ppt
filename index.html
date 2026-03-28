@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="css/slides/slide-02-challenges.css?v=20260328-3">
     <link rel="stylesheet" href="css/slides/slide-03-genesis.css?v=20260328-3">
     <link rel="stylesheet" href="css/slides/slide-04-landscape.css?v=20260328-5">
+    <link rel="stylesheet" href="css/slides/slide-05-dual-console.css?v=20260328-1">
+    <link rel="stylesheet" href="css/slides/slide-06-workbench.css?v=20260328-1">
+    <link rel="stylesheet" href="css/slides/slide-07-heterogeneous.css?v=20260328-1">
 </head>
 <body>
     <!-- 整体演示容器 -->
@@ -338,6 +341,308 @@
                         </div>
                     </div>
 
+                </section>
+
+                <!-- Slide 5: 双控制台设计 -->
+                <section class="slide" id="slide-5" data-title="双控制台设计">
+                    <div class="slide-05-header">
+                        <h2 class="slide-05-title">双控制台设计：管理与使用的平衡</h2>
+                    </div>
+
+                    <div class="slide-05-body">
+                        <div class="slide-05-left">
+                            <article class="slide-05-data-card console-stack">
+                                <div class="slide-05-data-number">Console</div>
+                                <div class="slide-05-data-desc">面向 AI 开发者与业务团队的租户工作台</div>
+                                <div class="slide-05-data-source">包含 Rune、Moha 和 ChatApp 三大核心模块，聚焦模型部署、微调任务、应用开发与日志查看。</div>
+                                <div class="slide-05-module-tags">
+                                    <span>Rune</span>
+                                    <span>Moha</span>
+                                    <span>ChatApp</span>
+                                </div>
+                            </article>
+
+                            <article class="slide-05-data-card boss-stack">
+                                <div class="slide-05-data-number">BOSS</div>
+                                <div class="slide-05-data-desc">面向平台管理员的全局管理平台</div>
+                                <div class="slide-05-data-source">负责集群运维、租户分配、网关配置与全局资源监控，为 Console 工作台提供统一治理与运行边界。</div>
+                            </article>
+                        </div>
+
+                        <div class="slide-05-right slide-05-insight-container">
+                            <div class="slide-05-section-title">双控制台设计</div>
+                            <div class="slide-05-insight-text">
+                                为不同角色提供专属的工作台，兼顾全局管控与敏捷开发。
+                            </div>
+
+                            <div class="slide-05-console-grid">
+                                <article class="slide-05-console-card admin-console">
+                                    <div class="slide-05-console-topline">
+                                        <span class="slide-05-console-badge">全局视角</span>
+                                        <span class="slide-05-console-label">BOSS 管理平台</span>
+                                    </div>
+                                    <h3>面向平台管理员</h3>
+                                    <ul>
+                                        <li>负责集群运维</li>
+                                        <li>负责账户分配</li>
+                                        <li>负责配额管理</li>
+                                        <li>负责算力管理</li>
+                                        <li>负责数据运营</li>
+                                        <li>负责全局资源监控</li>
+                                    </ul>
+                                </article>
+
+                                <article class="slide-05-console-card tenant-console">
+                                    <div class="slide-05-console-topline">
+                                        <span class="slide-05-console-badge">租户视角</span>
+                                        <span class="slide-05-console-label">Console 工作台</span>
+                                    </div>
+                                    <h3>Rune / Moha / ChatApp 三大模块</h3>
+                                    <ul>
+                                        <li>面向 AI 开发者与业务团队</li>
+                                        <li>聚焦工作空间内的模型部署</li>
+                                        <li>聚焦微调任务与应用开发</li>
+                                        <li>支持日志查看与日常使用协同</li>
+                                    </ul>
+                                </article>
+                            </div>
+
+                            <div class="slide-05-collaboration-strip">
+                                <span class="collaboration-node">管理员全局管控</span>
+                                <span class="collaboration-arrow"></span>
+                                <span class="collaboration-node">开发团队敏捷开发</span>
+                                <span class="collaboration-arrow"></span>
+                                <span class="collaboration-node">业务使用高效落地</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-05-footer">
+                        双控制台设计让平台治理与租户使用各归其位、协同运转
+                    </div>
+                </section>
+
+                <!-- Slide 6: AI 工作台 -->
+                <section class="slide" id="slide-6" data-title="AI 工作台">
+                    <div class="slide-06-bg-grid"></div>
+                    <div class="slide-06-bg-glow"></div>
+
+                    <div class="slide-06-header">
+                        <h2 class="slide-06-title">AI 工作台：从模型部署到实验追踪，全流程覆盖</h2>
+                        <p class="slide-06-subtitle">八大核心功能模块覆盖部署、微调、开发、评测、资产管理与运行观测，让 AI 团队在一个工作空间内完成研发到上线交付。</p>
+                    </div>
+
+                    <div class="slide-06-summary-strip">
+                        <div class="slide-06-summary-item">部署发布</div>
+                        <div class="slide-06-summary-item">训练微调</div>
+                        <div class="slide-06-summary-item">开发协作</div>
+                        <div class="slide-06-summary-item">评测观测</div>
+                    </div>
+
+                    <div class="slide-06-grid">
+                        <article class="slide-06-card accent-blue">
+                            <div class="slide-06-card-topline">
+                                <span class="slide-06-card-index">01</span>
+                                <span class="slide-06-card-en">Inference Service</span>
+                            </div>
+                            <h3>推理服务</h3>
+                            <ul>
+                                <li>支持高性能推理一键部署，兼容 PD 分离与 LoRA 挂载</li>
+                                <li>自动注册至 AI 网关，支持公开 / 租户 / 私有三级可见性</li>
+                                <li>提供服务状态监控、端点管理、弹性伸缩与自动暂停 / 恢复</li>
+                            </ul>
+                        </article>
+
+                        <article class="slide-06-card accent-green">
+                            <div class="slide-06-card-topline">
+                                <span class="slide-06-card-index">02</span>
+                                <span class="slide-06-card-en">Fine-tuning Service</span>
+                            </div>
+                            <h3>微调服务</h3>
+                            <ul>
+                                <li>支持多种微调框架，覆盖快速微调与专家微调场景</li>
+                                <li>支持 SFT / Freeze 等训练阶段，内置 Moha 与外部社区集成</li>
+                                <li>打通数据、模型与任务管理，降低从实验到产出的切换成本</li>
+                            </ul>
+                        </article>
+
+                        <article class="slide-06-card accent-purple">
+                            <div class="slide-06-card-topline">
+                                <span class="slide-06-card-index">03</span>
+                                <span class="slide-06-card-en">Development Service</span>
+                            </div>
+                            <h3>开发服务</h3>
+                            <ul>
+                                <li>内置 30+ rune-box 模板，覆盖 AI 基础环境与应用开发套件</li>
+                                <li>支持 Windows / Linux / Docker，兼容 SSH 与 VSCode 远程开发</li>
+                                <li>提供桌面终端级开发环境，支撑多样化研发与仿真场景</li>
+                            </ul>
+                        </article>
+
+                        <article class="slide-06-card accent-indigo">
+                            <div class="slide-06-card-topline">
+                                <span class="slide-06-card-index">04</span>
+                                <span class="slide-06-card-en">Experiment Tracking</span>
+                            </div>
+                            <h3>实验追踪</h3>
+                            <ul>
+                                <li>支持本地化实验数据服务，兼容 W&amp;B 协议记录训练过程</li>
+                                <li>记录参数、指标与日志，并支持可视化分析展现</li>
+                                <li>帮助团队复盘训练过程，提升模型实验的可追溯性与复现性</li>
+                            </ul>
+                        </article>
+
+                        <article class="slide-06-card accent-cyan">
+                            <div class="slide-06-card-topline">
+                                <span class="slide-06-card-index">05</span>
+                                <span class="slide-06-card-en">Model Evaluation</span>
+                            </div>
+                            <h3>模型评测</h3>
+                            <ul>
+                                <li>支持多领域基准评测任务与大模型推理服务性能压测</li>
+                                <li>评测数据与压测结果可视化，便于持续优化模型效果</li>
+                                <li>覆盖人文、数学、编程等场景，形成模型质量与性能双重视图</li>
+                            </ul>
+                        </article>
+
+                        <article class="slide-06-card accent-orange">
+                            <div class="slide-06-card-topline">
+                                <span class="slide-06-card-index">06</span>
+                                <span class="slide-06-card-en">App Market</span>
+                            </div>
+                            <h3>应用市场</h3>
+                            <ul>
+                                <li>内置丰富云原生应用模板，支持应用一键化部署与运维</li>
+                                <li>支持模板管理与企业自定义模板，沉淀专属应用资产</li>
+                                <li>让业务团队复用标准化模板，加快 AI 应用落地与扩散速度</li>
+                            </ul>
+                        </article>
+
+                        <article class="slide-06-card accent-teal">
+                            <div class="slide-06-card-topline">
+                                <span class="slide-06-card-index">07</span>
+                                <span class="slide-06-card-en">Data Management</span>
+                            </div>
+                            <h3>数据管理</h3>
+                            <ul>
+                                <li>兼容块设备、网络文件系统等多类存储，并支持 S3 协议访问</li>
+                                <li>提供 Web 可视化管理与密钥、可见性分级权限保障</li>
+                                <li>统一数据访问与权限边界，满足企业存算分离和安全治理需求</li>
+                            </ul>
+                        </article>
+
+                        <article class="slide-06-card accent-slate">
+                            <div class="slide-06-card-topline">
+                                <span class="slide-06-card-index">08</span>
+                                <span class="slide-06-card-en">Observability</span>
+                            </div>
+                            <h3>可观测性</h3>
+                            <ul>
+                                <li>实时上报 GPU / CPU / 内存 / 功耗 / 网卡等实例级监控指标</li>
+                                <li>支持应用监控日志采集与可视化展现，提升运维透明度</li>
+                                <li>让训练、推理与应用实例的运行状态持续可见、可分析、可追踪</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="slide-06-footer">
+                        AI 工作台把部署、开发、训练、评测与运维统一到一个工作空间内闭环协同
+                    </div>
+                </section>
+
+                <!-- Slide 7: 异构算力统一调度与管理 -->
+                <section class="slide" id="slide-7" data-title="异构算力调度">
+                    <div class="slide-07-bg-grid"></div>
+                    <div class="slide-07-bg-glow"></div>
+                    <div class="slide-07-bg-orbit"></div>
+
+                    <div class="slide-07-header">
+                        <h2 class="slide-07-title">异构算力统一调度与管理</h2>
+                        <p class="slide-07-subtitle">打破硬件壁垒，统一接入多厂商算力资源，通过池化切分与智能调度，让企业 AI 训练与推理效率最大化。</p>
+                    </div>
+
+                    <div class="slide-07-insight-strip">
+                        <span class="slide-07-insight-label">核心观点</span>
+                        <p>Rune AI 将“多厂商兼容、资源池化、智能调度”整合为一套统一底座，最大化企业算力投资回报。</p>
+                    </div>
+
+                    <div class="slide-07-pipeline">
+                        <article class="slide-07-stage stage-access">
+                            <div class="slide-07-stage-topline">
+                                <span class="slide-07-stage-index">01</span>
+                                <span class="slide-07-stage-kicker">Multi-Vendor Support</span>
+                            </div>
+                            <h3>多厂商支持</h3>
+                            <p class="slide-07-stage-desc">全面兼容多类 AI 芯片与云上算力，统一纳入企业级算力视图。</p>
+                            <div class="slide-07-chip-grid">
+                                <span>NVIDIA GPU</span>
+                                <span>昇腾 NPU</span>
+                                <span>海光 DCU</span>
+                                <span>阿里云 PPU</span>
+                                <span>昆仑芯 XPU</span>
+                                <span>AMD GPU</span>
+                                <span>沐曦 MX</span>
+                                <span>天数 天垓</span>
+                            </div>
+                            <ul>
+                                <li>统一接入不同厂商、不同形态的算力资源</li>
+                                <li>降低异构环境下的基础设施割裂与迁移成本</li>
+                            </ul>
+                        </article>
+
+                        <div class="slide-07-pipeline-arrow" aria-hidden="true">
+                            <span></span>
+                        </div>
+
+                        <article class="slide-07-stage stage-pool">
+                            <div class="slide-07-stage-topline">
+                                <span class="slide-07-stage-index">02</span>
+                                <span class="slide-07-stage-kicker">Pooling &amp; Partitioning</span>
+                            </div>
+                            <h3>资源池化与切分</h3>
+                            <p class="slide-07-stage-desc">把分散 GPU / NPU 资源统一池化，并按任务需求做精细化切分与分配。</p>
+                            <div class="slide-07-metrics">
+                                <div class="slide-07-metric-card">
+                                    <strong>共享</strong>
+                                    <span>GPU / NPU 资源复用</span>
+                                </div>
+                                <div class="slide-07-metric-card">
+                                    <strong>切分</strong>
+                                    <span>支持 vNPU 分片模板</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>支持 GPU 共享与细粒度切分，提高算力利用率</li>
+                                <li>让不同规模任务获得匹配的资源规格与成本控制</li>
+                            </ul>
+                        </article>
+
+                        <div class="slide-07-pipeline-arrow" aria-hidden="true">
+                            <span></span>
+                        </div>
+
+                        <article class="slide-07-stage stage-schedule">
+                            <div class="slide-07-stage-topline">
+                                <span class="slide-07-stage-index">03</span>
+                                <span class="slide-07-stage-kicker">Intelligent Scheduling</span>
+                            </div>
+                            <h3>智能调度</h3>
+                            <p class="slide-07-stage-desc">面向 AI 训练与 HPC 混合负载，按任务特征自动选择更合适的调度策略。</p>
+                            <div class="slide-07-tag-row">
+                                <span>binpack</span>
+                                <span>DRF</span>
+                                <span>Gang</span>
+                            </div>
+                            <ul>
+                                <li>优化训练、推理与 HPC 任务的排队与执行效率</li>
+                                <li>在共享集群中平衡吞吐、时延与资源公平性</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="slide-07-footer">
+                        从异构芯片接入到资源池化再到智能调度，Rune AI 为企业构建统一可控的算力底座
+                    </div>
                 </section>
 
                 <!-- 预留用于补充后续 21 页结构的占位 -->

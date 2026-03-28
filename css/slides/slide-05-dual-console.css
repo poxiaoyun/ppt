@@ -1,0 +1,355 @@
+/* =========================================
+   Slide 05: 双控制台设计 (slide-05-dual-console.css)
+   风格：延续 Slide 02 的浅色双栏结构与结论横幅
+   ========================================= */
+
+#slide-5 {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-main);
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-05-header {
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.slide-05-title {
+    position: relative;
+    display: inline-block;
+    font-size: 54px;
+    font-weight: 800;
+    color: #0A1128;
+}
+
+.slide-05-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 60px;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--color-primary);
+}
+
+.slide-05-body {
+    display: flex;
+    flex: 1;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.slide-05-left {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+}
+
+.slide-05-data-card {
+    background: var(--color-bg-white);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 4px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.console-stack {
+    border-left-color: var(--color-secondary);
+    transition: all 0.6s ease 0.4s;
+}
+
+.boss-stack {
+    border-left-color: var(--color-primary);
+    transition: all 0.6s ease 0.7s;
+}
+
+.slide-05-data-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.slide-05-data-number {
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    line-height: 1.05;
+}
+
+.console-stack .slide-05-data-number {
+    color: var(--color-secondary);
+}
+
+.slide-05-data-desc {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-text-main);
+    line-height: 1.4;
+}
+
+.slide-05-data-source {
+    margin-top: auto;
+    padding-top: 16px;
+    font-size: 17px;
+    color: #64748B;
+    line-height: 1.6;
+}
+
+.slide-05-module-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.slide-05-module-tags span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 92px;
+    height: 38px;
+    padding: 0 14px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0E9F6E;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.18);
+}
+
+.slide-05-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.slide-05-insight-container {
+    background: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    padding: 24px 32px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 16px;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s ease 0.6s;
+}
+
+#slide-5.active .slide-05-insight-container {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-05-insight-text {
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--color-border);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--color-text-main);
+}
+
+.slide-05-insight-title {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.slide-05-section-title {
+    margin-top: 4px;
+    margin-bottom: 2px;
+    font-size: 28px;
+    font-weight: 800;
+    color: #070707;
+}
+
+.slide-05-console-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    flex: 1;
+}
+
+.slide-05-console-card {
+    position: relative;
+    border-radius: 14px;
+    padding: 22px 22px 20px;
+    overflow: hidden;
+    background: #F8FAFC;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.slide-05-console-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+}
+
+.slide-05-console-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-sm);
+    background: #FFFFFF;
+}
+
+.admin-console::before {
+    background: linear-gradient(to bottom, #1E60F8, #60A5FA);
+}
+
+.tenant-console::before {
+    background: linear-gradient(to bottom, #10B981, #6C5DD3);
+}
+
+.slide-05-console-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.slide-05-console-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 88px;
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #1E60F8, #4F8BFF);
+}
+
+.tenant-console .slide-05-console-badge {
+    background: linear-gradient(135deg, #0E9F6E, #6C5DD3);
+}
+
+.slide-05-console-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #64748B;
+    letter-spacing: 0.02em;
+}
+
+.slide-05-console-card h3 {
+    margin-bottom: 12px;
+    font-size: 28px;
+    color: #0A1128;
+    line-height: 1.3;
+}
+
+.slide-05-console-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.slide-05-console-card li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--color-text-muted);
+}
+
+.slide-05-console-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.tenant-console li::before {
+    background: var(--color-secondary);
+}
+
+.slide-05-collaboration-strip {
+    min-height: 78px;
+    border-radius: 14px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: linear-gradient(135deg, rgba(30, 96, 248, 0.08), rgba(16, 185, 129, 0.08));
+    border: 1px solid rgba(30, 96, 248, 0.12);
+}
+
+.collaboration-node {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0F172A;
+    white-space: nowrap;
+}
+
+.collaboration-arrow {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(30, 96, 248, 0.15), rgba(30, 96, 248, 0.85));
+    position: relative;
+}
+
+.collaboration-arrow::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid rgba(30, 96, 248, 0.85);
+    border-right: 2px solid rgba(30, 96, 248, 0.85);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.slide-05-footer {
+    background: linear-gradient(135deg, var(--color-primary), #0A1128);
+    border-radius: 12px;
+    padding: 25px 40px;
+    color: #FFFFFF;
+    font-size: 31px;
+    font-weight: 800;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease 1s, transform 0.8s ease 1s;
+}
+
+#slide-5.active .slide-05-header,
+#slide-5.active .slide-05-data-card,
+#slide-5.active .slide-05-footer {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
