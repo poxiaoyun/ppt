@@ -561,10 +561,10 @@
                         <p class="slide-07-subtitle">打破硬件壁垒，统一接入多厂商算力资源，通过池化切分与智能调度，让企业 AI 训练与推理效率最大化。</p>
                     </div>
 
-                    <div class="slide-07-insight-strip">
-                        <span class="slide-07-insight-label">核心观点</span>
-                        <p>Rune AI 将“多厂商兼容、资源池化、智能调度”整合为一套统一底座，最大化企业算力投资回报。</p>
-                    </div>
+                    <p class="slide-07-insight-text">
+                        <span class="slide-07-insight-inline-label">核心能力：</span>
+                        Rune AI 将多厂商兼容、资源池化与智能调度整合为一套统一底座，最大化企业算力投资回报。
+                    </p>
 
                     <div class="slide-07-pipeline">
                         <article class="slide-07-stage stage-access">
@@ -573,7 +573,7 @@
                                 <span class="slide-07-stage-kicker">Multi-Vendor Support</span>
                             </div>
                             <h3>多厂商支持</h3>
-                            <p class="slide-07-stage-desc">全面兼容多类 AI 芯片与云上算力，统一纳入企业级算力视图。</p>
+                            <p class="slide-07-stage-desc">全面兼容 GPU / NPU / DCU / PPU / XPU 等多类 AI 芯片与云上算力，统一纳入企业级算力视图。</p>
                             <div class="slide-07-chip-grid">
                                 <span>NVIDIA GPU</span>
                                 <span>昇腾 NPU</span>
@@ -584,9 +584,27 @@
                                 <span>沐曦 MX</span>
                                 <span>天数 天垓</span>
                             </div>
+                            <div class="slide-07-support-tags">
+                                <span>本地集群</span>
+                                <span>云上算力</span>
+                                <span>训练 / 推理</span>
+                                <span>国产替代</span>
+                            </div>
+                            <div class="slide-07-compact-pairs">
+                                <div class="slide-07-compact-card">
+                                    <strong>统一纳管</strong>
+                                    <span>芯片、集群与云资源进入同一算力视图</span>
+                                </div>
+                                <div class="slide-07-compact-card">
+                                    <strong>平滑迁移</strong>
+                                    <span>减少跨厂商环境切换带来的适配成本</span>
+                                </div>
+                            </div>
                             <ul>
                                 <li>统一接入不同厂商、不同形态的算力资源</li>
                                 <li>降低异构环境下的基础设施割裂与迁移成本</li>
+                                <li>覆盖本地部署、云上扩展与国产化替代等多种基础设施路径</li>
+                                <li>为国产化替代与混合算力扩展预留统一接口与治理能力</li>
                             </ul>
                         </article>
 
@@ -601,14 +619,51 @@
                             </div>
                             <h3>资源池化与切分</h3>
                             <p class="slide-07-stage-desc">把分散 GPU / NPU 资源统一池化，并按任务需求做精细化切分与分配。</p>
-                            <div class="slide-07-metrics">
-                                <div class="slide-07-metric-card">
-                                    <strong>共享</strong>
-                                    <span>GPU / NPU 资源复用</span>
+                            <div class="slide-07-resource-visual" aria-hidden="true">
+                                <div class="slide-07-resource-header">
+                                    <span class="slide-07-resource-label">统一资源池</span>
+                                    <p>一套算力底座，按业务场景分配最合适的资源形态。</p>
                                 </div>
-                                <div class="slide-07-metric-card">
-                                    <strong>切分</strong>
-                                    <span>支持 vNPU 分片模板</span>
+
+                                <div class="slide-07-resource-modes">
+                                    <article class="slide-07-resource-mode shared-mode">
+                                        <div class="slide-07-mode-topline">
+                                            <span class="slide-07-mode-badge">共享模式</span>
+                                            <span class="slide-07-mode-kicker">更高复用</span>
+                                        </div>
+                                        <strong>一份算力，多任务并发使用</strong>
+                                        <p>适合开发调试、轻量推理、多人同时使用的常驻场景。</p>
+                                        <div class="slide-07-mode-users">
+                                            <span>团队 A</span>
+                                            <span>团队 B</span>
+                                            <span>团队 C</span>
+                                        </div>
+                                    </article>
+
+                                    <article class="slide-07-resource-mode sliced-mode">
+                                        <div class="slide-07-mode-topline">
+                                            <span class="slide-07-mode-badge">切分模式</span>
+                                            <span class="slide-07-mode-kicker">更细颗粒度</span>
+                                        </div>
+                                        <strong>一块大卡，拆成多个可交付规格</strong>
+                                        <p>适合小批量训练、实验任务与预算敏感型业务申请。</p>
+                                        <div class="slide-07-mode-slices">
+                                            <span>1/4 GPU</span>
+                                            <span>1/2 GPU</span>
+                                            <span>vNPU</span>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="slide-07-resource-scenarios">
+                                    <div class="slide-07-scenario-card">
+                                        <strong>提升资源利用率</strong>
+                                        <span>通过共享与切分减少空置浪费，提升整体算力复用效率。</span>
+                                    </div>
+                                    <div class="slide-07-scenario-card">
+                                        <strong>提升交付灵活性</strong>
+                                        <span>按任务大小交付资源规格，让更多团队更快拿到可用算力。</span>
+                                    </div>
                                 </div>
                             </div>
                             <ul>
@@ -632,10 +687,27 @@
                                 <span>binpack</span>
                                 <span>DRF</span>
                                 <span>Gang</span>
+                                <span>队列优先级</span>
+                            </div>
+                            <div class="slide-07-compact-pairs schedule-pairs">
+                                <div class="slide-07-compact-card">
+                                    <strong>装箱率优先</strong>
+                                    <span>binpack 提升集群利用率，减少资源碎片</span>
+                                </div>
+                                <div class="slide-07-compact-card">
+                                    <strong>公平性优先</strong>
+                                    <span>DRF 平衡多租户资源占用与任务等待</span>
+                                </div>
+                                <div class="slide-07-compact-card">
+                                    <strong>分布式优先</strong>
+                                    <span>Gang 保障训练任务按组启动与协同执行</span>
+                                </div>
                             </div>
                             <ul>
                                 <li>优化训练、推理与 HPC 任务的排队与执行效率</li>
                                 <li>在共享集群中平衡吞吐、时延与资源公平性</li>
+                                <li>支持队列优先级、任务组联动与公平共享等批调度机制</li>
+                                <li>让不同负载类型匹配更合适的调度策略与执行顺序</li>
                             </ul>
                         </article>
                     </div>
