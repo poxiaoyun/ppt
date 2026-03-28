@@ -17,6 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     elTotalPages.textContent = totalSlides;
 
+    function ensureSlideWatermarks() {
+        slides.forEach((slide) => {
+            if (slide.classList.contains('no-watermark') || slide.querySelector('.slide-watermark')) {
+                return;
+            }
+
+            const watermark = document.createElement('div');
+            watermark.className = 'slide-watermark';
+            watermark.innerHTML = `
+                <img src="assets/images/logo.png" alt="Rune AI Logo" onerror="this.style.display='none'">
+                <span>晓石云</span>
+            `;
+            slide.appendChild(watermark);
+        });
+    }
+
     /**
      * 更新幻灯片状态
      */
@@ -37,17 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[index].classList.add('active');
         currentSlideIndex = index;
 
-        // 全局水印控制：如果当前页有 no-watermark 类，则隐藏；否则显示
-        const globalWatermark = document.getElementById('global-watermark');
-        if (globalWatermark) {
-            if (slides[index].classList.contains('no-watermark')) {
-                globalWatermark.classList.remove('show');
-            } else {
-                globalWatermark.classList.add('show');
-            }
-
-            globalWatermark.classList.toggle('on-dark', slides[index].classList.contains('theme-dark'));
-        }
+        document.querySelectorAll('.slide-watermark').forEach((watermark) => {
+            watermark.classList.toggle('on-dark', slides[index].classList.contains('theme-dark'));
+        });
 
         // 更新 UI
         pageCounter.textContent = index + 1;
@@ -129,5 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlide(0); // 默认第一页
     }
 
+    ensureSlideWatermarks();
     initFromHash();
 });
