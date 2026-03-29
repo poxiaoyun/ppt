@@ -304,7 +304,7 @@
 }
 
 .slide-15-sim-table-card {
-    padding: 14px 16px 18px;
+    padding: 12px 14px 14px;
 }
 
 .slide-15-sim-table-head,
@@ -316,10 +316,10 @@
 }
 
 .slide-15-sim-table-head {
-    padding: 12px 14px;
-    border-radius: 20px;
+    padding: 10px 12px;
+    border-radius: 18px;
     background: linear-gradient(180deg, #F3F6FB 0%, #EDF2F8 100%);
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
     color: #64748B;
 }
@@ -329,8 +329,8 @@
 }
 
 .slide-15-sim-row {
-    padding: 11px 14px;
-    min-height: 62px;
+    padding: 8px 12px;
+    min-height: 52px;
     border-bottom: 1px dashed rgba(148, 163, 184, 0.22);
 }
 
@@ -340,31 +340,31 @@
 
 .sim-host-cell {
     display: grid;
-    gap: 4px;
+    gap: 2px;
 }
 
 .sim-host-cell strong {
-    font-size: 15px;
+    font-size: 14px;
     color: #1E293B;
 }
 
 .sim-host-cell span {
-    font-size: 11px;
+    font-size: 10px;
     color: #64748B;
 }
 
 .sim-green {
-    font-size: 14px;
+    font-size: 13px;
     color: #22C55E;
 }
 
 .sim-blue {
-    font-size: 14px;
+    font-size: 13px;
     color: #0EA5E9;
 }
 
 .sim-load {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 800;
 }
 
@@ -382,13 +382,13 @@
 
 .sim-pill,
 .sim-bandwidth {
-    min-height: 34px;
-    padding: 0 10px;
+    min-height: 28px;
+    padding: 0 8px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    font-size: 13px;
+    border-radius: 10px;
+    font-size: 11px;
     font-weight: 800;
 }
 
@@ -414,8 +414,8 @@
 
 .sim-meter {
     position: relative;
-    height: 34px;
-    border-radius: 12px;
+    height: 28px;
+    border-radius: 10px;
     background: linear-gradient(180deg, rgba(242, 244, 247, 0.96), rgba(232, 236, 242, 0.96));
     overflow: hidden;
 }
@@ -425,7 +425,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 .sim-meter em {
@@ -436,7 +436,7 @@
     align-items: center;
     justify-content: center;
     font-style: normal;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     color: #1E293B;
 }
