@@ -616,11 +616,10 @@
 
 .slide-12-side-panel {
     display: grid;
-    grid-template-rows: 272px minmax(0, 1fr) 132px;
+    grid-template-rows: minmax(0, 1fr) 132px;
     gap: 10px;
 }
 
-.slide-12-control-card,
 .slide-12-api-card {
     padding: 14px 14px 10px;
 }
@@ -653,85 +652,6 @@
     font-size: 24px;
     line-height: 1.18;
     color: #0F172A;
-}
-
-.slide-12-control-list {
-    display: grid;
-    gap: 12px;
-    margin-bottom: 14px;
-}
-
-.slide-12-control-row {
-    display: grid;
-    grid-template-columns: 108px minmax(0, 1fr) 58px;
-    gap: 12px;
-    align-items: center;
-}
-
-.slide-12-control-row span {
-    font-size: 14px;
-    font-weight: 700;
-    color: #334155;
-}
-
-.slide-12-control-row strong {
-    font-size: 15px;
-    font-weight: 800;
-    color: #0F172A;
-    text-align: right;
-}
-
-.slide-12-control-track {
-    position: relative;
-    height: 12px;
-    border-radius: 999px;
-    background: rgba(226, 232, 240, 0.9);
-    overflow: hidden;
-}
-
-.slide-12-control-track i {
-    position: absolute;
-    inset: 0 auto 0 0;
-    border-radius: inherit;
-    display: block;
-}
-
-.slide-12-control-track .fill-temperature {
-    width: 70%;
-    background: linear-gradient(90deg, #1E60F8, #60A5FA);
-}
-
-.slide-12-control-track .fill-top-p {
-    width: 88%;
-    background: linear-gradient(90deg, #8B5CF6, #C084FC);
-}
-
-.slide-12-control-track .fill-max-tokens {
-    width: 82%;
-    background: linear-gradient(90deg, #10B981, #34D399);
-}
-
-.slide-12-system-prompt {
-    padding: 16px;
-    border-radius: 20px;
-    background: rgba(248, 250, 252, 0.82);
-    border: 1px solid rgba(148, 163, 184, 0.14);
-}
-
-.slide-12-system-prompt .system-prompt-label {
-    display: inline-flex;
-    margin-bottom: 8px;
-    color: #1D4ED8;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.slide-12-system-prompt p {
-    font-size: 14px;
-    line-height: 1.58;
-    color: #475569;
 }
 
 .slide-12-feature-grid {
