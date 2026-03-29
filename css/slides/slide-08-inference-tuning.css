@@ -284,6 +284,13 @@
     gap: 8px;
 }
 
+.slide-08-dev-hero {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 8px;
+}
+
 .slide-08-dev-sidebar,
 .slide-08-dev-main,
 .slide-08-desktop-window,
@@ -327,6 +334,36 @@
     padding: 8px;
 }
 
+.slide-08-dev-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.slide-08-dev-app {
+    font-size: 8px;
+    font-weight: 800;
+    color: #0F172A;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.slide-08-dev-badge {
+    min-height: 18px;
+    padding: 0 7px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    font-size: 8px;
+    font-weight: 800;
+}
+
+.slide-08-dev-badge.online {
+    background: rgba(220, 252, 231, 0.96);
+    color: #15803D;
+}
+
 .slide-08-dev-tabs {
     display: flex;
     gap: 6px;
@@ -367,7 +404,7 @@
 .slide-08-code-lines span:nth-child(4) { width: 88%; }
 .slide-08-code-lines span:nth-child(5) { width: 64%; }
 
-.slide-08-dev-footer {
+.slide-08-dev-statusbar {
     display: flex;
     justify-content: space-between;
     gap: 6px;
@@ -375,6 +412,51 @@
     font-weight: 800;
     color: rgba(15, 23, 42, 0.44);
     text-transform: uppercase;
+}
+
+.slide-08-service-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.service-model,
+.service-state {
+    min-height: 22px;
+    padding: 0 9px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    font-size: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.service-model {
+    background: rgba(219, 234, 254, 0.94);
+    color: #1D4ED8;
+}
+
+.service-state {
+    background: rgba(220, 252, 231, 0.96);
+    color: #15803D;
+}
+
+.slide-08-service-loadbar {
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(226, 232, 240, 0.9);
+    overflow: hidden;
+}
+
+.slide-08-service-loadbar i {
+    display: block;
+    width: 71%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(30, 96, 248, 0.92), rgba(16, 185, 129, 0.84));
 }
 
 .slide-08-service-metrics,
@@ -491,6 +573,11 @@
     background: rgba(255, 255, 255, 0.92);
 }
 
+.slide-08-desktop-window.large-window {
+    min-height: 106px;
+    box-shadow: 0 18px 32px rgba(15, 23, 42, 0.18);
+}
+
 .desktop-toolbar {
     display: flex;
     justify-content: space-between;
@@ -507,10 +594,20 @@
     gap: 6px;
 }
 
+.desktop-panels.large-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
 .desktop-panels span {
     min-height: 50px;
     border-radius: 10px;
     background: linear-gradient(180deg, rgba(219, 234, 254, 0.96), rgba(239, 246, 255, 0.94));
+}
+
+.desktop-panels.large-layout span:first-child {
+    grid-column: 1 / -1;
+    min-height: 34px;
 }
 
 .slide-08-taskbar {
@@ -530,44 +627,86 @@
     background: rgba(255, 255, 255, 0.28);
 }
 
-.slide-08-exp-chart {
+.slide-08-exp-series,
+.slide-08-metric-series {
     flex: 1;
-    padding: 8px;
-    display: flex;
-    align-items: flex-end;
+    display: grid;
     gap: 6px;
 }
 
-.slide-08-exp-chart span {
-    flex: 1;
-    border-radius: 12px 12px 4px 4px;
-    background: linear-gradient(180deg, rgba(30, 96, 248, 0.78), rgba(16, 185, 129, 0.34));
-}
-
-.slide-08-exp-chart span:nth-child(1) { height: 34%; }
-.slide-08-exp-chart span:nth-child(2) { height: 56%; }
-.slide-08-exp-chart span:nth-child(3) { height: 46%; }
-.slide-08-exp-chart span:nth-child(4) { height: 82%; }
-.slide-08-exp-chart span:nth-child(5) { height: 70%; }
-
-.slide-08-exp-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.slide-08-exp-legend span {
-    min-height: 20px;
-    padding: 0 8px;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 999px;
+.slide-08-line-card {
+    padding: 7px 8px 6px;
+    border-radius: 14px;
     background: rgba(255, 255, 255, 0.84);
     border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.slide-08-line-card.compact {
+    padding: 7px;
+}
+
+.line-card-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.line-card-head span {
     font-size: 8px;
     font-weight: 800;
-    color: #475569;
+    color: #0F172A;
+}
+
+.line-card-head em {
+    font-style: normal;
+    font-size: 7px;
+    font-weight: 800;
+    color: #64748B;
     text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.slide-08-line-card svg {
+    width: 100%;
+    height: 42px;
+}
+
+.slide-08-line-card polyline {
+    fill: none;
+    stroke-width: 3.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: url(#none);
+}
+
+.sim-experiment .slide-08-line-card:nth-child(1) polyline {
+    stroke: #3B82F6;
+}
+
+.sim-experiment .slide-08-line-card:nth-child(2) polyline {
+    stroke: #10B981;
+}
+
+.sim-experiment .slide-08-line-card:nth-child(3) polyline {
+    stroke: #6366F1;
+}
+
+.sim-metrics .slide-08-line-card:nth-child(1) polyline {
+    stroke: #2563EB;
+}
+
+.sim-metrics .slide-08-line-card:nth-child(2) polyline {
+    stroke: #06B6D4;
+}
+
+.sim-metrics .slide-08-line-card:nth-child(3) polyline {
+    stroke: #10B981;
+}
+
+.sim-metrics .slide-08-line-card:nth-child(4) polyline {
+    stroke: #F59E0B;
 }
 
 .slide-08-runtime-bars {
@@ -627,6 +766,90 @@
     height: 100%;
     border-radius: inherit;
     background: linear-gradient(90deg, rgba(16, 185, 129, 0.9), rgba(30, 96, 248, 0.84));
+}
+
+.slide-08-filebrowser {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 8px;
+}
+
+.slide-08-filebrowser-sidebar,
+.slide-08-filebrowser-main {
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.slide-08-filebrowser-sidebar {
+    padding: 8px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.slide-08-filebrowser-sidebar span {
+    min-height: 22px;
+    padding: 0 7px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 8px;
+    font-weight: 800;
+    color: #475569;
+}
+
+.slide-08-filebrowser-sidebar .active {
+    background: rgba(219, 234, 254, 0.92);
+    color: #1D4ED8;
+}
+
+.slide-08-filebrowser-main {
+    padding: 8px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 8px;
+}
+
+.slide-08-filebrowser-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 8px;
+    font-weight: 800;
+    color: #64748B;
+    text-transform: uppercase;
+}
+
+.slide-08-filebrowser-rows {
+    display: grid;
+    gap: 6px;
+    align-content: start;
+}
+
+.slide-08-filebrowser-rows span {
+    min-height: 24px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    border-radius: 10px;
+    background: rgba(248, 250, 252, 0.92);
+    font-size: 8px;
+    color: #475569;
+}
+
+.slide-08-filebrowser-rows b {
+    color: #0F172A;
+    font-weight: 800;
+}
+
+.slide-08-filebrowser-rows em {
+    font-style: normal;
+    color: #1D4ED8;
+    font-weight: 700;
 }
 
 .sim-dev-env {
