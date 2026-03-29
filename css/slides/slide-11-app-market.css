@@ -507,32 +507,40 @@
 }
 
 .slide-11-lifecycle-card {
-    padding: 16px;
-    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    position: relative;
+    padding: 16px 16px 14px;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.slide-11-lifecycle-card::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 0;
+    width: 54px;
+    height: 4px;
+    border-radius: 0 0 999px 999px;
+    background: var(--color-primary);
 }
 
 .slide-11-lifecycle-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 28px 56px rgba(15, 23, 42, 0.1);
+    transform: translateY(-6px);
+    border-color: rgba(30, 96, 248, 0.18);
+    box-shadow: 0 28px 56px rgba(30, 96, 248, 0.12);
 }
 
 .slide-11-lifecycle-card .lifecycle-label {
     display: inline-flex;
-    align-items: center;
-    min-height: 30px;
-    padding: 0 10px;
     margin-bottom: 8px;
-    border-radius: 999px;
-    background: rgba(30, 96, 248, 0.08);
     color: #1D4ED8;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 800;
 }
 
 .slide-11-lifecycle-card p {
-    font-size: 13px;
-    line-height: 1.5;
-    color: #475569;
+    font-size: 16px;
+    line-height: 1.52;
+    color: #334155;
 }
 
 .slide-11-footer {
