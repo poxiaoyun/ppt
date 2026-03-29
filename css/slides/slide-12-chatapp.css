@@ -616,8 +616,9 @@
 
 .slide-12-side-panel {
     display: grid;
-    grid-template-rows: minmax(0, 1fr) 132px;
+    grid-template-rows: auto auto;
     gap: 10px;
+    align-content: start;
 }
 
 .slide-12-api-card {
@@ -659,11 +660,16 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
     min-height: 0;
+    align-content: start;
+    align-items: start;
+    grid-auto-rows: max-content;
 }
 
 .slide-12-feature-card {
     position: relative;
     padding: 16px 16px 14px;
+    height: 114px;
+    overflow: hidden;
     transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
