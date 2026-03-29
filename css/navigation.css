@@ -17,7 +17,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.1);
+    background: transparent;
     border: none;
     width: 60px;
     height: 100px;
@@ -25,8 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(4px);
-    transition: background 0.3s, transform 0.3s, opacity 0.3s;
+    transition: opacity 0.24s ease, transform 0.24s ease;
     border-radius: 8px;
     opacity: 0; /* 默认隐藏 */
 }
@@ -34,7 +33,7 @@
 /* 只有鼠标直接移动到控制区域(两侧或者底部)才显示对应按钮块，
    不再是移入整个 presentation 都能看见 */
 .nav-btn:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: transparent;
     opacity: 1 !important;
 }
 
@@ -69,10 +68,11 @@
 .nav-prev:hover,
 .nav-next:hover {
     opacity: 1; /* 只有移到边缘15%区域或者按钮身上时才显示 */
+    transform: translateY(-50%);
 }
 
 .nav-btn svg {
-    fill: rgba(255,255,255,0.7);
+    fill: rgba(128, 128, 128, 0.92);
     width: 40px;
     height: 40px;
 }
