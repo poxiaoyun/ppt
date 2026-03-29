@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/slides/slide-06-workbench.css?v=20260328-1">
     <link rel="stylesheet" href="css/slides/slide-07-heterogeneous.css?v=20260328-1">
     <link rel="stylesheet" href="css/slides/slide-08-inference-tuning.css?v=20260328-1">
+    <link rel="stylesheet" href="css/slides/slide-09-gateway.css?v=20260328-1">
+    <link rel="stylesheet" href="css/slides/slide-10-moha-hub.css?v=20260329-1">
 </head>
 <body>
     <!-- 整体演示容器 -->
@@ -813,6 +815,486 @@
 
                     <div class="slide-08-footer">
                         开发、微调、运行、发布与观测在一条链路内协同，让模型交付真正标准化
+                    </div>
+                </section>
+
+                <!-- Slide 9: 企业级大模型网关 -->
+                <section class="slide" id="slide-9" data-title="企业级大模型网关">
+                    <div class="slide-09-bg-grid"></div>
+                    <div class="slide-09-bg-glow"></div>
+                    <div class="slide-09-bg-beams"></div>
+
+                    <div class="slide-09-header">
+                        <h2 class="slide-09-title">企业级大模型网关</h2>
+                        <p class="slide-09-subtitle">以一个统一入口承接多模型 API 接入、路由回退、配额计量与安全审计，让企业从“能调用”走向“可治理、可运营、可扩展”。</p>
+                    </div>
+
+                    <div class="slide-09-stage">
+                        <div class="slide-09-connection-lines" aria-hidden="true">
+                            <svg width="1440" height="520" viewBox="0 0 1440 520">
+                                <defs>
+                                    <linearGradient id="slide-09-line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="rgba(30, 96, 248, 0.18)" />
+                                        <stop offset="48%" stop-color="rgba(30, 96, 248, 0.95)" />
+                                        <stop offset="100%" stop-color="rgba(16, 185, 129, 0.34)" />
+                                    </linearGradient>
+                                </defs>
+                                <path id="slide-09-path-agent" class="slide-09-line" d="" />
+                                <path id="slide-09-path-robot" class="slide-09-line" d="" />
+                                <path id="slide-09-path-vibe" class="slide-09-line" d="" />
+                                <path id="slide-09-path-driving" class="slide-09-line" d="" />
+
+                                <path id="slide-09-path-provider" class="slide-09-line" d="" />
+                                <path id="slide-09-path-rune-service" class="slide-09-line" d="" />
+                                <path id="slide-09-path-small-model" class="slide-09-line" d="" />
+
+                                <circle class="slide-09-flow-dot" r="4.5">
+                                    <animateMotion dur="4.2s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-agent"></mpath>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="slide-09-flow-dot" r="4.5">
+                                    <animateMotion dur="4.6s" begin="0.35s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-robot"></mpath>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="slide-09-flow-dot" r="4.5">
+                                    <animateMotion dur="4.4s" begin="0.7s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-vibe"></mpath>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="slide-09-flow-dot" r="4.5">
+                                    <animateMotion dur="4.8s" begin="1.05s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-driving"></mpath>
+                                    </animateMotion>
+                                </circle>
+
+                                <circle class="slide-09-flow-dot" r="4.5">
+                                    <animateMotion dur="4.5s" begin="0.25s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-provider"></mpath>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="slide-09-flow-dot" r="4.5">
+                                    <animateMotion dur="4.1s" begin="0.8s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-rune-service"></mpath>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="slide-09-flow-dot" r="4.5">
+                                    <animateMotion dur="4.7s" begin="1.15s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-small-model"></mpath>
+                                    </animateMotion>
+                                </circle>
+
+                                <circle class="slide-09-flow-dot flow-echo" r="3.5">
+                                    <animateMotion dur="4.2s" begin="1.7s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-agent"></mpath>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="slide-09-flow-dot flow-echo" r="3.5">
+                                    <animateMotion dur="4.6s" begin="2.05s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-robot"></mpath>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="slide-09-flow-dot flow-echo" r="3.5">
+                                    <animateMotion dur="4.4s" begin="2.4s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-vibe"></mpath>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="slide-09-flow-dot flow-echo" r="3.5">
+                                    <animateMotion dur="4.8s" begin="2.75s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-driving"></mpath>
+                                    </animateMotion>
+                                </circle>
+
+                                <circle class="slide-09-flow-dot flow-echo" r="3.5">
+                                    <animateMotion dur="4.5s" begin="1.95s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-provider"></mpath>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="slide-09-flow-dot flow-echo" r="3.5">
+                                    <animateMotion dur="4.1s" begin="2.45s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-rune-service"></mpath>
+                                    </animateMotion>
+                                </circle>
+                                <circle class="slide-09-flow-dot flow-echo" r="3.5">
+                                    <animateMotion dur="4.7s" begin="2.95s" repeatCount="indefinite">
+                                        <mpath href="#slide-09-path-small-model"></mpath>
+                                    </animateMotion>
+                                </circle>
+                            </svg>
+                        </div>
+
+                        <aside class="slide-09-side-panel slide-09-client-panel">
+                            <div class="slide-09-panel-header">
+                                <span class="slide-09-panel-kicker">Client Side</span>
+                                <h3>大模型调用客户端</h3>
+                                <p>把不同终端入口统一收口到 Rune Gateway，让业务侧用一致方式接入模型能力。</p>
+                            </div>
+
+                            <div class="slide-09-client-grid">
+                                <article class="slide-09-client-card">
+                                    <div class="slide-09-client-icon">PC</div>
+                                    <div class="slide-09-client-copy">
+                                        <h4>AI智能体</h4>
+                                        <p>面向业务流程和系统协作的 Agent，通过统一接口调用规划与执行能力。</p>
+                                    </div>
+                                </article>
+
+                                <article class="slide-09-client-card">
+                                    <div class="slide-09-client-icon">BOT</div>
+                                    <div class="slide-09-client-copy">
+                                        <h4>具身机器人</h4>
+                                        <p>服务和工业机器人接入感知、理解与动作决策能力，统一走网关调用。</p>
+                                    </div>
+                                </article>
+
+                                <article class="slide-09-client-card">
+                                    <div class="slide-09-client-icon">USR</div>
+                                    <div class="slide-09-client-copy">
+                                        <h4>Vibe Coding</h4>
+                                        <p>面向开发协作与代码生成场景，快速调用代码理解、生成与改写能力。</p>
+                                    </div>
+                                </article>
+
+                                <article class="slide-09-client-card">
+                                    <div class="slide-09-client-icon">CAR</div>
+                                    <div class="slide-09-client-copy">
+                                        <h4>智能驾驶</h4>
+                                        <p>面向座舱与驾驶辅助场景，接入视觉理解、语音交互与决策推理能力。</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </aside>
+
+                        <div class="slide-09-core">
+                            <div class="slide-09-core-orb">
+                                <div class="slide-09-core-text">
+                                    <span class="slide-09-core-kicker">Unified AI Access Layer</span>
+                                    <h3>LLM Gateway</h3>
+                                    <p>统一 API 入口</p>
+                                </div>
+                            </div>
+                            <div class="slide-09-core-meta">
+                                <span>统一协议</span>
+                                <span>策略编排</span>
+                                <span>弹性路由</span>
+                            </div>
+                        </div>
+
+                        <aside class="slide-09-side-panel slide-09-model-panel">
+                            <div class="slide-09-panel-header">
+                                <span class="slide-09-panel-kicker">Model Supply</span>
+                                <h3>上游模型接入</h3>
+                                <p>同时承接第三方模型、Rune 平台自建大模型服务，以及视觉、语音等专用小模型。</p>
+                            </div>
+
+                            <div class="slide-09-model-groups">
+                                <article class="slide-09-model-group">
+                                    <div class="slide-09-model-group-head">
+                                        <span>第三方模型供应商</span>
+                                        <strong>API Providers</strong>
+                                    </div>
+                                    <div class="slide-09-provider-cloud">
+                                        <span>OpenAI</span>
+                                        <span>Anthropic</span>
+                                        <span>Google</span>
+                                        <span>DeepSeek</span>
+                                        <span>智谱</span>
+                                        <span>豆包</span>
+                                        <span>Qwen</span>
+                                        <span>Moonshot</span>
+                                        <span>OpenRouter</span>
+                                        <span>硅基流动</span>
+                                    </div>
+                                </article>
+
+                                <article class="slide-09-model-group">
+                                    <div class="slide-09-model-group-head">
+                                        <span>Rune 平台模型服务</span>
+                                        <strong>Private LLM Services</strong>
+                                    </div>
+                                    <div class="slide-09-model-tags">
+                                        <span>私有化部署模型</span>
+                                        <span>企业微调模型</span>
+                                        <span>推理加速服务</span>
+                                        <span>知识增强模型</span>
+                                    </div>
+                                </article>
+
+                                <article class="slide-09-model-group compact-group">
+                                    <div class="slide-09-model-group-head">
+                                        <span>视觉 / 语音 / 小模型</span>
+                                        <strong>Specialized Models</strong>
+                                    </div>
+                                    <div class="slide-09-model-tags">
+                                        <span>OCR / VLM</span>
+                                        <span>ASR / TTS</span>
+                                        <span>Embedding</span>
+                                        <span>Reranker</span>
+                                        <span>检测分类</span>
+                                        <span>多模态理解</span>
+                                    </div>
+                                </article>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="slide-09-capability-rail">
+                        <article class="slide-09-capability-card">
+                            <div class="slide-09-capability-topline">
+                                <span class="slide-09-node-badge">01</span>
+                                <span class="slide-09-node-kicker">Format Compatibility</span>
+                            </div>
+                            <h3>统一 API 格式</h3>
+                            <p>兼容 OpenAI API 与 Anthropic API 请求格式，支持流式输出与多模态接入。</p>
+                        </article>
+
+                        <article class="slide-09-capability-card">
+                            <div class="slide-09-capability-topline">
+                                <span class="slide-09-node-badge">02</span>
+                                <span class="slide-09-node-kicker">Routing &amp; Fallback</span>
+                            </div>
+                            <h3>多渠道路由与回退</h3>
+                            <p>按模型能力、成本和可用性选择最优通道，并支持首选路由和自动降级。</p>
+                        </article>
+
+                        <article class="slide-09-capability-card">
+                            <div class="slide-09-capability-topline">
+                                <span class="slide-09-node-badge">03</span>
+                                <span class="slide-09-node-kicker">Rate Limit &amp; Metering</span>
+                            </div>
+                            <h3>精细化限流与计费</h3>
+                            <p>基于 RPM、TPM 和 Token 消耗做多维限速、配额管理与租户级成本统计。</p>
+                        </article>
+
+                        <article class="slide-09-capability-card">
+                            <div class="slide-09-capability-topline">
+                                <span class="slide-09-node-badge">04</span>
+                                <span class="slide-09-node-kicker">Security &amp; Compliance</span>
+                            </div>
+                            <h3>安全与合规</h3>
+                            <p>内置内容审查、IP 白名单和审计留痕，把访问治理和风控前置到统一网关层。</p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Slide 10: Moha Hub -->
+                <section class="slide" id="slide-10" data-title="Moha Hub 资产社区">
+                    <div class="slide-10-bg-grid"></div>
+                    <div class="slide-10-bg-glow"></div>
+                    <div class="slide-10-bg-orbit"></div>
+
+                    <div class="slide-10-header">
+                        <h2 class="slide-10-title">Moha Hub：企业内部的 AI 资产社区</h2>
+                        <p class="slide-10-subtitle">类 HuggingFace / ModelScope 的私有化 AI 资产管理平台，让模型、数据、镜像、应用与技能在企业内部持续沉淀、复用和协作演进。</p>
+                    </div>
+
+                    <div class="slide-10-summary-strip">
+                        <div class="slide-10-summary-item">六大资产类型</div>
+                        <div class="slide-10-summary-item">三层权限管理</div>
+                        <div class="slide-10-summary-item">社区化协作</div>
+                        <div class="slide-10-summary-item">模型加解密</div>
+                        <div class="slide-10-summary-item">镜像站同步</div>
+                    </div>
+
+                    <div class="slide-10-body">
+                        <div class="slide-10-assets-panel">
+                            <div class="slide-10-panel-head">
+                                <span class="slide-10-panel-kicker">Asset Matrix</span>
+                                <h3>六大资产类型</h3>
+                                <p>从模型到数据、镜像、应用、MCP 服务和技能市场，Moha Hub 把企业内部 AI 资产汇聚为统一的协作社区。</p>
+                            </div>
+
+                            <div class="slide-10-assets-grid">
+                                <article class="slide-10-asset-card accent-blue">
+                                    <div class="slide-10-asset-topline">
+                                        <span class="slide-10-asset-index">01</span>
+                                        <span class="slide-10-asset-en">Models</span>
+                                    </div>
+                                    <h4>模型库</h4>
+                                    <p>支持 Git-based 版本管理、文件浏览、提交历史与分支协作。</p>
+                                </article>
+
+                                <article class="slide-10-asset-card accent-green">
+                                    <div class="slide-10-asset-topline">
+                                        <span class="slide-10-asset-index">02</span>
+                                        <span class="slide-10-asset-en">Datasets</span>
+                                    </div>
+                                    <h4>数据集</h4>
+                                    <p>覆盖 NLP、CV、多模态等 50+ 任务类型的数据集管理与共享。</p>
+                                </article>
+
+                                <article class="slide-10-asset-card accent-slate">
+                                    <div class="slide-10-asset-topline">
+                                        <span class="slide-10-asset-index">03</span>
+                                        <span class="slide-10-asset-en">Images</span>
+                                    </div>
+                                    <h4>镜像仓库</h4>
+                                    <p>兼容 OCI 标准服务，统一托管企业内部容器镜像并支持漏洞更新。</p>
+                                </article>
+
+                                <article class="slide-10-asset-card accent-cyan">
+                                    <div class="slide-10-asset-topline">
+                                        <span class="slide-10-asset-index">04</span>
+                                        <span class="slide-10-asset-en">Spaces</span>
+                                    </div>
+                                    <h4>应用空间</h4>
+                                    <p>自动构建并运行 AI 应用和工具组件，支持在线预览与全生命周期管理。</p>
+                                </article>
+
+                                <article class="slide-10-asset-card accent-purple">
+                                    <div class="slide-10-asset-topline">
+                                        <span class="slide-10-asset-index">05</span>
+                                        <span class="slide-10-asset-en">MCP Server</span>
+                                    </div>
+                                    <h4>MCP 广场</h4>
+                                    <p>基于 MCP Server 的模型技能预置中心，支持技能的一键部署与共享。</p>
+                                </article>
+
+                                <article class="slide-10-asset-card accent-amber">
+                                    <div class="slide-10-asset-topline">
+                                        <span class="slide-10-asset-index">06</span>
+                                        <span class="slide-10-asset-en">Skills</span>
+                                    </div>
+                                    <h4>模型技能</h4>
+                                    <p>面向企业内部的模型技能市场，沉淀各领域可直接调用的能力模板。</p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="slide-10-community-panel">
+                            <div class="slide-10-community-stage">
+                                <div class="slide-10-screen-card">
+                                    <div class="slide-10-screen-header">
+                                        <span class="slide-10-screen-kicker">Moha Hub Console</span>
+                                        <div class="slide-10-screen-dots">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-10-screen-frame">
+                                        
+                                        <div class="slide-10-screen-sidebar">
+                                            <span class="active-item">Assets</span>
+                                            <span>Models</span>
+                                            <span>Datasets</span>
+                                            <span>Spaces</span>
+                                            <span>MCP</span>
+                                            <span>Skills</span>
+                                        </div>
+
+                                        <div class="slide-10-screen-main">
+                                            <div class="slide-10-screen-toolbar">
+                                                <span class="toolbar-title">Moha Hub</span>
+                                                <span class="toolbar-meta">Private AI Asset Community</span>
+                                            </div>
+
+                                            <div class="slide-10-screen-metrics">
+                                                <div class="metric-card"><strong>1,280</strong><span>Models</span></div>
+                                                <div class="metric-card"><strong>540</strong><span>Datasets</span></div>
+                                                <div class="metric-card"><strong>96</strong><span>Spaces</span></div>
+                                                <div class="metric-card"><strong>2996</strong><span>Skills</span></div>
+                                            </div>
+
+                                            <div class="slide-10-screen-content">
+                                                <div class="screen-list-card">
+                                                    <div class="screen-card-head">
+                                                        <span>热门资产</span>
+                                                        <span>Latest</span>
+                                                    </div>
+                                                    <div class="screen-list-lines">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="screen-chart-card">
+                                                    <div class="screen-card-head">
+                                                        <span>Asset Activity</span>
+                                                        <span>7 Days</span>
+                                                    </div>
+                                                    <div class="screen-chart-bars">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-10-screen-tags">
+                                        <span>Models</span>
+                                        <span>Datasets</span>
+                                        <span>Spaces</span>
+                                        <span>MCP</span>
+                                        <span>Skills</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="slide-10-sdk-terminal">
+                                <div class="slide-10-terminal-head">
+                                    <span class="slide-10-terminal-kicker">Moha SDK CLI</span>
+                                    <div class="slide-10-terminal-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="slide-10-terminal-body">
+                                    <div class="slide-10-terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <code>pip install xiaoshiai-hub</code>
+                                    </div>
+                                    <div class="slide-10-terminal-line terminal-success">
+                                        <code>Successfully installed xiaoshiai-hub</code>
+                                    </div>
+                                    <div class="slide-10-terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <code>moha login</code>
+                                    </div>
+                                    <div class="slide-10-terminal-line terminal-success">
+                                        <code>✔ Successfully logged in to Moha Hub</code>
+                                    </div>
+                                    <div class="slide-10-terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <code>moha upload -t models -e --encryption-password "your-password" -a SM4 deepseek-ai/DeepSeek-V3</code>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-10-highlight-stack">
+                                <article class="slide-10-highlight-card">
+                                    <span class="slide-10-highlight-label">权限管理</span>
+                                    <p>公开 / 内部 / 私有三层权限体系，确保资产共享边界清晰可控。</p>
+                                </article>
+                                <article class="slide-10-highlight-card">
+                                    <span class="slide-10-highlight-label">社区化运营</span>
+                                    <p>讨论区、标签系统与版本记录共同促进知识沉淀和团队协作。</p>
+                                </article>
+                                <article class="slide-10-highlight-card">
+                                    <span class="slide-10-highlight-label">模型加解密</span>
+                                    <p>支持模型加密存储，破晓石自研解密库可适配 vLLM、SGLang 等推理框架。</p>
+                                </article>
+                                <article class="slide-10-highlight-card">
+                                    <span class="slide-10-highlight-label">Mirror + SDK</span>
+                                    <p>支持镜像站同步与 API / SDK 集成，让企业资产持续保持新鲜并易于接入。</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-10-footer">
+                        完全私有化部署，数据不出企业，让模型、数据和应用资产真正成为可沉淀、可复用、可治理的企业生产资料
                     </div>
                 </section>
 
