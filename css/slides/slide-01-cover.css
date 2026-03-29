@@ -118,7 +118,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    font-size: 24px;
+    font-size: 34px;
     color: var(--color-text-muted);
     
     opacity: 0;
@@ -127,7 +127,7 @@
 }
 
 .slide-01-speaker-info {
-    font-size: 20px;
+    font-size: 24px;
     color: #94A3B8;
 }
 

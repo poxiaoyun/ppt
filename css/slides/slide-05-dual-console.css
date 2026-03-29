@@ -1,112 +1,142 @@
 /* =========================================
    Slide 05: 双控制台设计 (slide-05-dual-console.css)
-   风格：延续 Slide 02 的浅色双栏结构与结论横幅
+   风格：统一浅色双栏页，左侧平台角色卡，右侧职责与协同面板
    ========================================= */
 
 #slide-5 {
-    background-color: var(--color-bg-light);
+    background:
+        radial-gradient(circle at top left, rgba(30, 96, 248, 0.08), transparent 28%),
+        linear-gradient(180deg, #FCFDFF 0%, #F6F8FC 100%);
     color: var(--color-text-main);
-    padding: 80px 100px;
+    padding: 78px 100px 72px;
     display: flex;
     flex-direction: column;
 }
 
 .slide-05-header {
-    margin-bottom: 50px;
+    max-width: 1180px;
+    margin-bottom: 36px;
     opacity: 0;
     transform: translateY(-20px);
-    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+    transition: opacity 0.8s ease 0.12s, transform 0.8s ease 0.12s;
 }
 
 .slide-05-title {
     position: relative;
     display: inline-block;
+    margin-bottom: 20px;
     font-size: 54px;
     font-weight: 800;
     color: #0A1128;
+    letter-spacing: -0.02em;
 }
 
 .slide-05-title::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -15px;
-    width: 60px;
+    bottom: -14px;
+    width: 64px;
     height: 6px;
-    border-radius: 3px;
-    background: var(--color-primary);
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-primary), #6EA8FF);
+}
+
+.slide-05-subtitle {
+    max-width: 1160px;
+    font-size: 22px;
+    line-height: 1.65;
+    color: #516072;
 }
 
 .slide-05-body {
     display: flex;
     flex: 1;
-    gap: 60px;
-    margin-bottom: 40px;
+    gap: 32px;
+    margin-bottom: 30px;
+    min-height: 0;
 }
 
 .slide-05-left {
     flex: 0.9;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 28px;
+    gap: 20px;
 }
 
 .slide-05-data-card {
-    background: var(--color-bg-white);
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: var(--shadow-sm);
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 255, 0.96));
+    border-radius: 22px;
+    padding: 28px 28px 24px;
+    border: 1px solid rgba(206, 216, 232, 0.9);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.07);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border-left: 4px solid transparent;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: flex-start;
+    overflow: hidden;
+    transition: transform 0.32s ease, box-shadow 0.32s ease;
     opacity: 0;
-    transform: scale(0.9);
+    transform: translateY(26px) scale(0.98);
 }
 
-.console-stack {
-    border-left-color: var(--color-secondary);
-    transition: all 0.6s ease 0.4s;
-}
-
-.boss-stack {
-    border-left-color: var(--color-primary);
-    transition: all 0.6s ease 0.7s;
+.slide-05-data-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    opacity: 0.96;
 }
 
 .slide-05-data-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+    box-shadow: 0 22px 44px rgba(15, 23, 42, 0.11);
+}
+
+.console-stack {
+    transition: all 0.6s ease 0.26s;
+}
+
+.console-stack::before {
+    background: linear-gradient(90deg, var(--color-secondary), #47D8AB);
+}
+
+.boss-stack {
+    transition: all 0.6s ease 0.38s;
+}
+
+.boss-stack::before {
+    background: linear-gradient(90deg, var(--color-primary), #60A5FA);
 }
 
 .slide-05-data-number {
+    margin-bottom: 12px;
     font-size: 46px;
     font-weight: 800;
-    letter-spacing: 0.02em;
-    color: var(--color-primary);
-    margin-bottom: 12px;
-    line-height: 1.05;
+    letter-spacing: -0.03em;
+    line-height: 1.06;
+    color: #0D4ED8;
 }
 
 .console-stack .slide-05-data-number {
-    color: var(--color-secondary);
+    color: #059669;
 }
 
 .slide-05-data-desc {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--color-text-main);
-    line-height: 1.4;
+    font-size: 21px;
+    font-weight: 650;
+    line-height: 1.45;
+    color: #111827;
 }
 
 .slide-05-data-source {
     margin-top: auto;
     padding-top: 16px;
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.55;
     color: #64748B;
-    line-height: 1.6;
 }
 
 .slide-05-module-tags {
@@ -132,25 +162,34 @@
 }
 
 .slide-05-right {
-    flex: 1.2;
+    flex: 1.16;
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
 }
 
 .slide-05-insight-container {
-    background: #FFFFFF;
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
-    box-shadow: var(--shadow-sm);
-    padding: 24px 32px;
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(246, 249, 255, 0.97));
+    border: 1px solid rgba(206, 216, 232, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 22px 44px rgba(15, 23, 42, 0.07);
+    padding: 26px 28px 24px;
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 16px;
+    overflow: hidden;
     opacity: 0;
-    transform: translateX(40px);
-    transition: all 0.8s ease 0.6s;
+    transform: translateX(34px);
+    transition: all 0.8s ease 0.42s;
+}
+
+.slide-05-insight-container::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--color-primary), #60A5FA, #C6D8F7);
 }
 
 #slide-5.active .slide-05-insight-container {
@@ -158,44 +197,35 @@
     transform: translateX(0);
 }
 
+.slide-05-section-title {
+    font-size: 27px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
 .slide-05-insight-text {
     padding-bottom: 14px;
-    border-bottom: 1px dashed var(--color-border);
+    border-bottom: 1px solid rgba(206, 216, 232, 0.95);
     font-size: 20px;
     font-weight: 500;
-    line-height: 1.6;
-    color: var(--color-text-main);
-}
-
-.slide-05-insight-title {
-    display: inline-block;
-    margin-right: 4px;
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--color-primary);
-}
-
-.slide-05-section-title {
-    margin-top: 4px;
-    margin-bottom: 2px;
-    font-size: 28px;
-    font-weight: 800;
-    color: #070707;
+    line-height: 1.65;
+    color: #334155;
 }
 
 .slide-05-console-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 14px;
     flex: 1;
 }
 
 .slide-05-console-card {
     position: relative;
-    border-radius: 14px;
-    padding: 22px 22px 20px;
+    border-radius: 18px;
+    padding: 20px 20px 18px;
     overflow: hidden;
-    background: #F8FAFC;
+    background: rgba(248, 250, 252, 0.9);
+    border: 1px solid rgba(223, 231, 243, 0.95);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
@@ -204,29 +234,29 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 4px;
+    width: 5px;
     height: 100%;
 }
 
 .slide-05-console-card:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
     background: #FFFFFF;
 }
 
 .admin-console::before {
-    background: linear-gradient(to bottom, #1E60F8, #60A5FA);
+    background: linear-gradient(180deg, #1E60F8, #60A5FA);
 }
 
 .tenant-console::before {
-    background: linear-gradient(to bottom, #10B981, #6C5DD3);
+    background: linear-gradient(180deg, #10B981, #6C5DD3);
 }
 
 .slide-05-console-topline {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     margin-bottom: 14px;
 }
 
@@ -257,16 +287,17 @@
 
 .slide-05-console-card h3 {
     margin-bottom: 12px;
-    font-size: 28px;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.35;
     color: #0A1128;
-    line-height: 1.3;
 }
 
 .slide-05-console-card ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     padding: 0;
     margin: 0;
 }
@@ -274,7 +305,7 @@
 .slide-05-console-card li {
     position: relative;
     padding-left: 18px;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.55;
     color: var(--color-text-muted);
 }
@@ -283,7 +314,7 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 11px;
+    top: 10px;
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -296,7 +327,7 @@
 
 .slide-05-collaboration-strip {
     min-height: 78px;
-    border-radius: 14px;
+    border-radius: 18px;
     padding: 18px 22px;
     display: flex;
     align-items: center;
@@ -307,7 +338,7 @@
 }
 
 .collaboration-node {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 700;
     color: #0F172A;
     white-space: nowrap;
@@ -333,18 +364,18 @@
 }
 
 .slide-05-footer {
-    background: linear-gradient(135deg, var(--color-primary), #0A1128);
-    border-radius: 12px;
-    padding: 25px 40px;
+    background: linear-gradient(135deg, #1858F2, #0A1128);
+    border-radius: 18px;
+    padding: 24px 36px;
     color: #FFFFFF;
-    font-size: 31px;
+    font-size: 30px;
     font-weight: 800;
     text-align: center;
-    box-shadow: var(--shadow-md);
-    letter-spacing: 1px;
+    box-shadow: 0 18px 36px rgba(10, 17, 40, 0.18);
+    letter-spacing: 0.02em;
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease 1s, transform 0.8s ease 1s;
+    transition: opacity 0.8s ease 0.88s, transform 0.8s ease 0.88s;
 }
 
 #slide-5.active .slide-05-header,

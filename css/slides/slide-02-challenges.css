@@ -1,127 +1,198 @@
 /* =========================================
    Slide 02: 市场挑战 (slide-02-challenges.css)
-   风格：浅色背景、左右分栏（左数据，右痛点）、底部高亮结论
+   风格：统一浅色双栏页，左侧数据卡，右侧洞察与痛点卡
    ========================================= */
 
 #slide-2 {
-    background-color: var(--color-bg-light);
+    background:
+        radial-gradient(circle at top left, rgba(30, 96, 248, 0.08), transparent 28%),
+        linear-gradient(180deg, #FCFDFF 0%, #F6F8FC 100%);
     color: var(--color-text-main);
-    padding: 80px 100px;
+    padding: 78px 100px 72px;
     display: flex;
     flex-direction: column;
 }
 
-/* 页面标题 */
 .slide-02-header {
-    margin-bottom: 50px;
+    max-width: 1180px;
+    margin-bottom: 36px;
     opacity: 0;
     transform: translateY(-20px);
-    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+    transition: opacity 0.8s ease 0.12s, transform 0.8s ease 0.12s;
 }
 
 .slide-02-title {
-    font-size: 54px;
-    font-weight: bold;
-    color: #0A1128;
     position: relative;
     display: inline-block;
+    margin-bottom: 20px;
+    font-size: 54px;
+    font-weight: 800;
+    color: #0A1128;
+    letter-spacing: -0.02em;
 }
 
-/* 标题底部的一个科技感装饰线 */
 .slide-02-title::after {
     content: '';
     position: absolute;
-    bottom: -15px; left: 0;
-    width: 60px; height: 6px;
-    background: var(--color-primary);
-    border-radius: 3px;
+    left: 0;
+    bottom: -14px;
+    width: 64px;
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-primary), #6EA8FF);
 }
 
-/* 主要内容区：左右分栏 */
+.slide-02-subtitle {
+    max-width: 1160px;
+    font-size: 22px;
+    line-height: 1.65;
+    color: #516072;
+}
+
 .slide-02-body {
     display: flex;
     flex: 1;
-    gap: 60px;
-    margin-bottom: 40px;
+    gap: 32px;
+    margin-bottom: 30px;
+    min-height: 0;
 }
 
-/* 左侧：核心数据网格 */
 .slide-02-left {
-    flex: 1;
+    flex: 0.9;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 24px;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 20px;
 }
 
 .data-card {
-    background: var(--color-bg-white);
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: var(--shadow-sm);
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 255, 0.96));
+    border-radius: 22px;
+    padding: 28px 28px 24px;
+    border: 1px solid rgba(206, 216, 232, 0.9);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.07);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border-left: 4px solid transparent;
-    transition: transform 0.3s, box-shadow 0.3s;
-    
+    justify-content: flex-start;
+    overflow: hidden;
+    transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
     opacity: 0;
-    transform: scale(0.9);
+    transform: translateY(26px) scale(0.98);
+}
+
+.data-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    opacity: 0.96;
 }
 
 .data-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+    box-shadow: 0 22px 44px rgba(15, 23, 42, 0.11);
 }
 
-.data-card:nth-child(1) { border-left-color: var(--color-primary); transition: all 0.6s ease 0.4s; }
-.data-card:nth-child(2) { border-left-color: var(--color-secondary); transition: all 0.6s ease 0.5s; }
-.data-card:nth-child(3) { border-left-color: var(--color-accent); transition: all 0.6s ease 0.6s; }
-.data-card:nth-child(4) { border-left-color: #EAB308; transition: all 0.6s ease 0.7s; }
+.data-card:nth-child(1) {
+    transition: all 0.6s ease 0.26s;
+}
+
+.data-card:nth-child(1)::before {
+    background: linear-gradient(90deg, var(--color-primary), #60A5FA);
+}
+
+.data-card:nth-child(2) {
+    transition: all 0.6s ease 0.34s;
+}
+
+.data-card:nth-child(2)::before {
+    background: linear-gradient(90deg, var(--color-secondary), #47D8AB);
+}
+
+.data-card:nth-child(3) {
+    transition: all 0.6s ease 0.42s;
+}
+
+.data-card:nth-child(3)::before {
+    background: linear-gradient(90deg, var(--color-accent), #8B7CF6);
+}
+
+.data-card:nth-child(4) {
+    transition: all 0.6s ease 0.5s;
+}
+
+.data-card:nth-child(4)::before {
+    background: linear-gradient(90deg, #F97316, #EF4444);
+}
 
 .data-number {
-    font-size: 48px;
+    margin-bottom: 12px;
+    font-size: 46px;
     font-weight: 800;
-    color: var(--color-primary);
-    margin-bottom: 10px;
-    line-height: 1.1;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    color: #0D4ED8;
+}
+
+.data-card:nth-child(2) .data-number {
+    color: #059669;
+}
+
+.data-card:nth-child(3) .data-number {
+    color: #5B4FCF;
+}
+
+.data-card:nth-child(4) .data-number {
+    color: #DC2626;
 }
 
 .data-desc {
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--color-text-main);
+    font-size: 24px;
+    font-weight: 650;
+    line-height: 1.45;
+    color: #111827;
 }
 
 .data-source {
-    font-size: 16px;
-    color: #64748B;
     margin-top: auto;
-    padding-top: 15px;
+    padding-top: 16px;
+    font-size: 20px;
+    line-height: 1.55;
+    color: #64748B;
 }
 
-/* 右侧：痛点分析容器 */
 .slide-02-right {
-    flex: 1.2;
+    flex: 1.16;
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
 }
 
 .insight-pain-container {
-    background: white;
-    border-radius: 16px;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--color-border);
-    padding: 24px 32px; /* 间距微调以容纳4个卡片 */
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(246, 249, 255, 0.97));
+    border: 1px solid rgba(206, 216, 232, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 22px 44px rgba(15, 23, 42, 0.07);
+    padding: 26px 28px 24px;
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 15px; /* 卡片之间的间隔缩小 */
-    
+    gap: 16px;
+    overflow: hidden;
     opacity: 0;
-    transform: translateX(40px);
-    transition: all 0.8s ease 0.6s;
+    transform: translateX(34px);
+    transition: all 0.8s ease 0.42s;
+}
+
+.insight-pain-container::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--color-primary), #60A5FA, #C6D8F7);
 }
 
 #slide-2.active .insight-pain-container {
@@ -129,78 +200,74 @@
     transform: translateX(0);
 }
 
-/* 核心洞察文字在上方 */
 .insight-text-top {
-    font-size: 20px; /* 文字稍微缩小以防占高过多 */
+    font-size: 20px;
     font-weight: 500;
-    line-height: 1.5;
-    color: var(--color-text-main);
-    padding-bottom: 12px;
-    border-bottom: 1px dashed var(--color-border);
+    line-height: 1.65;
+    color: #334155;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(206, 216, 232, 0.95);
 }
 
 .insight-title {
-    color: var(--color-primary);
-    font-size: 24px;
-    font-weight: bold;
     display: inline-block;
     margin-right: 4px;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-primary);
 }
 
 .insight-highlight {
-    color: #EF4444; /* 警示红 */
-    font-weight: bold;
+    color: #DC2626;
+    font-weight: 800;
 }
 
 .pain-points-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #070707;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
+    font-size: 27px;
+    font-weight: 800;
+    color: #0F172A;
 }
 
 .pain-points-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 14px;
     flex: 1;
 }
 
 .pain-point-card {
-    background: #F8FAFC;
-    border-radius: 12px;
-    padding: 16px 20px; /* 内边距调小应对4张卡片 */
-    display: flex;
-    align-items: center;
-    flex: 1;
-    gap: 16px;
     position: relative;
+    background: rgba(248, 250, 252, 0.9);
+    border: 1px solid rgba(223, 231, 243, 0.95);
+    border-radius: 18px;
+    padding: 18px 20px 18px 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.pain-point-card:hover {
-    transform: translateX(10px);
-    box-shadow: var(--shadow-sm);
-    background: white;
-}
-
-/* 警示性渐变边框效果 */
 .pain-point-card::before {
     content: '';
     position: absolute;
-    left: 0; top: 0;
-    width: 4px; height: 100%;
-    background: linear-gradient(to bottom, #EF4444, #F59E0B);
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #EF4444, #F59E0B);
+}
+
+.pain-point-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    background: #FFFFFF;
 }
 
 .pain-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
     background: #FEF2F2;
     display: flex;
     justify-content: center;
@@ -210,39 +277,39 @@
 }
 
 .pain-icon svg {
-    width: 18px; height: 18px; fill: currentColor;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 
 .pain-content h3 {
-    font-size: 20px;
+    margin-bottom: 5px;
+    font-size: 21px;
+    font-weight: 800;
     color: #0A1128;
-    margin-bottom: 4px;
 }
 
 .pain-content p {
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 1.55;
     color: var(--color-text-muted);
-    line-height: 1.4;
 }
 
-/* 底部：核心结论横幅单独展现 */
 .slide-02-footer.conclusion-only {
-    background: linear-gradient(135deg, var(--color-primary), #0A1128);
-    border-radius: 12px;
-    padding: 25px 40px;
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
+    background: linear-gradient(135deg, #1858F2, #0A1128);
+    border-radius: 18px;
+    padding: 24px 36px;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 800;
     text-align: center;
-    box-shadow: var(--shadow-md);
-    letter-spacing: 2px;
-    
+    box-shadow: 0 18px 36px rgba(10, 17, 40, 0.18);
+    letter-spacing: 0.02em;
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease 1s, transform 0.8s ease 1s;
+    transition: opacity 0.8s ease 0.88s, transform 0.8s ease 0.88s;
 }
 
-/* 激活状态动画 */
 #slide-2.active .slide-02-header,
 #slide-2.active .data-card,
 #slide-2.active .slide-02-footer.conclusion-only {
