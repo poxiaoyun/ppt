@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/slides/slide-10-moha-hub.css?v=20260329-1">
     <link rel="stylesheet" href="css/slides/slide-11-app-market.css?v=20260329-1">
     <link rel="stylesheet" href="css/slides/slide-12-chatapp.css?v=20260329-1">
+    <link rel="stylesheet" href="css/slides/slide-13-boss.css?v=20260329-1">
 </head>
 <body>
     <!-- 整体演示容器 -->
@@ -1886,6 +1887,194 @@
 
                     <div class="slide-12-footer">
                         ChatApp 让模型试用、调优、对比和接入在同一工作台内闭环完成，把“好不好用”的评估更快转化为“能不能上线”的决策
+                    </div>
+                </section>
+
+                <!-- Slide 13: BOSS -->
+                <section class="slide" id="slide-13" data-title="BOSS 运营管理">
+                    <div class="slide-13-bg-grid"></div>
+                    <div class="slide-13-bg-glow"></div>
+                    <div class="slide-13-bg-orbit"></div>
+
+                    <div class="slide-13-header">
+                        <h2 class="slide-13-title">BOSS：全局运营管理与监控平台</h2>
+                        <p class="slide-13-subtitle">作为企业级平台的统一运营中枢，BOSS 把多集群、租户体系、资源配额、模板发布与平台设置收敛到同一个全局控制面中，让运营、平台和安全团队在一个视图内完成治理、监控和策略分发。</p>
+                    </div>
+
+                    <div class="slide-13-summary-strip">
+                        <div class="slide-13-summary-item">多集群统一纳管</div>
+                        <div class="slide-13-summary-item">租户与工作空间隔离</div>
+                        <div class="slide-13-summary-item">异构资源双层配额</div>
+                        <div class="slide-13-summary-item">模板版本与发布治理</div>
+                        <div class="slide-13-summary-item">平台级配置与安全策略</div>
+                    </div>
+
+                    <div class="slide-13-body">
+                        <div class="slide-13-rail slide-13-rail-left">
+                            <article class="slide-13-domain-card accent-blue">
+                                <div class="slide-13-card-topline">
+                                    <span class="slide-13-card-index">01</span>
+                                    <span class="slide-13-card-kicker">Cluster Governance</span>
+                                </div>
+                                <h3>多集群管理</h3>
+                                <p>统一注册计算、存储与系统应用，把节点、资源池、规格和告警事件拉到一个运营视角中持续跟踪。</p>
+                                <div class="slide-13-card-tags">
+                                    <span>节点与资源池</span>
+                                    <span>块存储 / 文件系统</span>
+                                    <span>系统应用管理</span>
+                                    <span>监控告警</span>
+                                </div>
+                                <ul>
+                                    <li>支持多集群注册、纳管和生命周期维护</li>
+                                    <li>集中查看资源池、规格和关键组件状态</li>
+                                    <li>统一沉淀监控事件、日志和告警处理闭环</li>
+                                </ul>
+                            </article>
+
+                            <article class="slide-13-domain-card accent-green">
+                                <div class="slide-13-card-topline">
+                                    <span class="slide-13-card-index">02</span>
+                                    <span class="slide-13-card-kicker">Tenant &amp; Identity</span>
+                                </div>
+                                <h3>租户与用户管理</h3>
+                                <p>用多租户、工作空间和身份系统把平台访问边界管清楚，让组织架构、账号体系与权限分配同步落地。</p>
+                                <div class="slide-13-card-tags">
+                                    <span>多租户体系</span>
+                                    <span>工作空间隔离</span>
+                                    <span>多 SSO / OAuth</span>
+                                    <span>MFA</span>
+                                </div>
+                                <ul>
+                                    <li>租户创建、成员分配和空间隔离统一编排</li>
+                                    <li>兼容企业单点登录和内置账号体系</li>
+                                    <li>为 RBAC、审计和配额治理提供身份基础</li>
+                                </ul>
+                            </article>
+                        </div>
+
+                        <div class="slide-13-command-panel">
+                            <div class="slide-13-command-shell">
+                                <div class="slide-13-command-topbar">
+                                    <span class="slide-13-command-kicker">BOSS Global Control Surface</span>
+                                    <div class="slide-13-command-states">
+                                        <span>12 个集群在线</span>
+                                        <span>86 个工作空间</span>
+                                        <span>审计开启</span>
+                                    </div>
+                                </div>
+
+                                <div class="slide-13-metric-strip">
+                                    <div class="slide-13-metric-card">
+                                        <strong>12</strong>
+                                        <span>纳管集群</span>
+                                    </div>
+                                    <div class="slide-13-metric-card">
+                                        <strong>164</strong>
+                                        <span>活跃租户成员</span>
+                                    </div>
+                                    <div class="slide-13-metric-card">
+                                        <strong>2,480</strong>
+                                        <span>GPU / NPU / DCU 配额单元</span>
+                                    </div>
+                                    <div class="slide-13-metric-card">
+                                        <strong>58</strong>
+                                        <span>模板版本在线</span>
+                                    </div>
+                                </div>
+
+                                <div class="slide-13-control-stage">
+                                    <div class="slide-13-stage-ring ring-outer"></div>
+                                    <div class="slide-13-stage-ring ring-inner"></div>
+
+                                    <div class="slide-13-orbit-node orbit-top-left">告警与事件</div>
+                                    <div class="slide-13-orbit-node orbit-top-right">权限与身份</div>
+                                    <div class="slide-13-orbit-node orbit-right">配额策略</div>
+                                    <div class="slide-13-orbit-node orbit-bottom">模板发布</div>
+                                    <div class="slide-13-orbit-node orbit-left">产品配置</div>
+
+                                    <div class="slide-13-core-panel">
+                                        <span class="slide-13-core-label">Enterprise Operations Brain</span>
+                                        <h3>BOSS</h3>
+                                        <p>从底层算力资源到上层应用模版，统一承接运营监控、安全策略和平台配置，保证企业级 AI 平台的持续可控运行。</p>
+                                        <div class="slide-13-core-points">
+                                            <span>Global Visibility</span>
+                                            <span>Policy Dispatch</span>
+                                            <span>Security Baseline</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-13-command-lane lane-left">
+                                        <span class="lane-label">运营闭环</span>
+                                        <p>集群指标、租户行为、告警事件和审计记录统一汇聚，形成持续可追踪的运营看板。</p>
+                                    </div>
+
+                                    <div class="slide-13-command-lane lane-right">
+                                        <span class="lane-label">策略下发</span>
+                                        <p>配额、模版发布、身份规则和平台配置通过统一控制面下发到不同产品和工作空间。</p>
+                                    </div>
+                                </div>
+
+                                <div class="slide-13-platform-dock">
+                                    <div class="slide-13-dock-copy">
+                                        <span class="dock-label">05 Platform Settings</span>
+                                        <h3>平台设置</h3>
+                                        <p>系统成员、平台参数和产品级开关在同一配置坞舱内统一维护，保障智算平台、Moha Hub 和大模型网关的独立配置与一致治理。</p>
+                                    </div>
+                                    <div class="slide-13-dock-chips">
+                                        <span>智算平台配置</span>
+                                        <span>Moha Hub 配置</span>
+                                        <span>大模型网关配置</span>
+                                        <span>系统成员管理</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slide-13-rail slide-13-rail-right">
+                            <article class="slide-13-domain-card accent-purple">
+                                <div class="slide-13-card-topline">
+                                    <span class="slide-13-card-index">03</span>
+                                    <span class="slide-13-card-kicker">Quota Policy</span>
+                                </div>
+                                <h3>资源配额管理</h3>
+                                <p>面向 CPU、内存、GPU、存储和网络资源建立租户级与工作空间级双层配额体系，保证共享资源下的公平与可控。</p>
+                                <div class="slide-13-card-tags">
+                                    <span>CPU / Memory</span>
+                                    <span>NVIDIA / 昇腾 / 海光</span>
+                                    <span>高性能存储</span>
+                                    <span>网络配额</span>
+                                </div>
+                                <ul>
+                                    <li>兼容多类型异构加速卡和高性能资源口径</li>
+                                    <li>支持租户级与工作空间级双层限制</li>
+                                    <li>把资源申请、审批和投放纳入统一策略</li>
+                                </ul>
+                            </article>
+
+                            <article class="slide-13-domain-card accent-amber">
+                                <div class="slide-13-card-topline">
+                                    <span class="slide-13-card-index">04</span>
+                                    <span class="slide-13-card-kicker">Template Lifecycle</span>
+                                </div>
+                                <h3>应用模版管理</h3>
+                                <p>将推理、微调、开发、实验和评测模版纳入同一版本和发布体系，让平台运营者既能控质量，也能加快模版交付效率。</p>
+                                <div class="slide-13-card-tags">
+                                    <span>推理 / 微调 / 开发</span>
+                                    <span>版本治理</span>
+                                    <span>模版市场</span>
+                                    <span>统一发布</span>
+                                </div>
+                                <ul>
+                                    <li>统一管理模版版本、适配范围和发布状态</li>
+                                    <li>连接模版市场与应用上线入口</li>
+                                    <li>让最佳实践在不同租户之间稳定复用</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="slide-13-footer">
+                        BOSS 用一个全局控制面把集群、组织、资源、模板和平台设置串成企业 AI 的运营主脑，让复杂平台的治理动作持续可见、可控、可审计
                     </div>
                 </section>
 
