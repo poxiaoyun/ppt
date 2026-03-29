@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="css/slides/slide-11-app-market.css?v=20260329-1">
     <link rel="stylesheet" href="css/slides/slide-12-chatapp.css?v=20260329-1">
     <link rel="stylesheet" href="css/slides/slide-13-boss.css?v=20260329-1">
-    <link rel="stylesheet" href="css/slides/slide-14-rbac.css?v=20260329-12">
+    <link rel="stylesheet" href="css/slides/slide-14-rbac.css?v=20260329-13">
     <link rel="stylesheet" href="css/slides/slide-15-observability.css?v=20260329-1">
     <link rel="stylesheet" href="css/slides/slide-16-market-comparison.css?v=20260329-1">
 </head>
@@ -2623,34 +2623,56 @@
                                 <h3>Rune 的优势不是单点领先，而是减少企业把能力拼成平台的成本</h3>
                                 <p>当企业同时要求私有化、异构芯片、资产沉淀、API 治理与租户合规时，Rune 把最容易断开的链路收进同一控制面。</p>
 
-                                <div class="slide-16-score-list">
-                                    <div class="score-item">
-                                        <div class="score-meta">
-                                            <span>私有化掌控</span>
-                                            <strong>95</strong>
-                                        </div>
-                                        <div class="score-bar"><span style="width: 95%;"></span></div>
-                                    </div>
-                                    <div class="score-item">
-                                        <div class="score-meta">
-                                            <span>异构芯片兼容</span>
-                                            <strong>92</strong>
-                                        </div>
-                                        <div class="score-bar"><span style="width: 92%;"></span></div>
-                                    </div>
-                                    <div class="score-item">
-                                        <div class="score-meta">
-                                            <span>治理一体化</span>
-                                            <strong>94</strong>
-                                        </div>
-                                        <div class="score-bar"><span style="width: 94%;"></span></div>
-                                    </div>
-                                    <div class="score-item">
-                                        <div class="score-meta">
-                                            <span>协作资产沉淀</span>
-                                            <strong>90</strong>
-                                        </div>
-                                        <div class="score-bar"><span style="width: 90%;"></span></div>
+                                <div class="slide-16-radar-panel">
+                                    <div class="slide-16-radar-stage">
+                                        <svg viewBox="0 0 360 292" aria-hidden="true">
+                                            <defs>
+                                                <linearGradient id="slide-16-radar-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stop-color="#1E60F8"></stop>
+                                                    <stop offset="100%" stop-color="#10B981"></stop>
+                                                </linearGradient>
+                                                <linearGradient id="slide-16-radar-fill" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stop-color="rgba(30, 96, 248, 0.22)"></stop>
+                                                    <stop offset="100%" stop-color="rgba(16, 185, 129, 0.14)"></stop>
+                                                </linearGradient>
+                                            </defs>
+
+                                            <g class="radar-grid">
+                                                <polygon points="180,72 257.9,117 257.9,207 180,252 102.1,207 102.1,117"></polygon>
+                                                <polygon points="180,95 238,128.5 238,195.5 180,229 122,195.5 122,128.5"></polygon>
+                                                <polygon points="180,118 218.1,140 218.1,184 180,206 141.9,184 141.9,140"></polygon>
+                                                <polygon points="180,141 198.1,151.5 198.1,172.5 180,183 161.9,172.5 161.9,151.5"></polygon>
+                                            </g>
+
+                                            <g class="radar-axis">
+                                                <line x1="180" y1="162" x2="180" y2="72"></line>
+                                                <line x1="180" y1="162" x2="257.9" y2="117"></line>
+                                                <line x1="180" y1="162" x2="257.9" y2="207"></line>
+                                                <line x1="180" y1="162" x2="180" y2="252"></line>
+                                                <line x1="180" y1="162" x2="102.1" y2="207"></line>
+                                                <line x1="180" y1="162" x2="102.1" y2="117"></line>
+                                            </g>
+
+                                            <polygon class="radar-area" points="180,74 252.9,120 248.1,201.6 180,248.4 105.9,204.8 107.3,120.6"></polygon>
+
+                                            <g class="radar-dots">
+                                                <circle cx="180" cy="74" r="4"></circle>
+                                                <circle cx="252.9" cy="120" r="4"></circle>
+                                                <circle cx="248.1" cy="201.6" r="4"></circle>
+                                                <circle cx="180" cy="248.4" r="4"></circle>
+                                                <circle cx="105.9" cy="204.8" r="4"></circle>
+                                                <circle cx="107.3" cy="120.6" r="4"></circle>
+                                            </g>
+
+                                            <g class="radar-labels">
+                                                <text x="180" y="40" text-anchor="middle">私有化部署</text>
+                                                <text x="292" y="104" text-anchor="start">国产芯片</text>
+                                                <text x="292" y="222" text-anchor="start">模型 Hub</text>
+                                                <text x="180" y="282" text-anchor="middle">网关治理</text>
+                                                <text x="68" y="222" text-anchor="end">多租户</text>
+                                                <text x="68" y="104" text-anchor="end">安全合规</text>
+                                            </g>
+                                        </svg>
                                     </div>
                                 </div>
 
