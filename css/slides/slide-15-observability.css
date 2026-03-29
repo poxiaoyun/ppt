@@ -224,9 +224,7 @@
 .slide-15-stage-shell {
     padding: 20px;
     height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    gap: 16px;
+    display: flex;
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 255, 0.95)),
         radial-gradient(circle at 50% 30%, rgba(30, 96, 248, 0.08), rgba(30, 96, 248, 0) 36%);
@@ -242,57 +240,9 @@
     pointer-events: none;
 }
 
-.slide-15-stage-top,
 .slide-15-sim-console {
     position: relative;
     z-index: 1;
-}
-
-.slide-15-stage-top {
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-    gap: 16px;
-    align-items: end;
-}
-
-.slide-15-stage-copy h3 {
-    margin: 10px 0 10px;
-    font-size: 34px;
-    line-height: 1.22;
-    color: #0F172A;
-}
-
-.slide-15-stage-copy p {
-    font-size: 15px;
-    line-height: 1.68;
-    color: #475569;
-}
-
-.slide-15-kpi-strip {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 12px;
-}
-
-.slide-15-kpi-card {
-    padding: 16px 14px;
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(30, 96, 248, 0.08);
-    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.05);
-    display: grid;
-    gap: 6px;
-}
-
-.slide-15-kpi-card strong {
-    font-size: 28px;
-    color: #0F172A;
-}
-
-.slide-15-kpi-card span {
-    font-size: 12px;
-    font-weight: 700;
-    color: #475569;
 }
 
 .panel-kicker {
@@ -300,6 +250,7 @@
 }
 
 .slide-15-sim-console {
+    flex: 1;
     min-height: 0;
     display: grid;
     grid-template-rows: auto minmax(0, 1fr) auto;
