@@ -2250,147 +2250,155 @@
                                     </div>
                                 </div>
 
-                                <div class="slide-15-panorama">
-                                    <section class="slide-15-panel slide-15-topology-panel">
-                                        <div class="slide-15-panel-head">
-                                            <div>
-                                                <span class="panel-kicker">Monitoring Panel</span>
-                                                <h4>节点与工作负载全景</h4>
+                                <div class="slide-15-sim-console">
+                                    <div class="slide-15-sim-toolbar">
+                                        <div class="slide-15-sim-title">
+                                            <span class="panel-kicker">Resource Overview</span>
+                                            <h4>服务器资源总览表</h4>
+                                        </div>
+                                        <div class="slide-15-sim-pills">
+                                            <span>Host Total 07</span>
+                                            <span>Realtime Polling</span>
+                                            <span>Cluster East</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-15-sim-table-card">
+                                        <div class="slide-15-sim-table-head">
+                                            <span>主机名</span>
+                                            <span>运行天数</span>
+                                            <span>健康值</span>
+                                            <span>CPU</span>
+                                            <span>内存</span>
+                                            <span>GPU 使用率</span>
+                                            <span>磁盘使用率</span>
+                                            <span>下载带宽</span>
+                                        </div>
+
+                                        <div class="slide-15-sim-table-body">
+                                            <div class="slide-15-sim-row">
+                                                <div class="sim-host-cell">
+                                                    <strong>k8s-node1</strong>
+                                                    <span>192.168.10.13:9100</span>
+                                                </div>
+                                                <strong class="sim-green">338.01</strong>
+                                                <span class="sim-pill sim-warn">89.8</span>
+                                                <strong class="sim-blue">8 Core</strong>
+                                                <strong class="sim-blue">29 Gi</strong>
+                                                <div class="sim-meter yellow"><span style="width: 59%"></span><em>59.6%</em></div>
+                                                <div class="sim-meter amber"><span style="width: 42%"></span><em>42.1%</em></div>
+                                                <span class="sim-bandwidth sim-warm">57.01 MiBps</span>
                                             </div>
-                                            <span class="panel-chip">Realtime Sync</span>
-                                        </div>
 
-                                        <div class="slide-15-cluster-row">
-                                            <article class="slide-15-cluster-card accent-blue">
-                                                <span class="cluster-label">Cluster East</span>
-                                                <strong>42 Workloads</strong>
-                                                <p>训练集群，关注 GPU 分配率、作业等待和副本稳定性。</p>
-                                            </article>
-                                            <article class="slide-15-cluster-card accent-green">
-                                                <span class="cluster-label">Cluster South</span>
-                                                <strong>58 Workloads</strong>
-                                                <p>推理集群，承担多租户在线服务与弹性扩缩容压力。</p>
-                                            </article>
-                                            <article class="slide-15-cluster-card accent-purple">
-                                                <span class="cluster-label">Edge Region</span>
-                                                <strong>68 Endpoints</strong>
-                                                <p>边缘推理区域，主要监控链路延迟、网关路由与镜像版本。</p>
-                                            </article>
-                                        </div>
+                                            <div class="slide-15-sim-row">
+                                                <div class="sim-host-cell">
+                                                    <strong>k8s-node5</strong>
+                                                    <span>192.168.10.19:9100</span>
+                                                </div>
+                                                <strong class="sim-green">0.34</strong>
+                                                <span class="sim-pill sim-ok">96.4</span>
+                                                <strong class="sim-blue">24 Core</strong>
+                                                <strong class="sim-blue">55 Gi</strong>
+                                                <div class="sim-meter green"><span style="width: 33%"></span><em>33.7%</em></div>
+                                                <div class="sim-meter yellow"><span style="width: 52%"></span><em>52.1%</em></div>
+                                                <span class="sim-bandwidth">5.85 MiBps</span>
+                                            </div>
 
-                                        <div class="slide-15-signal-river">
-                                            <div class="slide-15-signal-grid"></div>
-                                            <svg viewBox="0 0 760 240" aria-hidden="true">
-                                                <defs>
-                                                    <linearGradient id="slide-15-area-blue" x1="0%" y1="0%" x2="0%" y2="100%">
-                                                        <stop offset="0%" stop-color="rgba(30, 96, 248, 0.28)" />
-                                                        <stop offset="100%" stop-color="rgba(30, 96, 248, 0)" />
-                                                    </linearGradient>
-                                                    <linearGradient id="slide-15-line-blue" x1="0%" y1="0%" x2="100%" y2="0%">
-                                                        <stop offset="0%" stop-color="#60A5FA" />
-                                                        <stop offset="100%" stop-color="#1E60F8" />
-                                                    </linearGradient>
-                                                    <linearGradient id="slide-15-line-green" x1="0%" y1="0%" x2="100%" y2="0%">
-                                                        <stop offset="0%" stop-color="#6EE7B7" />
-                                                        <stop offset="100%" stop-color="#10B981" />
-                                                    </linearGradient>
-                                                </defs>
-                                                <path d="M28 188 C96 154, 156 164, 212 122 S348 74, 420 102 S558 186, 732 96 L732 220 L28 220 Z" fill="url(#slide-15-area-blue)"></path>
-                                                <path class="slide-15-chart-line" d="M28 188 C96 154, 156 164, 212 122 S348 74, 420 102 S558 186, 732 96" stroke="url(#slide-15-line-blue)" stroke-width="6" fill="none" stroke-linecap="round"></path>
-                                                <path class="slide-15-chart-line delay" d="M28 170 C102 154, 158 138, 216 148 S348 166, 426 132 S572 106, 732 142" stroke="url(#slide-15-line-green)" stroke-width="5" fill="none" stroke-linecap="round"></path>
-                                                <circle cx="212" cy="122" r="8" fill="#1E60F8"></circle>
-                                                <circle cx="420" cy="102" r="8" fill="#10B981"></circle>
-                                                <circle cx="732" cy="96" r="8" fill="#1E60F8"></circle>
+                                            <div class="slide-15-sim-row">
+                                                <div class="sim-host-cell">
+                                                    <strong>k8s-node4</strong>
+                                                    <span>192.168.10.18:9100</span>
+                                                </div>
+                                                <strong class="sim-green">27.3</strong>
+                                                <span class="sim-pill sim-ok">98.3</span>
+                                                <strong class="sim-blue">24 Core</strong>
+                                                <strong class="sim-blue">31 Gi</strong>
+                                                <div class="sim-meter yellow"><span style="width: 41%"></span><em>41.5%</em></div>
+                                                <div class="sim-meter orange"><span style="width: 79%"></span><em>79.4%</em></div>
+                                                <span class="sim-bandwidth">7.87 MiBps</span>
+                                            </div>
+
+                                            <div class="slide-15-sim-row">
+                                                <div class="sim-host-cell">
+                                                    <strong>k8s-node6</strong>
+                                                    <span>192.168.10.20:9100</span>
+                                                </div>
+                                                <strong class="sim-green">13.16</strong>
+                                                <span class="sim-pill sim-ok">98.5</span>
+                                                <strong class="sim-blue">20 Core</strong>
+                                                <strong class="sim-blue">94 Gi</strong>
+                                                <div class="sim-meter green"><span style="width: 12%"></span><em>12.2%</em></div>
+                                                <div class="sim-meter yellow"><span style="width: 42%"></span><em>42.2%</em></div>
+                                                <span class="sim-bandwidth">13.95 MiBps</span>
+                                            </div>
+
+                                            <div class="slide-15-sim-row">
+                                                <div class="sim-host-cell">
+                                                    <strong>k8s-node8</strong>
+                                                    <span>192.168.0.107:9100</span>
+                                                </div>
+                                                <strong class="sim-green">122.25</strong>
+                                                <span class="sim-pill sim-ok">98.7</span>
+                                                <strong class="sim-blue">16 Core</strong>
+                                                <strong class="sim-blue">63 Gi</strong>
+                                                <div class="sim-meter green"><span style="width: 10%"></span><em>10.9%</em></div>
+                                                <div class="sim-meter green"><span style="width: 23%"></span><em>22.9%</em></div>
+                                                <span class="sim-bandwidth">5.38 MiBps</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-15-sim-chart-grid">
+                                        <article class="slide-15-sim-chart-card list-card">
+                                            <div class="sim-chart-head">
+                                                <h5>最近 7 天 P99 资源使用率</h5>
+                                            </div>
+                                            <div class="sim-ranking-list">
+                                                <div class="sim-ranking-item"><span>k8s-node7</span><strong>92.4%</strong></div>
+                                                <div class="sim-ranking-item"><span>k8s-node6</span><strong>88.1%</strong></div>
+                                                <div class="sim-ranking-item"><span>k8s-node8</span><strong>84.7%</strong></div>
+                                                <div class="sim-ranking-item"><span>k8s-node2</span><strong>79.5%</strong></div>
+                                            </div>
+                                        </article>
+
+                                        <article class="slide-15-sim-chart-card">
+                                            <div class="sim-chart-head">
+                                                <h5>整体总负载与平均 CPU 使用率</h5>
+                                                <span>09:05 - 09:55</span>
+                                            </div>
+                                            <svg viewBox="0 0 320 140" aria-hidden="true">
+                                                <path class="sim-grid-line" d="M18 20 H302 M18 56 H302 M18 92 H302 M18 128 H302" />
+                                                <path class="sim-line orange" d="M24 54 C66 55, 94 54, 136 54 S218 54, 296 54" />
+                                                <path class="sim-line blue" d="M24 108 C64 101, 92 109, 138 104 S220 98, 296 106" />
                                             </svg>
-                                            <div class="slide-15-river-legend">
-                                                <span><i class="legend-dot blue"></i> API Calls</span>
-                                                <span><i class="legend-dot green"></i> Healthy Pods</span>
-                                                <span><i class="legend-dot cyan"></i> Alert Correlation</span>
-                                            </div>
-                                            <div class="slide-15-river-callout">
-                                                <strong>Peak Window</strong>
-                                                <p>高峰时段调用量抬升 34%，网关自动回退策略在 90 秒内完成稳定收敛。</p>
-                                            </div>
-                                        </div>
-                                    </section>
+                                        </article>
 
-                                    <section class="slide-15-panel slide-15-resource-panel">
-                                        <div class="slide-15-panel-head">
-                                            <div>
-                                                <span class="panel-kicker">Resource Analysis</span>
-                                                <h4>分配率与使用率并行观察</h4>
+                                        <article class="slide-15-sim-chart-card">
+                                            <div class="sim-chart-head">
+                                                <h5>整体总内存与平均内存使用率</h5>
+                                                <span>09:05 - 09:55</span>
                                             </div>
-                                            <span class="panel-chip">Allocation vs Usage</span>
-                                        </div>
+                                            <svg viewBox="0 0 320 140" aria-hidden="true">
+                                                <path class="sim-grid-line" d="M18 20 H302 M18 56 H302 M18 92 H302 M18 128 H302" />
+                                                <path class="sim-line orange" d="M24 36 C70 36, 94 36, 142 36 S230 36, 296 36" />
+                                                <path class="sim-line blue" d="M24 94 C72 92, 98 94, 142 93 S222 92, 296 94" />
+                                                <path class="sim-line cyan" d="M24 126 C66 126, 98 126, 144 126 S226 126, 296 126" />
+                                            </svg>
+                                        </article>
 
-                                        <div class="slide-15-usage-list">
-                                            <div class="slide-15-usage-row">
-                                                <div class="slide-15-usage-meta">
-                                                    <span>GPU Pool</span>
-                                                    <strong>84% / 67%</strong>
-                                                </div>
-                                                <div class="slide-15-usage-track allocated"><span style="width: 84%"></span></div>
-                                                <div class="slide-15-usage-track actual"><span style="width: 67%"></span></div>
+                                        <article class="slide-15-sim-chart-card">
+                                            <div class="sim-chart-head">
+                                                <h5>整体总磁盘与平均磁盘使用率</h5>
+                                                <span>09:05 - 09:55</span>
                                             </div>
-                                            <div class="slide-15-usage-row">
-                                                <div class="slide-15-usage-meta">
-                                                    <span>CPU</span>
-                                                    <strong>72% / 58%</strong>
-                                                </div>
-                                                <div class="slide-15-usage-track allocated"><span style="width: 72%"></span></div>
-                                                <div class="slide-15-usage-track actual"><span style="width: 58%"></span></div>
-                                            </div>
-                                            <div class="slide-15-usage-row">
-                                                <div class="slide-15-usage-meta">
-                                                    <span>Memory</span>
-                                                    <strong>76% / 63%</strong>
-                                                </div>
-                                                <div class="slide-15-usage-track allocated"><span style="width: 76%"></span></div>
-                                                <div class="slide-15-usage-track actual"><span style="width: 63%"></span></div>
-                                            </div>
-                                            <div class="slide-15-usage-row">
-                                                <div class="slide-15-usage-meta">
-                                                    <span>Storage I/O</span>
-                                                    <strong>61% / 49%</strong>
-                                                </div>
-                                                <div class="slide-15-usage-track allocated"><span style="width: 61%"></span></div>
-                                                <div class="slide-15-usage-track actual"><span style="width: 49%"></span></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-15-latency-card">
-                                            <div class="latency-pill">
-                                                <span>P95 Route Latency</span>
-                                                <strong>182 ms</strong>
-                                            </div>
-                                            <div class="latency-pill">
-                                                <span>Failed Requests</span>
-                                                <strong>0.14%</strong>
-                                            </div>
-                                            <div class="latency-pill">
-                                                <span>Config Drift</span>
-                                                <strong>2 changes</strong>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-
-                                <div class="slide-15-trace-grid">
-                                    <article class="slide-15-trace-card accent-blue">
-                                        <span class="trace-kicker">API Audit</span>
-                                        <h4>每一次请求都可定位到租户、模型、Key 与审查策略</h4>
-                                        <p>调用链路与内容审查结果自动落库，方便回看异常输出、计费争议与安全事件。</p>
-                                    </article>
-                                    <article class="slide-15-trace-card accent-green">
-                                        <span class="trace-kicker">Instance Lifecycle</span>
-                                        <h4>实例创建、扩缩容、重启、暂停与恢复都有完整时间线</h4>
-                                        <p>平台团队可以直接判断是资源不足、镜像变更还是策略触发导致服务状态波动。</p>
-                                    </article>
-                                    <article class="slide-15-trace-card accent-purple">
-                                        <span class="trace-kicker">Change Replay</span>
-                                        <h4>配置差异、版本变更与操作人责任链形成闭环追踪</h4>
-                                        <p>把发布动作、工单记录与告警事件对齐，避免“有问题但找不到变更源头”。</p>
-                                    </article>
+                                            <svg viewBox="0 0 320 140" aria-hidden="true">
+                                                <path class="sim-grid-line" d="M18 20 H302 M18 56 H302 M18 92 H302 M18 128 H302" />
+                                                <path class="sim-line orange" d="M24 26 C66 26, 98 26, 142 26 S220 26, 296 26" />
+                                                <path class="sim-line blue" d="M24 84 C70 84, 100 84, 142 84 S224 84, 296 84" />
+                                                <path class="sim-line cyan" d="M24 126 C70 126, 100 126, 142 126 S224 126, 296 126" />
+                                            </svg>
+                                        </article>
+                                    </div>
                                 </div>
                             </div>
                         </div>
