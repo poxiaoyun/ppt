@@ -3,7 +3,7 @@
    风格：白底科技卡片墙，突出八大功能模块
    ========================================= */
 
-#slide-6 {
+#slide-7 {
     position: absolute;
     overflow: hidden;
     padding: 74px 92px 40px;
@@ -131,7 +131,7 @@
         border-color 0.35s ease;
 }
 
-#slide-6 .slide-06-card::before {
+#slide-7 .slide-06-card::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -226,56 +226,56 @@
     background: currentColor;
 }
 
-#slide-6 .slide-06-card.accent-blue {
+#slide-7 .slide-06-card.accent-blue {
     background: linear-gradient(180deg, rgba(254, 255, 255, 0.99), rgba(244, 248, 255, 0.94));
     border-color: rgba(30, 96, 248, 0.1);
     box-shadow: 0 20px 36px rgba(30, 96, 248, 0.05);
     color: #2563EB;
 }
 
-#slide-6 .slide-06-card.accent-green {
+#slide-7 .slide-06-card.accent-green {
     background: linear-gradient(180deg, rgba(253, 255, 255, 0.99), rgba(242, 247, 255, 0.94));
     border-color: rgba(37, 99, 235, 0.09);
     box-shadow: 0 20px 36px rgba(37, 99, 235, 0.05);
     color: #1D4ED8;
 }
 
-#slide-6 .slide-06-card.accent-purple {
+#slide-7 .slide-06-card.accent-purple {
     background: linear-gradient(180deg, rgba(252, 254, 255, 0.99), rgba(239, 245, 255, 0.94));
     border-color: rgba(30, 64, 175, 0.09);
     box-shadow: 0 20px 36px rgba(30, 64, 175, 0.05);
     color: #1E40AF;
 }
 
-#slide-6 .slide-06-card.accent-indigo {
+#slide-7 .slide-06-card.accent-indigo {
     background: linear-gradient(180deg, rgba(251, 253, 255, 0.99), rgba(237, 243, 255, 0.95));
     border-color: rgba(30, 58, 138, 0.09);
     box-shadow: 0 20px 36px rgba(30, 58, 138, 0.05);
     color: #1E3A8A;
 }
 
-#slide-6 .slide-06-card.accent-cyan {
+#slide-7 .slide-06-card.accent-cyan {
     background: linear-gradient(180deg, rgba(253, 255, 255, 0.99), rgba(241, 246, 255, 0.94));
     border-color: rgba(30, 64, 175, 0.09);
     box-shadow: 0 20px 36px rgba(30, 64, 175, 0.05);
     color: #1E40AF;
 }
 
-#slide-6 .slide-06-card.accent-orange {
+#slide-7 .slide-06-card.accent-orange {
     background: linear-gradient(180deg, rgba(252, 254, 255, 0.99), rgba(239, 244, 255, 0.94));
     border-color: rgba(29, 78, 216, 0.09);
     box-shadow: 0 20px 36px rgba(29, 78, 216, 0.05);
     color: #1D4ED8;
 }
 
-#slide-6 .slide-06-card.accent-teal {
+#slide-7 .slide-06-card.accent-teal {
     background: linear-gradient(180deg, rgba(251, 253, 255, 0.99), rgba(236, 242, 255, 0.95));
     border-color: rgba(30, 58, 138, 0.09);
     box-shadow: 0 20px 36px rgba(30, 58, 138, 0.05);
     color: #1E3A8A;
 }
 
-#slide-6 .slide-06-card.accent-slate {
+#slide-7 .slide-06-card.accent-slate {
     background: linear-gradient(180deg, rgba(250, 253, 255, 0.99), rgba(234, 240, 252, 0.95));
     border-color: rgba(30, 58, 138, 0.09);
     box-shadow: 0 20px 36px rgba(30, 58, 138, 0.05);
@@ -307,10 +307,10 @@
     transition: opacity 0.75s ease 0.96s, transform 0.75s ease 0.96s;
 }
 
-#slide-6.active .slide-06-header,
-#slide-6.active .slide-06-summary-strip,
-#slide-6.active .slide-06-card,
-#slide-6.active .slide-06-footer {
+#slide-7.active .slide-06-header,
+#slide-7.active .slide-06-summary-strip,
+#slide-7.active .slide-06-card,
+#slide-7.active .slide-06-footer {
     opacity: 1;
     transform: translate(0, 0) scale(1);
 }

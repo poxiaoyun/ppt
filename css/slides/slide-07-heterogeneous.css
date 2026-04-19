@@ -3,10 +3,12 @@
    风格：白底科技流程图，突出三段式算力治理链路
    ========================================= */
 
-#slide-7 {
+#slide-6 {
     position: absolute;
     overflow: hidden;
-    padding: 68px 88px 28px;
+    padding: 68px 88px 60px;
+    display: flex;
+    flex-direction: column;
     color: var(--color-text-main);
     background:
         radial-gradient(circle at 14% 14%, rgba(30, 96, 248, 0.12) 0%, rgba(30, 96, 248, 0) 26%),
@@ -79,7 +81,7 @@
     position: relative;
     display: inline-block;
     margin-bottom: 10px;
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 800;
     color: #0F172A;
 }
@@ -98,7 +100,7 @@
 .slide-07-subtitle {
     max-width: 1160px;
     margin-top: 12px;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.55;
     color: #475569;
 }
@@ -122,7 +124,9 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) 88px minmax(0, 1fr) 88px minmax(0, 1fr);
     align-items: stretch;
+    flex: 1;
     gap: 0;
+    min-height: 0;
 }
 
 .slide-07-stage {
@@ -217,7 +221,7 @@
     position: relative;
     z-index: 1;
     margin-bottom: 14px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     color: #475569;
 }
@@ -264,7 +268,7 @@
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.64);
     border: 1px solid rgba(255, 255, 255, 0.72);
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
     color: #1E3A8A;
     text-align: center;
@@ -279,7 +283,7 @@
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.78);
     border: 1px solid rgba(148, 163, 184, 0.18);
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 700;
     color: #2563EB;
 }
@@ -295,12 +299,12 @@
 .slide-07-compact-card strong {
     display: block;
     margin-bottom: 4px;
-    font-size: 13px;
+    font-size: 18px;
     color: #0F172A;
 }
 
 .slide-07-compact-card span {
-    font-size: 11px;
+    font-size: 16px;
     line-height: 1.35;
     color: #64748B;
 }
@@ -334,17 +338,17 @@
     border-radius: 999px;
     background: linear-gradient(135deg, rgba(15, 118, 110, 0.94), rgba(16, 185, 129, 0.82));
     color: #ffffff;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
     letter-spacing: 0.06em;
 }
 
 .slide-07-resource-header p {
-    max-width: 290px;
-    font-size: 13px;
+    max-width: 390px;
+    font-size: 14px;
     line-height: 1.4;
     color: #475569;
-    text-align: center;
+    text-align: left;
 }
 
 .slide-07-resource-modes {
@@ -379,7 +383,7 @@
     padding: 0 10px;
     border-radius: 999px;
     color: #ffffff;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 800;
     letter-spacing: 0.05em;
 }
@@ -393,7 +397,7 @@
 }
 
 .slide-07-mode-kicker {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.06em;
     color: #64748b;
@@ -409,7 +413,7 @@
 
 .slide-07-resource-mode p {
     margin-bottom: 10px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.45;
     color: #475569;
 }
@@ -461,12 +465,12 @@
 .slide-07-scenario-card strong {
     display: block;
     margin-bottom: 5px;
-    font-size: 13px;
+    font-size: 16px;
     color: #0f172a;
 }
 
 .slide-07-scenario-card span {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.4;
     color: #64748b;
 }
@@ -493,7 +497,7 @@
 .slide-07-stage li {
     position: relative;
     padding-left: 16px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.4;
     color: #475569;
 }
@@ -542,26 +546,26 @@
 }
 
 .slide-07-footer {
-    margin-top: 16px;
-    padding: 18px 28px;
+    margin-top: 24px;
+    padding: 24px 36px;
     border-radius: 18px;
-    background: linear-gradient(135deg, #1E60F8 0%, #0F172A 100%);
-    box-shadow: 0 22px 40px rgba(15, 23, 42, 0.12);
+    background: linear-gradient(135deg, #1858F2, #0A1128);
+    box-shadow: 0 18px 36px rgba(10, 17, 40, 0.18);
     color: #FFFFFF;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 800;
     text-align: center;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.75s ease 0.9s, transform 0.75s ease 0.9s;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease 0.88s, transform 0.8s ease 0.88s;
 }
 
-#slide-7.active .slide-07-header,
-#slide-7.active .slide-07-insight-text,
-#slide-7.active .slide-07-stage,
-#slide-7.active .slide-07-pipeline-arrow,
-#slide-7.active .slide-07-footer {
+#slide-6.active .slide-07-header,
+#slide-6.active .slide-07-insight-text,
+#slide-6.active .slide-07-stage,
+#slide-6.active .slide-07-pipeline-arrow,
+#slide-6.active .slide-07-footer {
     opacity: 1;
     transform: translate(0, 0) scale(1);
 }
