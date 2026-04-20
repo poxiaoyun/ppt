@@ -45,35 +45,6 @@
     gap: 4px;
 }
 
-.market-toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4px;
-}
-
-.market-toolbar-title {
-    font-size: 8px;
-    font-weight: 800;
-    color: #0f172a;
-    letter-spacing: 0.02em;
-}
-
-.market-toolbar-meta {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 6px;
-    color: #64748b;
-}
-
-.market-toolbar-meta span {
-    padding: 1px 4px;
-    border-radius: 999px;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-}
-
 .slide-08-header {
     max-width: 1240px;
     margin-bottom: 14px;
@@ -93,55 +64,50 @@
 
 .slide-08-title::after {
 
-.market-chips {
-    display: flex;
-    flex-wrap: wrap;
+.market-summary-strip {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 3px;
 }
 
-.market-chips span {
-    padding: 1px 4px;
-    border-radius: 999px;
+.market-summary-card {
+    min-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1px;
+    padding: 2px 4px;
+    border-radius: 6px;
     border: 1px solid #e2e8f0;
-    background: #fff;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 247, 255, 0.95));
     color: #64748b;
     font-size: 5px;
     font-weight: 800;
+    line-height: 1;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    overflow: hidden;
 }
 
-.market-chips span.active {
-    background: #1e60f8;
-    border-color: #1e60f8;
+.market-summary-card.active {
+    background: linear-gradient(135deg, rgba(30, 96, 248, 0.96), rgba(59, 130, 246, 0.92));
     color: #fff;
+    border-color: rgba(30, 96, 248, 0.95);
 }
 
-.market-stats {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 4px;
-}
-
-.market-stat {
-    padding: 4px 5px;
-    border-radius: 6px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 247, 255, 0.95));
-    border: 1px solid #e2e8f0;
-}
-
-.market-stat strong {
+.market-summary-card.stat strong {
     display: block;
-    font-size: 10px;
-    line-height: 1.1;
-    color: #0f172a;
+    font-size: 8px;
+    line-height: 1;
+    color: inherit;
 }
 
-.market-stat span {
-    font-size: 5px;
-    color: #64748b;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+.market-summary-card.stat span {
+    display: block;
+    font-size: 4px;
+    line-height: 1;
+    opacity: 0.88;
 }
     content: '';
     position: absolute;
