@@ -63,52 +63,6 @@
 }
 
 .slide-08-title::after {
-
-.market-summary-strip {
-    display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 3px;
-}
-
-.market-summary-card {
-    min-height: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1px;
-    padding: 2px 4px;
-    border-radius: 6px;
-    border: 1px solid #e2e8f0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 247, 255, 0.95));
-    color: #64748b;
-    font-size: 5px;
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    overflow: hidden;
-}
-
-.market-summary-card.active {
-    background: linear-gradient(135deg, rgba(30, 96, 248, 0.96), rgba(59, 130, 246, 0.92));
-    color: #fff;
-    border-color: rgba(30, 96, 248, 0.95);
-}
-
-.market-summary-card.stat strong {
-    display: block;
-    font-size: 8px;
-    line-height: 1;
-    color: inherit;
-}
-
-.market-summary-card.stat span {
-    display: block;
-    font-size: 4px;
-    line-height: 1;
-    opacity: 0.88;
-}
     content: '';
     position: absolute;
     left: 0;
@@ -553,156 +507,176 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
 }
 
-.market-search {
+/* 搜索栏 */
+.mkt-search-bar {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 4px 6px;
-    border-radius: 5px;
+    padding: 3px 6px;
+    border-radius: 4px;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
+}
+
+.mkt-search-ico {
+    width: 8px;
+    height: 8px;
+    border: 1.5px solid #94a3b8;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.mkt-search-ico::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 4px;
+    height: 1.5px;
+    background: #94a3b8;
+    transform: rotate(45deg);
+    border-radius: 1px;
+}
+
+.mkt-search-text {
+    font-size: 6px;
     color: #94a3b8;
-    font-size: 7px;
     font-family: monospace;
 }
 
-.market-search-icon {
-    color: #1e60f8;
-    font-size: 8px;
-    font-weight: 800;
-}
-
-.market-featured {
+/* 分类 Chips */
+.mkt-chips {
     display: flex;
-    flex-direction: column;
-    gap: 3px;
-    padding: 6px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, rgba(30, 96, 248, 0.96), rgba(17, 24, 39, 0.96));
-    color: #fff;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.market-featured-badge {
-    width: fit-content;
-    padding: 1px 4px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.16);
-    font-size: 6px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.market-featured strong {
-    font-size: 9px;
-    line-height: 1.1;
-}
-
-.market-featured p {
-    margin: 0;
-    font-size: 6px;
-    line-height: 1.25;
-    color: rgba(255, 255, 255, 0.88);
-}
-
-.market-featured-meta {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-top: 1px;
-}
-
-.market-featured-meta span {
-    font-size: 6px;
-    color: rgba(255, 255, 255, 0.84);
-}
-
-.market-featured-meta button {
-    margin-left: auto;
-    border: 0;
-    border-radius: 999px;
-    padding: 2px 6px;
-    background: #fff;
-    color: #1e60f8;
-    font-size: 6px;
-    font-weight: 800;
-}
-
-.market-list {
-    display: flex;
-    flex-direction: column;
     gap: 3px;
 }
 
-.market-item {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 5px;
-    align-items: center;
-    padding: 3px 5px;
-    border-radius: 6px;
-    border: 1px solid #e2e8f0;
-    background: rgba(255, 255, 255, 0.96);
-}
-
-.market-item.compact {
-    background: linear-gradient(180deg, rgba(248, 251, 255, 0.98), rgba(239, 246, 255, 0.96));
-}
-
-.market-tag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 24px;
-    padding: 2px 4px;
+.mkt-chip {
+    padding: 2px 5px;
     border-radius: 999px;
-    font-size: 6px;
-    font-weight: 800;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
-.market-tag.blue { background: rgba(30, 96, 248, 0.12); color: #1e60f8; }
-.market-tag.teal { background: rgba(16, 185, 129, 0.12); color: #0f766e; }
-.market-tag.amber { background: rgba(245, 158, 11, 0.14); color: #b45309; }
-
-.market-item strong {
-    display: block;
-    font-size: 7px;
-    line-height: 1.1;
-    color: #0f172a;
-}
-
-.market-item em {
-    display: block;
-    margin-top: 1px;
-    font-size: 6px;
-    line-height: 1.1;
+    font-size: 5.5px;
+    font-weight: 700;
     color: #64748b;
-    font-style: normal;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    line-height: 1.2;
 }
 
-.market-action {
-    font-size: 6px;
+.mkt-chip.active {
+    background: linear-gradient(135deg, #1e60f8, #3b82f6);
+    color: #fff;
+    border-color: #1e60f8;
+}
+
+/* 指标行 */
+.mkt-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+.mkt-metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: 3px 2px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #f0f4ff 0%, #eef2ff 100%);
+    border: 1px solid #dbeafe;
+}
+
+.mkt-metric strong {
+    font-size: 9px;
     font-weight: 800;
-    color: #1e60f8;
-    white-space: nowrap;
+    color: #1e40af;
+    line-height: 1;
 }
 
-.market-footer {
+.mkt-metric span {
+    font-size: 5px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* 应用卡网格 */
+.mkt-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+.mkt-app {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 5px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #e2e8f0;
+    transition: box-shadow 0.15s;
+}
+
+.mkt-app:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.mkt-app-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.mkt-app-icon.blue   { background: linear-gradient(135deg, #3b82f6, #1e40af); }
+.mkt-app-icon.cyan   { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.mkt-app-icon.purple { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+.mkt-app-icon.green  { background: linear-gradient(135deg, #10b981, #047857); }
+.mkt-app-icon.slate  { background: linear-gradient(135deg, #64748b, #475569); }
+.mkt-app-icon.amber  { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
+.mkt-app-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    overflow: hidden;
+}
+
+.mkt-app-info strong {
+    font-size: 7px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mkt-app-info span {
+    font-size: 5.5px;
+    color: #94a3b8;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* 底部状态栏 */
+.mkt-statusbar {
     display: flex;
     justify-content: space-between;
-    gap: 6px;
+    gap: 4px;
     margin-top: auto;
-    padding-top: 2px;
+    padding-top: 3px;
     border-top: 1px solid #e2e8f0;
-    color: #64748b;
     font-size: 5px;
-    letter-spacing: 0.04em;
+    color: #94a3b8;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
 }
 
