@@ -66,17 +66,17 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -14px;
-    width: 60px;
-    padding: 5px 6px;
-    border-radius: 3px;
-    background: var(--color-primary);
+    bottom: -12px;
+    width: 62px;
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #1E60F8, #F59E0B);;
 }
 
 .slide-08-subtitle {
-    max-width: 1160px;
+    max-width: 1260px;
     margin-top: 10px;
-    font-size: 19px;
+    font-size: 20px;
     line-height: 1.55;
     color: #475569;
 }
@@ -147,14 +147,14 @@
 
 .slide-08-capability-card h3 {
     margin-bottom: 3px;
-    font-size: 19px;
+    font-size: 22px;
     font-weight: 800;
     color: #0F172A;
     line-height: 1.12;
 }
 
 .slide-08-capability-card p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.22;
     color: #475569;
 }
@@ -665,7 +665,7 @@
 }
 
 .mkt-app-info span {
-    font-size: 5px;
+    font-size: 5.5px;
     color: #94a3b8;
     line-height: 1;
     text-transform: uppercase;

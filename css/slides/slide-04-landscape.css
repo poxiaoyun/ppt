@@ -93,11 +93,11 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -14px;
-    width: 60px;
+    bottom: -12px;
+    width: 62px;
     height: 6px;
-    border-radius: 3px;
-    background: var(--color-primary);
+    border-radius: 999px;
+    background: linear-gradient(90deg, #1E60F8, #F59E0B);;
 }
 
 .slide-04-subtitle {

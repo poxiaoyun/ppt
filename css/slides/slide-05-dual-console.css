@@ -35,11 +35,11 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -14px;
-    width: 64px;
+    bottom: -12px;
+    width: 62px;
     height: 6px;
     border-radius: 999px;
-    background: linear-gradient(90deg, var(--color-primary), #6EA8FF);
+    background: linear-gradient(90deg, #1E60F8, #F59E0B);
 }
 
 .slide-05-subtitle {
