@@ -607,30 +607,30 @@
 .mkt-grid {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 3px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2px;
 }
 
 .mkt-app {
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding: 4px 5px;
-    border-radius: 6px;
+    gap: 3px;
+    padding: 2px 3px;
+    border-radius: 4px;
     background: rgba(255, 255, 255, 0.96);
     border: 1px solid #e2e8f0;
     transition: box-shadow 0.15s;
 }
 
 .mkt-app:hover {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
 .mkt-app-icon {
-    width: 18px;
-    height: 18px;
-    border-radius: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
     flex-shrink: 0;
 }
 
@@ -640,16 +640,22 @@
 .mkt-app-icon.green  { background: linear-gradient(135deg, #10b981, #047857); }
 .mkt-app-icon.slate  { background: linear-gradient(135deg, #64748b, #475569); }
 .mkt-app-icon.amber  { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.mkt-app-icon.rose   { background: linear-gradient(135deg, #f43f5e, #be123c); }
+.mkt-app-icon.indigo { background: linear-gradient(135deg, #6366f1, #4338ca); }
+.mkt-app-icon.teal   { background: linear-gradient(135deg, #14b8a6, #0d9488); }
+.mkt-app-icon.orange { background: linear-gradient(135deg, #f97316, #c2410c); }
+.mkt-app-icon.sky    { background: linear-gradient(135deg, #0ea5e9, #0369a1); }
+.mkt-app-icon.lime   { background: linear-gradient(135deg, #84cc16, #4d7c0f); }
 
 .mkt-app-info {
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 0px;
     overflow: hidden;
 }
 
 .mkt-app-info strong {
-    font-size: 7px;
+    font-size: 6px;
     font-weight: 700;
     color: #0f172a;
     line-height: 1.1;
@@ -659,7 +665,7 @@
 }
 
 .mkt-app-info span {
-    font-size: 5.5px;
+    font-size: 5px;
     color: #94a3b8;
     line-height: 1;
     text-transform: uppercase;
