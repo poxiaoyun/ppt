@@ -191,11 +191,98 @@
 }
 
 .slide-12-shell-header {
+    display: grid;
+    gap: 10px;
+    margin: -18px -18px 12px;
+    padding: 10px 14px 12px;
+    border-bottom: 1px solid rgba(203, 213, 225, 0.94);
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.98), rgba(239, 244, 250, 0.96));
+}
+
+.slide-12-browser-tabs {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.slide-12-browser-tab {
+    max-width: 188px;
+    min-height: 32px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px 12px 0 0;
+    background: rgba(226, 232, 240, 0.92);
+    border: 1px solid rgba(203, 213, 225, 0.96);
+    border-bottom: none;
+    color: #64748B;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.slide-12-browser-tab.active {
+    background: rgba(255, 255, 255, 0.98);
+    color: #0F172A;
+}
+
+.slide-12-browser-tab.ghost {
+    opacity: 0.82;
+}
+
+.slide-12-browser-favicon {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #1E60F8, #8B5CF6);
+    flex: 0 0 auto;
+}
+
+.slide-12-browser-favicon.alt {
+    background: linear-gradient(135deg, #10B981, #38BDF8);
+}
+
+.slide-12-browser-toolbar {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.slide-12-browser-nav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 12px;
-    margin-bottom: 10px;
+    gap: 8px;
+}
+
+.slide-12-browser-nav span {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(203, 213, 225, 0.96);
+    color: #64748B;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.slide-12-browser-address {
+    min-height: 34px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(203, 213, 225, 0.96);
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .slide-12-shell-dots {
@@ -617,7 +704,7 @@
 .slide-12-side-panel {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 14px;
     min-height: 0;
     height: 100%;
     align-self: stretch;
@@ -625,7 +712,7 @@
 
 .slide-12-api-card {
     padding: 14px 14px 10px;
-    margin-top: auto;
+    flex: 0 0 auto;
 }
 
 .slide-12-card-head {
@@ -661,18 +748,21 @@
 .slide-12-feature-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
     gap: 12px;
     min-height: 0;
     flex: 1;
-    align-content: start;
-    align-items: start;
-    grid-auto-rows: max-content;
+    align-content: stretch;
+    align-items: stretch;
 }
 
 .slide-12-feature-card {
     position: relative;
     padding: 16px 16px 14px;
-    height: 114px;
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
@@ -733,6 +823,7 @@
     font-size: 14px;
     line-height: 1.5;
     color: #334155;
+    flex: 1;
 }
 
 .slide-12-api-list {

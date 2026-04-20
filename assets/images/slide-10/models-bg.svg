@@ -1,0 +1,121 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="520" rx="36" fill="url(#surface)"/>
+
+  <g opacity="0.42">
+    <circle cx="168" cy="104" r="166" fill="url(#glowA)"/>
+    <circle cx="734" cy="390" r="210" fill="url(#glowB)"/>
+    <circle cx="558" cy="176" r="144" fill="url(#glowC)"/>
+  </g>
+
+  <g opacity="0.14" stroke="url(#grid)" stroke-width="2">
+    <path d="M56 118H846"/>
+    <path d="M74 202H826"/>
+    <path d="M52 302H848"/>
+    <path d="M96 410H804"/>
+    <path d="M150 42V474"/>
+    <path d="M336 30V488"/>
+    <path d="M544 24V496"/>
+    <path d="M734 44V476"/>
+  </g>
+
+  <g filter="url(#softBlur)">
+    <path d="M-36 378C108 264 240 250 372 276C466 294 566 346 670 366C756 382 842 372 936 320V564H-36V378Z" fill="url(#waveA)" fill-opacity="0.46"/>
+    <path d="M110 -18C248 32 348 120 474 150C578 174 690 154 820 80C864 54 900 28 934 -8V-120H110V-18Z" fill="url(#waveB)" fill-opacity="0.34"/>
+  </g>
+
+  <g filter="url(#glassShadow)">
+    <rect x="48" y="56" width="228" height="118" rx="28" fill="url(#paneA)" fill-opacity="0.34" stroke="url(#strokeA)" stroke-opacity="0.56"/>
+    <rect x="298" y="78" width="184" height="104" rx="26" fill="url(#paneB)" fill-opacity="0.28" stroke="url(#strokeA)" stroke-opacity="0.44"/>
+    <rect x="560" y="90" width="252" height="154" rx="34" fill="url(#paneC)" fill-opacity="0.28" stroke="url(#strokeA)" stroke-opacity="0.46"/>
+    <rect x="112" y="258" width="290" height="148" rx="34" fill="url(#paneD)" fill-opacity="0.22" stroke="url(#strokeA)" stroke-opacity="0.36"/>
+    <rect x="440" y="284" width="308" height="154" rx="34" fill="url(#paneE)" fill-opacity="0.24" stroke="url(#strokeA)" stroke-opacity="0.38"/>
+  </g>
+
+  <g opacity="0.26" stroke="#EAF2FF" stroke-width="4" stroke-linecap="round">
+    <path d="M164 146C236 120 282 122 348 148"/>
+    <path d="M348 148C410 174 470 176 546 148"/>
+    <path d="M546 148C616 122 676 126 742 168"/>
+    <path d="M212 316C292 274 368 284 446 332"/>
+    <path d="M446 332C516 374 596 382 678 344"/>
+  </g>
+
+  <g opacity="0.38">
+    <circle cx="164" cy="146" r="12" fill="#F8FBFF"/>
+    <circle cx="348" cy="148" r="14" fill="#E4EEFF"/>
+    <circle cx="546" cy="148" r="13" fill="#D6E7FF"/>
+    <circle cx="742" cy="168" r="12" fill="#C9DDFF"/>
+    <circle cx="212" cy="316" r="11" fill="#F3F7FF"/>
+    <circle cx="446" cy="332" r="14" fill="#D8E7FF"/>
+    <circle cx="678" cy="344" r="12" fill="#C8DBFF"/>
+  </g>
+
+  <g opacity="0.2" stroke="#FFFFFF" stroke-width="3">
+    <rect x="598" y="120" width="74" height="18" rx="9"/>
+    <rect x="598" y="152" width="116" height="18" rx="9"/>
+    <rect x="598" y="184" width="94" height="18" rx="9"/>
+    <rect x="166" y="286" width="102" height="18" rx="9"/>
+    <rect x="166" y="318" width="152" height="18" rx="9"/>
+    <rect x="166" y="350" width="124" height="18" rx="9"/>
+  </g>
+
+  <defs>
+    <linearGradient id="surface" x1="58" y1="26" x2="842" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#EAF2FF" stop-opacity="0.18"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(168 104) rotate(90) scale(166)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(734 390) rotate(90) scale(210)">
+      <stop stop-color="#B8D0FF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#93B8FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowC" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(558 176) rotate(90) scale(144)">
+      <stop stop-color="#EAF2FF" stop-opacity="0.54"/>
+      <stop offset="1" stop-color="#EAF2FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grid" x1="68" y1="72" x2="824" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#DDE9FF"/>
+    </linearGradient>
+    <linearGradient id="waveA" x1="42" y1="268" x2="834" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF2FF"/>
+      <stop offset="1" stop-color="#BFD7FF"/>
+    </linearGradient>
+    <linearGradient id="waveB" x1="134" y1="-44" x2="844" y2="164" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9F2FF"/>
+    </linearGradient>
+    <linearGradient id="paneA" x1="60" y1="68" x2="258" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EFF5FF"/>
+    </linearGradient>
+    <linearGradient id="paneB" x1="312" y1="88" x2="468" y2="176" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F2F7FF"/>
+    </linearGradient>
+    <linearGradient id="paneC" x1="578" y1="106" x2="796" y2="228" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E8F2FF"/>
+    </linearGradient>
+    <linearGradient id="paneD" x1="132" y1="274" x2="384" y2="398" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F0F5FF"/>
+    </linearGradient>
+    <linearGradient id="paneE" x1="458" y1="300" x2="736" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EBF3FF"/>
+    </linearGradient>
+    <linearGradient id="strokeA" x1="82" y1="62" x2="812" y2="434" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDEAFF"/>
+    </linearGradient>
+    <filter id="softBlur" x="-80" y="-164" width="1080" height="772" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="glassShadow" x="30" y="38" width="800" height="418" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#A8C4F3" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+</svg>

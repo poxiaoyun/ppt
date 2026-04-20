@@ -1,0 +1,113 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="520" rx="36" fill="url(#surface)"/>
+
+  <g opacity="0.42">
+    <circle cx="172" cy="106" r="162" fill="url(#glowA)"/>
+    <circle cx="742" cy="392" r="208" fill="url(#glowB)"/>
+    <circle cx="552" cy="168" r="138" fill="url(#glowC)"/>
+  </g>
+
+  <g opacity="0.14" stroke="url(#grid)" stroke-width="2">
+    <path d="M56 118H846"/>
+    <path d="M74 202H826"/>
+    <path d="M52 302H848"/>
+    <path d="M94 410H806"/>
+    <path d="M146 42V474"/>
+    <path d="M336 30V488"/>
+    <path d="M548 24V494"/>
+    <path d="M736 44V474"/>
+  </g>
+
+  <g filter="url(#softBlur)">
+    <path d="M-22 384C120 280 236 268 370 286C486 302 592 366 704 380C784 390 860 372 930 320V566H-22V384Z" fill="url(#waveA)" fill-opacity="0.42"/>
+    <path d="M96 -10C232 36 326 128 452 156C560 180 684 160 816 90C864 64 900 40 930 8V-110H96V-10Z" fill="url(#waveB)" fill-opacity="0.3"/>
+  </g>
+
+  <g filter="url(#glassShadow)" opacity="0.34">
+    <rect x="84" y="96" width="212" height="134" rx="30" fill="url(#paneA)" stroke="url(#strokeA)"/>
+    <rect x="116" y="128" width="90" height="70" rx="20" fill="#FFFFFF" fill-opacity="0.68"/>
+    <path d="M250 130L262 156L290 160L270 180L276 208L250 194L224 208L230 180L210 160L238 156L250 130Z" fill="#FFF6E7" fill-opacity="0.72" stroke="#FFF7EB" stroke-opacity="0.76"/>
+
+    <rect x="352" y="78" width="182" height="120" rx="28" fill="url(#paneB)" stroke="url(#strokeA)"/>
+    <rect x="382" y="108" width="122" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.76"/>
+    <rect x="382" y="142" width="92" height="18" rx="9" fill="#FFF8EA" fill-opacity="0.68"/>
+
+    <rect x="570" y="94" width="244" height="164" rx="34" fill="url(#paneC)" stroke="url(#strokeA)"/>
+    <rect x="604" y="128" width="80" height="42" rx="16" fill="#FFFFFF" fill-opacity="0.64"/>
+    <rect x="694" y="128" width="86" height="42" rx="16" fill="#FFF6E5" fill-opacity="0.74"/>
+    <rect x="604" y="186" width="176" height="20" rx="10" fill="#FFFFFF" fill-opacity="0.76"/>
+    <rect x="604" y="220" width="126" height="18" rx="9" fill="#FFF7EA" fill-opacity="0.68"/>
+
+    <rect x="142" y="286" width="266" height="136" rx="32" fill="url(#paneD)" stroke="url(#strokeA)"/>
+    <rect x="174" y="320" width="80" height="42" rx="16" fill="#FFFFFF" fill-opacity="0.64"/>
+    <rect x="266" y="320" width="108" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.74"/>
+    <rect x="266" y="352" width="82" height="18" rx="9" fill="#FFF7EA" fill-opacity="0.68"/>
+
+    <rect x="450" y="298" width="308" height="126" rx="34" fill="url(#paneE)" stroke="url(#strokeA)"/>
+    <rect x="484" y="332" width="92" height="58" rx="18" fill="#FFFFFF" fill-opacity="0.64"/>
+    <path d="M530 344L537 358L552 360L541 371L544 386L530 378L516 386L519 371L508 360L523 358L530 344Z" fill="#FFF4DD" fill-opacity="0.78"/>
+    <rect x="594" y="334" width="128" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.76"/>
+    <rect x="594" y="366" width="94" height="18" rx="9" fill="#FFF7EA" fill-opacity="0.68"/>
+  </g>
+
+  <defs>
+    <linearGradient id="surface" x1="56" y1="26" x2="842" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#FFF5E4" stop-opacity="0.18"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(172 106) rotate(90) scale(162)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(742 392) rotate(90) scale(208)">
+      <stop stop-color="#FFD7A6" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#FFC56F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowC" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(552 168) rotate(90) scale(138)">
+      <stop stop-color="#FFF7E9" stop-opacity="0.54"/>
+      <stop offset="1" stop-color="#FFF7E9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grid" x1="70" y1="74" x2="824" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#FBE2B7"/>
+    </linearGradient>
+    <linearGradient id="waveA" x1="74" y1="282" x2="834" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8ED"/>
+      <stop offset="1" stop-color="#FFE1A8"/>
+    </linearGradient>
+    <linearGradient id="waveB" x1="126" y1="-32" x2="848" y2="166" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF5E8"/>
+    </linearGradient>
+    <linearGradient id="paneA" x1="98" y1="106" x2="736" y2="402" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF7EA"/>
+    </linearGradient>
+    <linearGradient id="paneB" x1="98" y1="106" x2="736" y2="402" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF3DD"/>
+    </linearGradient>
+    <linearGradient id="paneC" x1="98" y1="106" x2="736" y2="402" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFEFCF"/>
+    </linearGradient>
+    <linearGradient id="paneD" x1="98" y1="106" x2="736" y2="402" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF4E2"/>
+    </linearGradient>
+    <linearGradient id="paneE" x1="98" y1="106" x2="736" y2="402" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF0D6"/>
+    </linearGradient>
+    <linearGradient id="strokeA" x1="86" y1="72" x2="814" y2="432" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FADCAD"/>
+    </linearGradient>
+    <filter id="softBlur" x="-72" y="-154" width="1058" height="772" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="glassShadow" x="64" y="58" width="770" height="384" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#F3C470" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+</svg>
