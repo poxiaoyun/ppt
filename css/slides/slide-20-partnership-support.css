@@ -119,6 +119,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 72px;
 }
 
 /* ── Phase cards grid ── */
@@ -169,6 +170,28 @@
 
 .phase-operations::before {
     background: linear-gradient(90deg, #0EA5E9, #10B981);
+}
+
+/* ── Per-card semantic background illustrations ── */
+.phase-discovery {
+    background-image: url("<svg width='220' height='220' viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'> <line x1='44' y1='140' x2='110' y2='66' stroke='%231E60F8' stroke-width='1.5' opacity='0.18'/> <line x1='110' y1='66' x2='178' y2='110' stroke='%230EA5E9' stroke-width='1.5' opacity='0.18'/> <line x1='44' y1='140' x2='150' y2='170' stroke='%231E60F8' stroke-width='1' opacity='0.13'/> <line x1='178' y1='110' x2='150' y2='170' stroke='%230EA5E9' stroke-width='1' opacity='0.13'/> <line x1='110' y1='66' x2='150' y2='170' stroke='%231E60F8' stroke-width='0.8' opacity='0.1'/> <circle cx='110' cy='66' r='11' fill='%231E60F8' opacity='0.08'/> <circle cx='110' cy='66' r='5.5' fill='%231E60F8' opacity='0.22'/> <circle cx='44' cy='140' r='9' fill='%231E60F8' opacity='0.08'/> <circle cx='44' cy='140' r='4.5' fill='%231E60F8' opacity='0.2'/> <circle cx='178' cy='110' r='9' fill='%230EA5E9' opacity='0.08'/> <circle cx='178' cy='110' r='4.5' fill='%230EA5E9' opacity='0.2'/> <circle cx='150' cy='170' r='8' fill='%230EA5E9' opacity='0.08'/> <circle cx='150' cy='170' r='4' fill='%230EA5E9' opacity='0.2'/> </svg>");
+    background-repeat: no-repeat;
+    background-position: right -10px bottom -10px;
+    background-size: 220px 220px;
+}
+
+.phase-delivery {
+    background-image: url("<svg width='220' height='220' viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'> <path d='M 30 100 L 88 100 L 88 148 L 170 148' stroke='%231E60F8' stroke-width='1.5' fill='none' opacity='0.18'/> <path d='M 88 100 L 88 54 L 180 54' stroke='%2310B981' stroke-width='1.5' fill='none' opacity='0.18'/> <path d='M 170 148 L 170 188 L 124 188' stroke='%2310B981' stroke-width='1' fill='none' opacity='0.14'/> <circle cx='88' cy='100' r='5.5' fill='%231E60F8' opacity='0.26'/> <circle cx='88' cy='148' r='4.5' fill='%231E60F8' opacity='0.2'/> <circle cx='170' cy='148' r='6.5' fill='%2310B981' opacity='0.26'/> <circle cx='88' cy='54' r='4.5' fill='%2310B981' opacity='0.2'/> <rect x='180' y='46' width='14' height='14' rx='3' stroke='%2310B981' stroke-width='1.2' fill='%2310B981' fill-opacity='0.08' opacity='0.55'/> <rect x='22' y='92' width='14' height='14' rx='3' stroke='%231E60F8' stroke-width='1.2' fill='%231E60F8' fill-opacity='0.08' opacity='0.55'/> </svg>");
+    background-repeat: no-repeat;
+    background-position: right -10px bottom -10px;
+    background-size: 220px 220px;
+}
+
+.phase-operations {
+    background-image: url("<svg width='220' height='220' viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'> <path d='M 110 28 L 164 56 L 164 112 Q 164 168 110 192 Q 56 168 56 112 L 56 56 Z' stroke='%230EA5E9' stroke-width='1.5' fill='none' opacity='0.12'/> <path d='M 72 122 Q 91 104 110 122 Q 129 104 148 122' stroke='%2310B981' stroke-width='1.5' fill='none' opacity='0.2' stroke-linecap='round'/> <path d='M 83 136 Q 96 120 110 136 Q 124 120 137 136' stroke='%2310B981' stroke-width='1.5' fill='none' opacity='0.26' stroke-linecap='round'/> <circle cx='110' cy='147' r='4.5' fill='%2310B981' opacity='0.3'/> <circle cx='110' cy='147' r='8' fill='none' stroke='%2310B981' stroke-width='1' opacity='0.16'/> </svg>");
+    background-repeat: no-repeat;
+    background-position: right -10px bottom -10px;
+    background-size: 220px 220px;
 }
 
 /* Hover only when already active (avoids transform conflict) */
