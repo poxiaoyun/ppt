@@ -1,18 +1,17 @@
-<!-- @license lucide-static v1.7.0 - ISC -->
-<svg
-  class="lucide lucide-component"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M15.536 11.293a1 1 0 0 0 0 1.414l2.376 2.377a1 1 0 0 0 1.414 0l2.377-2.377a1 1 0 0 0 0-1.414l-2.377-2.377a1 1 0 0 0-1.414 0z" />
-  <path d="M2.297 11.293a1 1 0 0 0 0 1.414l2.377 2.377a1 1 0 0 0 1.414 0l2.377-2.377a1 1 0 0 0 0-1.414L6.088 8.916a1 1 0 0 0-1.414 0z" />
-  <path d="M8.916 17.912a1 1 0 0 0 0 1.415l2.377 2.376a1 1 0 0 0 1.414 0l2.377-2.376a1 1 0 0 0 0-1.415l-2.377-2.376a1 1 0 0 0-1.414 0z" />
-  <path d="M8.916 4.674a1 1 0 0 0 0 1.414l2.377 2.376a1 1 0 0 0 1.414 0l2.377-2.376a1 1 0 0 0 0-1.414l-2.377-2.377a1 1 0 0 0-1.414 0z" />
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="module-gradient" x1="14" y1="14" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#C4B5FD"/>
+    </linearGradient>
+  </defs>
+  <rect x="14" y="30" width="14" height="14" rx="4" fill="url(#module-gradient)" fill-opacity="0.18" stroke="#10233F" stroke-width="2.4"/>
+  <rect x="32" y="30" width="14" height="14" rx="4" fill="url(#module-gradient)" fill-opacity="0.24" stroke="#10233F" stroke-width="2.4"/>
+  <rect x="23" y="46" width="14" height="10" rx="4" fill="url(#module-gradient)" fill-opacity="0.18" stroke="#10233F" stroke-width="2.4"/>
+  <rect x="32" y="12" width="12" height="12" rx="4" fill="url(#module-gradient)" fill-opacity="0.3" stroke="#10233F" stroke-width="2.4"/>
+  <path d="M38 24V30" stroke="#8B5CF6" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3.5 4"/>
+  <path d="M28 37H32" stroke="#10233F" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M30 44V46" stroke="#10233F" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="30" cy="37" r="1.7" fill="#8B5CF6"/>
+  <circle cx="38" cy="30" r="1.7" fill="#8B5CF6"/>
 </svg>

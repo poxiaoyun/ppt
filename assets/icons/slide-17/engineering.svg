@@ -1,26 +1,16 @@
-<!-- @license lucide-static v1.7.0 - ISC -->
-<svg
-  class="lucide lucide-boxes"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" />
-  <path d="m7 16.5-4.74-2.85" />
-  <path d="m7 16.5 5-3" />
-  <path d="M7 16.5v5.17" />
-  <path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" />
-  <path d="m17 16.5-5-3" />
-  <path d="m17 16.5 4.74-2.85" />
-  <path d="M17 16.5v5.17" />
-  <path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" />
-  <path d="M12 8 7.26 5.15" />
-  <path d="m12 8 4.74-2.85" />
-  <path d="M12 13.5V8" />
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="eng-gradient" x1="16" y1="14" x2="48" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E60F8"/>
+      <stop offset="1" stop-color="#77A8FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M24 19.5L32 15L40 19.5L32 24L24 19.5Z" fill="url(#eng-gradient)" fill-opacity="0.34" stroke="#10233F" stroke-width="2.4" stroke-linejoin="round"/>
+  <rect x="18" y="28" width="28" height="9" rx="4.5" fill="url(#eng-gradient)" fill-opacity="0.18" stroke="#10233F" stroke-width="2.4"/>
+  <rect x="14" y="39" width="36" height="10" rx="5" fill="url(#eng-gradient)" fill-opacity="0.12" stroke="#10233F" stroke-width="2.4"/>
+  <path d="M22 32.5H42" stroke="#10233F" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M20 44H44" stroke="#10233F" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M32 24V28" stroke="#1E60F8" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M45.5 17.5H50" stroke="#1E60F8" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M47.75 15.25V19.75" stroke="#1E60F8" stroke-width="2.4" stroke-linecap="round"/>
 </svg>

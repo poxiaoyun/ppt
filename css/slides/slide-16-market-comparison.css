@@ -104,7 +104,7 @@
 
 .slide-16-subtitle {
     max-width: 1620px;
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.5;
     color: #475569;
 }
@@ -648,7 +648,7 @@
     box-shadow: 0 22px 44px rgba(15, 23, 42, 0.18);
     display: flex;
     align-items: center;
-    font-size: 17px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.45;
     color: #F8FAFC;

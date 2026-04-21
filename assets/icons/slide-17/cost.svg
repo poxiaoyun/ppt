@@ -1,16 +1,15 @@
-<!-- @license lucide-static v1.7.0 - ISC -->
-<svg
-  class="lucide lucide-gauge"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m12 14 4-4" />
-  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="cost-gradient" x1="14" y1="18" x2="46" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#94A3B8"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="24" cy="24" rx="9" ry="4" fill="url(#cost-gradient)" fill-opacity="0.18" stroke="#10233F" stroke-width="2.4"/>
+  <path d="M15 24V32C15 34.5 19 36.5 24 36.5C29 36.5 33 34.5 33 32V24" stroke="#10233F" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M15 28.8C15 31.2 19 33 24 33C29 33 33 31.2 33 28.8" stroke="#10233F" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M37 23C42.8 23 47.5 27.7 47.5 33.5C47.5 35.9 46.7 38.2 45.3 40" stroke="#334155" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M45 35.6L45.3 40.2L40.8 39.3" stroke="#334155" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="45" cy="20" r="5.5" fill="#E2E8F0" stroke="#10233F" stroke-width="2.4"/>
+  <path d="M42.8 20.2L44.3 21.7L47.4 18.6" stroke="#334155" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

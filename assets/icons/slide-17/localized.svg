@@ -1,16 +1,23 @@
-<!-- @license lucide-static v1.7.0 - ISC -->
-<svg
-  class="lucide lucide-shield-check"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-  <path d="m9 12 2 2 4-4" />
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="local-gradient" x1="18" y1="12" x2="46" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#FCD34D"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 11C36.8 14.9 42.2 16.9 46 17.6V28C46 38.3 39.8 45.4 32 48.4C24.2 45.4 18 38.3 18 28V17.6C21.8 16.9 27.2 14.9 32 11Z" fill="url(#local-gradient)" fill-opacity="0.14" stroke="#10233F" stroke-width="2.4" stroke-linejoin="round"/>
+  <rect x="24" y="24" width="16" height="14" rx="4" fill="url(#local-gradient)" fill-opacity="0.22" stroke="#10233F" stroke-width="2.4"/>
+  <circle cx="32" cy="31" r="3.5" fill="url(#local-gradient)" fill-opacity="0.5" stroke="#10233F" stroke-width="2.2"/>
+  <path d="M28 19V23" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M32 19V23" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M36 19V23" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M28 39V43" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M32 39V43" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M36 39V43" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M20 28H24" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M20 32H24" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M20 36H24" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M40 28H44" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M40 32H44" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M40 36H44" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
 </svg>

@@ -1,17 +1,17 @@
-<!-- @license lucide-static v1.7.0 - ISC -->
-<svg
-  class="lucide lucide-git-branch"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M15 6a9 9 0 0 0-9 9V3" />
-  <circle cx="18" cy="6" r="3" />
-  <circle cx="6" cy="18" r="3" />
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="open-gradient" x1="14" y1="18" x2="50" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10B981"/>
+      <stop offset="1" stop-color="#6EE7B7"/>
+    </linearGradient>
+  </defs>
+  <path d="M17 18L10.5 24V40L17 46" stroke="#10233F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M47 18L53.5 24V40L47 46" stroke="#10233F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="5.5" fill="url(#open-gradient)" fill-opacity="0.24" stroke="#10233F" stroke-width="2.4"/>
+  <circle cx="24" cy="20" r="4" fill="url(#open-gradient)" stroke="#10233F" stroke-width="2.4"/>
+  <circle cx="24" cy="44" r="4" fill="url(#open-gradient)" stroke="#10233F" stroke-width="2.4"/>
+  <circle cx="44" cy="32" r="4" fill="url(#open-gradient)" stroke="#10233F" stroke-width="2.4"/>
+  <path d="M26.5 23.5L28.8 27.3" stroke="#10233F" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M26.5 40.5L28.8 36.7" stroke="#10233F" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M37.5 32H40" stroke="#10233F" stroke-width="2.4" stroke-linecap="round"/>
 </svg>
