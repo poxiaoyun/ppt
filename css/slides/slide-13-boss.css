@@ -560,6 +560,15 @@
 }
 
 .slide-13-orbit-node {
+    z-index: 2;
+}
+
+.slide-13-core-panel,
+.slide-13-command-lane {
+    z-index: 1;
+}
+
+.slide-13-orbit-node {
     min-height: 42px;
     padding: 0 16px;
     display: inline-flex;
@@ -587,7 +596,7 @@
 
 .orbit-right {
     right: 80px;
-    top: 254px;
+    top: 200px;
 }
 
 .orbit-bottom {
@@ -597,8 +606,8 @@
 }
 
 .orbit-left {
-    left: 84px;
-    top: 270px;
+    left: 52px;
+    top: 200px;
 }
 
 .slide-13-core-panel {

@@ -1877,7 +1877,7 @@
                             <div class="slide-09-panel-header">
                                 <span class="slide-09-panel-kicker">Client Side</span>
                                 <h3>大模型调用客户端</h3>
-                                <p>把不同终端入口统一收口到 Rune Gateway，让业务侧用一致方式接入模型能力。</p>
+                                <p>把不同终端入口统一收口到 LLGM 网关，让业务侧用一致方式接入模型能力。</p>
                             </div>
 
                             <div class="slide-09-client-grid">
@@ -1919,14 +1919,14 @@
                             <div class="slide-09-core-orb">
                                 <div class="slide-09-core-text">
                                     <span class="slide-09-core-kicker">Unified AI Access Layer</span>
-                                    <h3>LLM Gateway</h3>
+                                    <h3>LLMG Gateway</h3>
                                     <p>统一 API 入口</p>
                                 </div>
                             </div>
                             <div class="slide-09-core-meta">
                                 <span>统一协议</span>
-                                <span>策略编排</span>
                                 <span>弹性路由</span>
+                                <span>负载均衡</span>
                             </div>
                         </div>
 
@@ -2393,11 +2393,11 @@
                                 <div class="slide-12-api-list">
                                     <div class="slide-12-api-item">
                                         <span>Endpoint</span>
-                                        <code>/openai/v1/chat/completions</code>
+                                        <code>/v1/chat/completions</code>
                                     </div>
                                     <div class="slide-12-api-item">
                                         <span>Routing</span>
-                                        <code>chatapp-route / deepseek-r1 / qwen-max</code>
+                                        <code>gpt-5.2/ deepseek-r1 / qwen-max</code>
                                     </div>
                                     <div class="slide-12-api-item">
                                         <span>Security</span>
@@ -2434,10 +2434,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="slide-12-footer">
-                        ChatApp 让模型试用、调优、对比和接入在同一工作台内闭环完成，把“好不好用”的评估更快转化为“能不能上线”的决策
-                    </div>
                 </section>
 
                 <!-- Slide 13: BOSS -->
@@ -2447,8 +2443,8 @@
                     <div class="slide-13-bg-orbit"></div>
 
                     <div class="slide-13-header">
-                        <h2 class="slide-13-title">BOSS：全局运营管理与监控平台</h2>
-                        <p class="slide-13-subtitle">作为企业级平台的统一运营中枢，BOSS 把多集群、租户体系、资源配额、模板发布与平台设置收敛到同一个全局控制面中，让运营、平台和安全团队在一个视图内完成治理、监控和策略分发。</p>
+                        <h2 class="slide-13-title">BOSS全局运营管理平台</h2>
+                        <p class="slide-13-subtitle">将多集群、租户体系、资源配额、模板发布与平台设置收敛到同一个全局控制面中，让运营、平台和安全团队在一个视图内完成治理、监控和策略分发。</p>
                     </div>
                     <div class="slide-13-body">
                         <div class="slide-13-rail slide-13-rail-left">
@@ -2559,7 +2555,7 @@
                                     <div class="slide-13-dock-copy">
                                         <span class="dock-label">05 Platform Settings</span>
                                         <h3>平台设置</h3>
-                                        <p>系统成员、平台参数和产品级开关在同一配置坞舱内统一维护，保障智算平台、Moha Hub 和大模型网关的独立配置与一致治理。</p>
+                                        <p>系统成员、平台参数和产品级开关在同一配置坞舱内统一维护，保障智算平台、魔哈和大模型平台的独立配置与一致治理。</p>
                                     </div>
                                 </div>
                             </div>
@@ -2605,25 +2601,15 @@
                     <div class="slide-14-bg-beam"></div>
 
                     <div class="slide-14-header">
-                        <h2 class="slide-14-title">多租户隔离与 RBAC 权限控制</h2>
-                        <p class="slide-14-subtitle">从一家公司共享基础设施向上切分部门级租户资源池与工作空间边界，让算力、存储、网络和数据在统一平台内被高效复用，同时保持严格隔离和可控访问。</p>
+                        <h2 class="slide-14-title">BOSS多租户权限隔离</h2>
+                        <p class="slide-14-subtitle">一套基础设施向上切分部门级租户资源池与工作空间边界，让算力、存储、网络和数据在统一平台内被高效复用，同时保持严格隔离和可控访问。</p>
                     </div>
-
-                    <div class="slide-14-summary-strip">
-                        <div class="slide-14-summary-item">共享基础设施统一供给</div>
-                        <div class="slide-14-summary-item">部门级租户资源池切分</div>
-                        <div class="slide-14-summary-item">工作空间命名空间隔离</div>
-                        <div class="slide-14-summary-item">网络 / 存储 / 密钥范围收口</div>
-                        <div class="slide-14-summary-item">RBAC 绑定租户与空间边界</div>
-                    </div>
-
                     <div class="slide-14-body">
                         <div class="slide-14-stage">
                             <div class="slide-14-stage-shell">
                                 <div class="slide-14-stage-head">
                                     <div class="slide-14-stage-copy">
                                         <h3>同一家公司下，不同部门拥有独立租户域</h3>
-                                        <p>底层异构资源池统一供给，上层按部门切分租户配额池、命名空间、网络与存储边界，让各部门在同一平台内独立运行。</p>
                                     </div>
                                 </div>
 
