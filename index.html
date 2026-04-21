@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="css/slides/slide-11-app-market.css?v=20260329-1">
     <link rel="stylesheet" href="css/slides/slide-12-chatapp.css?v=20260329-1">
     <link rel="stylesheet" href="css/slides/slide-13-boss.css?v=20260329-2">
-    <link rel="stylesheet" href="css/slides/slide-14-rbac.css?v=20260329-14">
+    <link rel="stylesheet" href="css/slides/slide-14-rbac.css?v=20260421-1">
     <link rel="stylesheet" href="css/slides/slide-15-observability.css?v=20260329-1">
     <link rel="stylesheet" href="css/slides/slide-16-market-comparison.css?v=20260329-1">
     <link rel="stylesheet" href="css/slides/slide-17-why-rune.css?v=20260329-1">
@@ -2608,9 +2608,6 @@
                         <div class="slide-14-stage">
                             <div class="slide-14-stage-shell">
                                 <div class="slide-14-stage-head">
-                                    <div class="slide-14-stage-copy">
-                                        <h3>同一家公司下，不同部门拥有独立租户域</h3>
-                                    </div>
                                 </div>
 
                                 <div class="slide-14-canvas">
@@ -2618,68 +2615,105 @@
                                         <article class="slide-14-tenant-card accent-blue">
                                             <div class="slide-14-tenant-topline">
                                                 <span class="tenant-label">Department 01</span>
-                                                <span class="tenant-quota">18 GPU / 5 TB</span>
                                             </div>
                                             <h4>算法研发部</h4>
                                             <p>负责模型训练、推理与评测，拥有独立成员、模型可见性和实验资源配额。</p>
-                                            <div class="slide-14-workspace-chips">
-                                                <span>Model Lab</span>
-                                                <span>Training Ops</span>
-                                                <span>Eval Bench</span>
+                                            <div class="slide-14-resource-visual resource-layout-two">
+                                                <div class="slide-14-resource-tile resource-gpu">
+                                                    <div class="resource-icon" aria-hidden="true"></div>
+                                                    <div class="resource-copy">
+                                                        <span>GPU</span>
+                                                        <strong>18 Card</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="slide-14-resource-tile resource-cpu">
+                                                    <div class="resource-icon" aria-hidden="true"></div>
+                                                    <div class="resource-copy">
+                                                        <span>CPU</span>
+                                                        <strong>96 Core</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="slide-14-resource-tile resource-memory">
+                                                    <div class="resource-icon" aria-hidden="true"></div>
+                                                    <div class="resource-copy">
+                                                        <span>Memory</span>
+                                                        <strong>384 GB</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="slide-14-resource-tile resource-storage">
+                                                    <div class="resource-icon" aria-hidden="true"></div>
+                                                    <div class="resource-copy">
+                                                        <span>Storage</span>
+                                                        <strong>5 TB</strong>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </article>
 
                                         <article class="slide-14-tenant-card accent-green">
                                             <div class="slide-14-tenant-topline">
                                                 <span class="tenant-label">Department 02</span>
-                                                <span class="tenant-quota">8 GPU / 2 TB</span>
                                             </div>
                                             <h4>客户服务部</h4>
                                             <p>围绕客服机器人、知识问答和工单助手建设应用，避免和研发任务混用资源与数据。</p>
-                                            <div class="slide-14-workspace-chips">
-                                                <span>Service Bot</span>
-                                                <span>Ticket Copilot</span>
-                                                <span>FAQ Hub</span>
+                                            <div class="slide-14-resource-visual resource-layout-two">
+                                                <div class="slide-14-resource-tile resource-gpu">
+                                                    <div class="resource-icon" aria-hidden="true"></div>
+                                                    <div class="resource-copy">
+                                                        <span>GPU</span>
+                                                        <strong>8 Card</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="slide-14-resource-tile resource-token">
+                                                    <div class="resource-icon" aria-hidden="true"></div>
+                                                    <div class="resource-copy">
+                                                        <span>Token</span>
+                                                        <strong>35M / Day</strong>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </article>
 
                                         <article class="slide-14-tenant-card accent-purple">
                                             <div class="slide-14-tenant-topline">
                                                 <span class="tenant-label">Department 03</span>
-                                                <span class="tenant-quota">10 GPU / 3 TB</span>
                                             </div>
                                             <h4>风控合规部</h4>
                                             <p>承接敏感文档审查、审计追溯和规则校验，确保数据、日志和实例始终留在本部门边界内。</p>
-                                            <div class="slide-14-workspace-chips">
-                                                <span>Audit Agent</span>
-                                                <span>Policy Review</span>
-                                                <span>Risk Desk</span>
+                                            <div class="slide-14-resource-visual resource-layout-one">
+                                                <div class="slide-14-resource-tile resource-token">
+                                                    <div class="resource-icon" aria-hidden="true"></div>
+                                                    <div class="resource-copy">
+                                                        <span>Token</span>
+                                                        <strong>50M / Day</strong>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </article>
                                     </div>
 
                                     <div class="slide-14-channel-row">
                                         <div class="slide-14-channel-card">
-                                            <span class="channel-kicker">Quota Pool</span>
-                                            <p>每个租户拥有独立 CPU / GPU / Memory / Storage 上限</p>
+                                            <span class="channel-kicker">配额资源池</span>
+                                            <p>每个租户可按场景组合配置 GPU / CPU / Memory / Storage / Token 配额上限</p>
                                             <div class="slide-14-channel-tags">
                                                 <span>Hard Limit</span>
                                                 <span>申请审批</span>
                                             </div>
                                         </div>
                                         <div class="slide-14-channel-card">
-                                            <span class="channel-kicker">Namespace Fence</span>
+                                            <span class="channel-kicker">独立工作空间</span>
                                             <p>工作空间与运行实例隔离到独立命名空间和运行域</p>
                                             <div class="slide-14-channel-tags">
                                                 <span>Workspace</span>
-                                                <span>Runtime Scope</span>
+                                                <span>Runtime</span>
                                             </div>
                                         </div>
                                         <div class="slide-14-channel-card">
-                                            <span class="channel-kicker">Data &amp; Secret Scope</span>
+                                            <span class="channel-kicker">租户级数据隔离</span>
                                             <p>存储路径、镜像可见性和 API Key 都围绕租户边界收口</p>
                                             <div class="slide-14-channel-tags">
-                                                <span>Storage Domain</span>
+                                                <span>Storage</span>
                                                 <span>Secret Policy</span>
                                             </div>
                                         </div>
@@ -2687,7 +2721,8 @@
 
                                     <div class="slide-14-foundation">
                                         <div class="slide-14-foundation-head">
-                                            <h4>RUNE 平台</h4>
+                                            <h4>RUNE基础设施</h4>
+                                            <p>异构算力、存储、网络与调度平面统一供给，再通过租户机制向上切分成可审计、可治理的独立运行域。</p>
                                         </div>
                                         <div class="slide-14-foundation-grid">
                                             <div class="slide-14-foundation-tag">
@@ -2710,28 +2745,10 @@
                                     </div>
                                 </div>
 
-                                <div class="slide-14-stage-metrics">
-                                    <div class="slide-14-metric-card infra-card">
-                                        <strong>计算</strong>
-                                        <span>GPU / NPU / CPU 服务器，以及训练和推理节点</span>
-                                    </div>
-                                    <div class="slide-14-metric-card infra-card">
-                                        <strong>存储</strong>
-                                        <span>块存储、文件系统、对象存储与模型数据卷</span>
-                                    </div>
-                                    <div class="slide-14-metric-card infra-card">
-                                        <strong>网络</strong>
-                                        <span>交换机、负载均衡、Ingress、API Gateway 与安全入口</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-
                     </div>
 
-                    <div class="slide-14-footer">
-                        Rune 先把公司级共享基础设施切分成按部门独立的租户资源池，再用工作空间、网络、存储和 RBAC 把访问边界逐层收紧，让复用效率和隔离安全同时成立
-                    </div>
                 </section>
 
                 <!-- Slide 15: Full-Stack Observability -->
