@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web PPT 导出"
+  short_description: "导出静态 Web PPT 每页内容为 Markdown 稿"
+  default_prompt: "Use $web-ppt-slide-export to extract each slide from index.html into Markdown for PDF conversion."

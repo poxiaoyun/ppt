@@ -183,20 +183,41 @@
     box-shadow: 0 24px 50px rgba(15, 23, 42, 0.08);
 }
 
+.slide-15-rail-head,
+.slide-15-compliance-card {
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at top right, rgba(96, 165, 250, 0.16) 0%, rgba(96, 165, 250, 0) 32%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(244, 248, 255, 0.96));
+    border: 1px solid rgba(203, 213, 225, 0.9);
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+}
+
+.slide-15-rail-head::before,
+.slide-15-compliance-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #1E60F8, #38BDF8, #10B981);
+}
+
 .slide-15-rail-head {
-    padding: 18px 18px 16px;
+    padding: 16px 18px 18px;
 }
 
 .slide-15-rail-head h3 {
-    margin: 8px 0 8px;
-    font-size: 28px;
-    line-height: 1.22;
+    margin: 10px 0 8px;
+    font-size: 21px;
+    line-height: 1.24;
     color: #0F172A;
 }
 
 .slide-15-rail-head p {
-    font-size: 14px;
-    line-height: 1.62;
+    font-size: 13px;
+    line-height: 1.68;
     color: #475569;
 }
 
@@ -218,26 +239,21 @@
 }
 
 .slide-15-compliance-card {
-    padding: 16px;
+    padding: 16px 18px 18px;
 }
 
 .slide-15-stage-shell {
-    padding: 20px;
+    padding: 0;
     height: 100%;
     display: flex;
-    background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 255, 0.95)),
-        radial-gradient(circle at 50% 30%, rgba(30, 96, 248, 0.08), rgba(30, 96, 248, 0) 36%);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
 }
 
 .slide-15-stage-shell::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(180deg, rgba(30, 96, 248, 0.05), rgba(255, 255, 255, 0) 22%),
-        linear-gradient(90deg, rgba(30, 96, 248, 0.04), rgba(16, 185, 129, 0.02), rgba(30, 96, 248, 0.04));
-    pointer-events: none;
+    content: none;
 }
 
 .slide-15-sim-console {
@@ -253,13 +269,12 @@
     flex: 1;
     min-height: 0;
     display: grid;
-    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-rows: auto minmax(0, 1fr);
     gap: 16px;
 }
 
 .slide-15-sim-toolbar,
-.slide-15-sim-table-card,
-.slide-15-sim-chart-card {
+.slide-15-sim-panel {
     position: relative;
     overflow: hidden;
     border-radius: 28px;
@@ -270,7 +285,10 @@
 
 .slide-15-sim-toolbar {
     padding: 16px 18px;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
 }
 
 .slide-15-sim-title h4 {
@@ -280,113 +298,811 @@
     color: #0F172A;
 }
 
-.slide-15-sim-table-card {
-    padding: 12px 14px 14px;
+.slide-15-sim-panel-grid {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 14px;
 }
 
-.slide-15-sim-table-head,
-.slide-15-sim-row {
-    display: grid;
-    grid-template-columns: 2.05fr 0.72fr 0.84fr 0.76fr 0.76fr 0.72fr 1.45fr 1.38fr 1.02fr;
+.slide-15-sim-panel {
+    padding: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.sim-window-shell {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.sim-shell-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 16px 14px;
+    border-bottom: 1px solid rgba(203, 213, 225, 0.96);
+    background: linear-gradient(180deg, rgba(245, 248, 255, 0.98), rgba(238, 244, 252, 0.94));
+}
+
+.sim-browser-tabs {
+    display: flex;
+    align-items: flex-end;
     gap: 8px;
-    align-items: center;
+    padding-right: 54px;
 }
 
-.slide-15-sim-table-head {
-    padding: 10px 12px;
-    border-radius: 18px;
-    background: linear-gradient(180deg, #F3F6FB 0%, #EDF2F8 100%);
-    font-size: 10px;
-    font-weight: 800;
-    color: #64748B;
-}
-
-.slide-15-sim-table-body {
-    display: grid;
-}
-
-.slide-15-sim-row {
-    padding: 8px 12px;
-    min-height: 52px;
-    border-bottom: 1px dashed rgba(148, 163, 184, 0.22);
-}
-
-.slide-15-sim-row:last-child {
-    border-bottom: 0;
-}
-
-.sim-host-cell {
-    display: grid;
-    gap: 2px;
-}
-
-.sim-host-cell strong {
-    font-size: 14px;
-    color: #1E293B;
-}
-
-.sim-host-cell span {
-    font-size: 10px;
-    color: #64748B;
-}
-
-.sim-green {
-    font-size: 13px;
-    color: #22C55E;
-}
-
-.sim-blue {
-    font-size: 13px;
-    color: #0EA5E9;
-}
-
-.sim-load {
-    font-size: 13px;
-    font-weight: 800;
-}
-
-.sim-load.hot {
-    color: #22C55E;
-}
-
-.sim-load.warm {
-    color: #16A34A;
-}
-
-.sim-load.cool {
-    color: #65A30D;
-}
-
-.sim-pill,
-.sim-bandwidth {
+.sim-browser-tab {
+    max-width: 120px;
     min-height: 28px;
-    padding: 0 8px;
+    padding: 0 12px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 10px;
+    gap: 8px;
+    border-radius: 12px 12px 0 0;
+    background: rgba(226, 232, 240, 0.88);
+    border: 1px solid rgba(203, 213, 225, 0.9);
+    border-bottom: none;
+    color: #64748B;
     font-size: 11px;
     font-weight: 800;
 }
 
-.sim-pill.sim-ok {
-    background: rgba(220, 242, 225, 0.9);
+.sim-browser-tab.active {
+    background: rgba(255, 255, 255, 0.98);
+    color: #0F172A;
+}
+
+.sim-browser-tab.ghost {
+    opacity: 0.82;
+}
+
+.sim-browser-favicon {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    flex: 0 0 auto;
+    background: linear-gradient(135deg, #1E60F8, #38BDF8);
+}
+
+.sim-browser-favicon.gpu {
+    background: linear-gradient(135deg, #F59E0B, #F97316);
+}
+
+.sim-browser-favicon.app {
+    background: linear-gradient(135deg, #10B981, #06B6D4);
+}
+
+.sim-browser-favicon.log {
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+}
+
+.sim-browser-favicon.alt {
+    background: linear-gradient(135deg, #10B981, #38BDF8);
+}
+
+.sim-browser-toolbar {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    padding-right: 54px;
+}
+
+.sim-browser-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sim-browser-nav span {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(203, 213, 225, 0.96);
+    color: #64748B;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sim-browser-address {
+    min-width: 0;
+    min-height: 34px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(203, 213, 225, 0.96);
+    font-size: 12px;
+    font-weight: 700;
+    color: #475569;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sim-shell-dots {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    display: inline-flex;
+    gap: 8px;
+}
+
+.sim-shell-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(148, 163, 184, 0.66);
+}
+
+.sim-shell-dots span:nth-child(1) {
+    background: #8B5CF6;
+}
+
+.sim-shell-dots span:nth-child(2) {
+    background: #1E60F8;
+}
+
+.sim-shell-dots span:nth-child(3) {
+    background: #10B981;
+}
+
+.sim-panel-body {
+    flex: 1;
+    min-height: 0;
+    padding: 14px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sim-window-caption {
+    padding: 8px 12px 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #0F172A;
+    background: transparent;
+}
+
+.sim-panel-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.sim-panel-section-head h5 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #0F172A;
+}
+
+.sim-panel-section-head span {
+    font-size: 11px;
+    font-weight: 800;
+    color: #64748B;
+    white-space: nowrap;
+}
+
+.sim-panel-body-server,
+.sim-panel-body-gpu {
+    overflow: hidden;
+}
+
+.sim-panel-body-server {
+    gap: 10px;
+}
+
+.sim-server-table,
+.sim-gpu-detail-table {
+    border-radius: 16px;
+    border: 1px solid rgba(203, 213, 225, 0.76);
+    background: rgba(255, 255, 255, 0.98);
+    overflow: hidden;
+}
+
+.sim-server-row,
+.sim-gpu-detail-row {
+    display: grid;
+    align-items: center;
+}
+
+.sim-server-row {
+    grid-template-columns: 1.05fr 1.08fr 0.7fr 0.74fr 1.08fr 1.08fr 0.9fr;
+    gap: 8px;
+    min-height: 38px;
+    padding: 0 10px;
+    border-bottom: 1px dashed rgba(203, 213, 225, 0.85);
+}
+
+.sim-server-row:last-child,
+.sim-gpu-detail-row:last-child {
+    border-bottom: 0;
+}
+
+.sim-server-head,
+.sim-gpu-detail-head {
+    min-height: 34px;
+    background: linear-gradient(180deg, #F5F7FB 0%, #EDF2F8 100%);
+    border-bottom-style: solid;
+}
+
+.sim-server-head span,
+.sim-gpu-detail-head span {
+    font-size: 10px;
+    font-weight: 800;
+    color: #64748B;
+}
+
+.sim-server-row strong,
+.sim-gpu-detail-row strong {
+    font-size: 11px;
+    color: #1E293B;
+}
+
+.sim-server-row span,
+.sim-server-row em,
+.sim-gpu-detail-row span {
+    font-size: 10px;
+    color: #334155;
+}
+
+.sim-server-row em {
+    font-style: normal;
+    color: #22C55E;
+    font-weight: 800;
+}
+
+.sim-health-pill,
+.sim-flow-pill {
+    min-height: 24px;
+    padding: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.sim-health-pill.ok {
+    background: rgba(220, 242, 225, 0.95);
     color: #22C55E;
 }
 
-.sim-pill.sim-warn {
-    background: rgba(255, 239, 214, 0.92);
+.sim-health-pill.warn {
+    background: rgba(255, 237, 212, 0.95);
     color: #F59E0B;
 }
 
-.sim-bandwidth {
-    background: rgba(220, 242, 225, 0.9);
-    color: #3BAE44;
+.sim-flow-pill {
+    background: rgba(220, 242, 225, 0.95);
+    color: #22C55E;
 }
 
-.sim-bandwidth.sim-warm {
-    background: rgba(255, 235, 220, 0.94);
+.sim-flow-pill.hot {
+    background: rgba(255, 235, 220, 0.96);
     color: #FB923C;
+}
+
+.sim-inline-meter {
+    position: relative;
+    height: 24px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(242, 244, 247, 0.96), rgba(232, 236, 242, 0.96));
+    overflow: hidden;
+}
+
+.sim-inline-meter span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 8px;
+}
+
+.sim-inline-meter em {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 800;
+    color: #1E293B;
+}
+
+.sim-inline-meter.green span {
+    background: linear-gradient(90deg, #86D25B, #7AC84D);
+}
+
+.sim-inline-meter.lime span {
+    background: linear-gradient(90deg, #C9D93E, #DCE435);
+}
+
+.sim-inline-meter.yellow span {
+    background: linear-gradient(90deg, #EAD81D, #F3D62B);
+}
+
+.sim-server-mini-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr 1fr;
+    gap: 10px;
+}
+
+.sim-panel-server-ref .sim-server-table {
+    flex: 1;
+    min-height: 0;
+}
+
+.sim-panel-server-ref .sim-server-mini-grid {
+    flex: 0 0 94px;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.sim-mini-card,
+.sim-gpu-chart-card {
+    border-radius: 16px;
+    border: 1px solid rgba(203, 213, 225, 0.76);
+    background: rgba(255, 255, 255, 0.98);
+    padding: 10px 12px;
+}
+
+.sim-mini-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.sim-mini-head h6 {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #0F172A;
+}
+
+.sim-panel-server-ref .sim-mini-card {
+    padding: 8px 10px 6px;
+    border-radius: 14px;
+    min-height: 0;
+}
+
+.sim-panel-server-ref .sim-mini-head {
+    margin-bottom: 5px;
+}
+
+.sim-panel-server-ref .sim-mini-head h6 {
+    font-size: 11px;
+}
+
+.sim-panel-server-ref .sim-mini-card svg {
+    display: block;
+    width: 100%;
+    height: 48px;
+}
+
+.sim-panel-server-ref .sim-mini-rank {
+    gap: 4px;
+}
+
+.sim-panel-server-ref .sim-mini-rank div {
+    font-size: 9px;
+}
+
+.sim-mini-rank {
+    display: grid;
+    gap: 8px;
+}
+
+.sim-mini-rank div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 10px;
+    color: #334155;
+}
+
+.sim-mini-rank strong {
+    color: #1E60F8;
+}
+
+.sim-gpu-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.sim-gpu-kpi-box {
+    min-height: 64px;
+    padding: 8px 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(203, 213, 225, 0.76);
+    background: rgba(255, 255, 255, 0.98);
+    display: grid;
+    align-content: center;
+    gap: 4px;
+}
+
+.sim-gpu-kpi-box label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #64748B;
+}
+
+.sim-gpu-kpi-box strong {
+    font-size: 26px;
+    line-height: 1;
+    color: #06B6D4;
+}
+
+.sim-gpu-kpi-box strong span {
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.sim-gpu-kpi-box.warn strong {
+    color: #F59E0B;
+}
+
+.sim-gpu-kpi-box.power strong {
+    color: #06B6D4;
+}
+
+.sim-gpu-kpi-box.ok strong {
+    color: #22C55E;
+}
+
+.sim-gpu-chart-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.1fr 1.1fr;
+    gap: 10px;
+}
+
+.sim-gpu-pie-wrap {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.sim-gpu-pie {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #5DB9E8 0 50%, #B974F1 50% 100%);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.sim-gpu-legend {
+    display: grid;
+    gap: 6px;
+    width: 100%;
+}
+
+.sim-gpu-legend span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: #334155;
+}
+
+.sim-gpu-legend i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.sim-gpu-legend i.blue {
+    background: #5DB9E8;
+}
+
+.sim-gpu-legend i.purple {
+    background: #B974F1;
+}
+
+.sim-gpu-detail-row {
+    grid-template-columns: 1.1fr 0.9fr 0.46fr 0.46fr 0.62fr;
+    gap: 8px;
+    min-height: 32px;
+    padding: 0 10px;
+    border-bottom: 1px dashed rgba(203, 213, 225, 0.85);
+}
+
+.sim-panel-body-app,
+.sim-panel-body-log {
+    overflow: hidden;
+}
+
+.sim-app-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.sim-app-kpi-card,
+.sim-app-chart-card {
+    border-radius: 16px;
+    border: 1px solid rgba(203, 213, 225, 0.76);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.sim-app-kpi-card {
+    min-height: 82px;
+    padding: 10px 12px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 4px;
+}
+
+.sim-app-kpi-card h6 {
+    margin: 0;
+    width: 100%;
+    font-size: 12px;
+    color: #1E293B;
+    text-align: left;
+}
+
+.sim-app-kpi-meta {
+    font-size: 10px;
+    color: #64748B;
+}
+
+.sim-app-kpi-card strong {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.sim-app-kpi-card strong.blue {
+    color: #1E88E5;
+}
+
+.sim-app-kpi-card strong.cyan {
+    color: #06B6D4;
+}
+
+.sim-app-kpi-card strong.green {
+    color: #22C55E;
+}
+
+.sim-app-chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.sim-app-chart-card {
+    padding: 10px 12px;
+}
+
+.sim-app-chart-card.network-wide {
+    padding-bottom: 8px;
+}
+
+.sim-app-chart-card svg {
+    width: 100%;
+    height: 108px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(244, 248, 255, 0.9));
+}
+
+.sim-app-chart-card.network-wide svg {
+    height: 96px;
+}
+
+.sim-log-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.sim-log-input {
+    min-height: 42px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    border: 1px solid rgba(203, 213, 225, 0.9);
+    background: rgba(255, 255, 255, 0.98);
+    font-size: 12px;
+    color: #94A3B8;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sim-log-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sim-log-chip {
+    min-height: 36px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid rgba(203, 213, 225, 0.9);
+    background: rgba(255, 255, 255, 0.98);
+    font-size: 11px;
+    font-weight: 800;
+    color: #334155;
+}
+
+.sim-log-btn {
+    min-height: 36px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.sim-log-btn.dark {
+    background: #111827;
+    color: #FFFFFF;
+}
+
+.sim-log-btn.ghost {
+    background: rgba(255, 255, 255, 0.98);
+    border-color: rgba(147, 197, 253, 0.9);
+    color: #1E88E5;
+}
+
+.sim-log-loaded-bar {
+    min-height: 36px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 14px 14px 0 0;
+    background: linear-gradient(180deg, #F4F7FB 0%, #EEF3F8 100%);
+    border: 1px solid rgba(203, 213, 225, 0.76);
+    border-bottom: none;
+    font-size: 11px;
+    font-weight: 800;
+    color: #64748B;
+}
+
+.sim-log-loaded-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sim-log-table {
+    flex: 1;
+    min-height: 0;
+    border-radius: 0 0 14px 14px;
+    border: 1px solid rgba(203, 213, 225, 0.76);
+    background: rgba(255, 255, 255, 0.98);
+    overflow: hidden;
+}
+
+.sim-log-table-row {
+    min-height: 32px;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 0.95fr minmax(0, 1fr);
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.86);
+}
+
+.sim-log-table-row:last-child {
+    border-bottom: 0;
+}
+
+.sim-log-table-row span {
+    font-size: 10px;
+    color: #64748B;
+}
+
+.sim-log-table-row code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 10px;
+    color: #334155;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sim-stat-grid,
+.sim-gpu-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.sim-stat-card,
+.sim-gpu-kpi,
+.sim-app-pill,
+.sim-service-item {
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74);
+}
+
+.sim-stat-card,
+.sim-gpu-kpi {
+    min-height: 78px;
+    padding: 12px 10px;
+    display: grid;
+    align-content: center;
+    gap: 4px;
+    text-align: center;
+}
+
+.sim-stat-card strong,
+.sim-gpu-kpi strong {
+    font-size: 24px;
+    line-height: 1;
+    color: #0F172A;
+}
+
+.sim-stat-card span,
+.sim-gpu-kpi span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748B;
+}
+
+.sim-resource-list,
+.sim-gpu-list,
+.sim-log-list {
+    display: grid;
+    align-content: start;
+    gap: 10px;
+}
+
+.sim-resource-row,
+.sim-gpu-row {
+    display: grid;
+    gap: 6px;
+}
+
+.sim-resource-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.sim-resource-label strong {
+    font-size: 13px;
+    color: #0F172A;
 }
 
 .sim-meter {
@@ -422,6 +1138,14 @@
     background: linear-gradient(90deg, #8BCF5A, #A3D348);
 }
 
+.sim-meter.blue span {
+    background: linear-gradient(90deg, #38BDF8, #1D4ED8);
+}
+
+.sim-meter.cyan span {
+    background: linear-gradient(90deg, #22D3EE, #0EA5E9);
+}
+
 .sim-meter.yellow span {
     background: linear-gradient(90deg, #C8D83D, #E7DF31);
 }
@@ -432,20 +1156,6 @@
 
 .sim-meter.orange span {
     background: linear-gradient(90deg, #FB923C, #F97316);
-}
-
-.slide-15-sim-chart-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 12px;
-}
-
-.slide-15-sim-chart-card {
-    padding: 16px;
-    min-height: 210px;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    gap: 12px;
 }
 
 .sim-chart-head {
@@ -469,32 +1179,135 @@
     white-space: nowrap;
 }
 
-.sim-ranking-list {
+.sim-app-topline {
     display: grid;
-    align-content: start;
-    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
 }
 
-.sim-ranking-item {
-    min-height: 42px;
+.sim-app-pill {
+    min-height: 60px;
+    padding: 10px 12px;
+    display: grid;
+    gap: 4px;
+}
+
+.sim-app-pill strong {
+    font-size: 12px;
+    font-weight: 800;
+    color: #64748B;
+}
+
+.sim-app-pill span {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.sim-service-grid {
+    display: grid;
+    align-content: start;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.sim-service-item {
+    min-height: 62px;
+    padding: 10px 12px;
+    display: grid;
+    gap: 4px;
+}
+
+.sim-service-item span {
+    font-size: 12px;
+    color: #64748B;
+}
+
+.sim-service-item strong {
+    font-size: 16px;
+}
+
+.sim-green {
+    color: #22C55E;
+}
+
+.sim-blue {
+    color: #0EA5E9;
+}
+
+.slide-15-sim-panel svg {
+    width: 100%;
+    height: 126px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(241, 246, 255, 0.88));
+}
+
+.sim-log-panel {
+    min-height: 0;
+}
+
+.sim-log-search {
+    min-height: 46px;
     padding: 0 14px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.sim-log-query {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 12px;
+    color: #334155;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sim-log-range {
+    font-size: 11px;
+    font-weight: 800;
+    color: #1E40AF;
+}
+
+.sim-log-item {
+    padding: 10px 12px;
+    display: grid;
+    gap: 4px;
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.96);
     border: 1px solid rgba(148, 163, 184, 0.16);
-    font-size: 14px;
+}
+
+.sim-log-meta {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.sim-log-item code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 12px;
+    line-height: 1.45;
     color: #334155;
+    white-space: normal;
+    word-break: break-word;
 }
 
-.sim-ranking-item strong {
-    color: #1E60F8;
+.sim-log-item.info .sim-log-meta {
+    color: #0EA5E9;
 }
 
-.slide-15-sim-chart-card svg {
-    width: 100%;
-    height: 132px;
+.sim-log-item.warn .sim-log-meta {
+    color: #F59E0B;
+}
+
+.sim-log-item.error .sim-log-meta {
+    color: #EF4444;
 }
 
 .sim-grid-line {
@@ -524,39 +1337,40 @@
 
 .slide-15-timeline {
     display: grid;
-    gap: 12px;
+    gap: 8px;
     min-height: 0;
 }
 
 .slide-15-timeline-item {
     position: relative;
-    padding: 14px 14px 14px 36px;
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(30, 96, 248, 0.08);
-    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.05);
+    padding: 10px 12px 10px 36px;
+    border-radius: 18px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.96));
+    border: 1px solid rgba(203, 213, 225, 0.86);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
 }
 
 .slide-15-timeline-item::before {
     content: '';
     position: absolute;
     left: 16px;
-    top: 18px;
-    width: 10px;
-    height: 10px;
+    top: 14px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #1E60F8;
-    box-shadow: 0 0 0 6px rgba(30, 96, 248, 0.12);
+    box-shadow: 0 0 0 4px rgba(30, 96, 248, 0.12);
 }
 
 .slide-15-timeline-item::after {
     content: '';
     position: absolute;
-    left: 20px;
-    top: 30px;
-    bottom: -18px;
+    left: 19px;
+    top: 24px;
+    bottom: -10px;
     width: 2px;
-    background: linear-gradient(180deg, rgba(30, 96, 248, 0.2), rgba(30, 96, 248, 0));
+    background: linear-gradient(180deg, rgba(148, 163, 184, 0.42), rgba(148, 163, 184, 0));
 }
 
 .slide-15-timeline-item:last-child::after {
@@ -564,18 +1378,25 @@
 }
 
 .timeline-time {
-    display: inline-block;
-    margin-bottom: 8px;
-    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    min-height: 20px;
+    padding: 0 8px;
+    margin-bottom: 5px;
+    font-size: 10px;
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #64748B;
+    color: #1E40AF;
+    border-radius: 999px;
+    background: rgba(30, 96, 248, 0.08);
 }
 
 .slide-15-timeline-item h4 {
-    margin-bottom: 6px;
-    font-size: 16px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 800;
     color: #0F172A;
 }
 
@@ -584,6 +1405,15 @@
     font-size: 13px;
     line-height: 1.62;
     color: #475569;
+}
+
+.slide-15-timeline-item p {
+    font-size: 12px;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .slide-15-compliance-card {
@@ -597,6 +1427,9 @@
 .slide-15-compliance-card strong {
     display: block;
     margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.24;
+    color: #0F172A;
 }
 
 .slide-15-footer {

@@ -2028,13 +2028,13 @@
                 </section>
 
                 <!-- Slide 9-1: 供应商封装 -->
-                <section class="slide" id="slide-9-1" data-title="LLGM上游供应商封装">
+                <section class="slide" id="slide-9-1" data-title="LLGM上游供应商">
                     <div class="slide-09-1-bg-grid"></div>
                     <div class="slide-09-1-bg-glow"></div>
                     <div class="slide-09-1-bg-orbit"></div>
 
                     <div class="slide-09-1-header">
-                        <h2 class="slide-09-1-title">LLGM上游供应商封装</h2>
+                        <h2 class="slide-09-1-title">LLGM上游供应商</h2>
                         <p class="slide-09-1-subtitle">把上游模型能力封装成可售卖、可计量、可复用的资源单元，让技术接入、产品定价和运营增长联动起来。</p>
                     </div>
 
@@ -2696,26 +2696,14 @@
                                         <div class="slide-14-channel-card">
                                             <span class="channel-kicker">配额资源池</span>
                                             <p>每个租户可按场景组合配置 GPU / CPU / Memory / Storage / Token 配额上限</p>
-                                            <div class="slide-14-channel-tags">
-                                                <span>Hard Limit</span>
-                                                <span>申请审批</span>
-                                            </div>
                                         </div>
                                         <div class="slide-14-channel-card">
                                             <span class="channel-kicker">独立工作空间</span>
                                             <p>工作空间与运行实例隔离到独立命名空间和运行域</p>
-                                            <div class="slide-14-channel-tags">
-                                                <span>Workspace</span>
-                                                <span>Runtime</span>
-                                            </div>
                                         </div>
                                         <div class="slide-14-channel-card">
                                             <span class="channel-kicker">租户级数据隔离</span>
                                             <p>存储路径、镜像可见性和 API Key 都围绕租户边界收口</p>
-                                            <div class="slide-14-channel-tags">
-                                                <span>Storage</span>
-                                                <span>Secret Policy</span>
-                                            </div>
                                         </div>
                                     </div>
 
@@ -2759,212 +2747,403 @@
 
                     <div class="slide-15-header">
                         <h2 class="slide-15-title">全景可观测性与动态监控</h2>
-                        <p class="slide-15-subtitle">把节点健康、工作负载、资源消耗、API 调用链、实例生命周期与配置变更收敛到同一张运营画布中，让平台团队从“事后排查”切换到“实时感知与主动处置”。</p>
+                        <p class="slide-15-subtitle">把节点健康、工作负载、资源消耗、API 调用链等收敛到数据面板，让平台团队从“事后排查”切换到“实时感知与主动处置”。</p>
                     </div>
-
-                    <div class="slide-15-summary-strip">
-                        <div class="slide-15-summary-item">自定义监控大盘统一聚合</div>
-                        <div class="slide-15-summary-item">CPU / Memory / GPU 双视角分析</div>
-                        <div class="slide-15-summary-item">API 审计与实例追踪同页联动</div>
-                        <div class="slide-15-summary-item">配置变更过程可回放可追责</div>
-                        <div class="slide-15-summary-item">告警分级与定位链路收口</div>
-                    </div>
-
                     <div class="slide-15-body">
                         <div class="slide-15-stage">
                             <div class="slide-15-stage-shell">
                                 <div class="slide-15-sim-console">
-                                    <div class="slide-15-sim-toolbar">
-                                        <div class="slide-15-sim-title">
-                                            <h4>服务器资源总览表</h4>
-                                        </div>
-                                    </div>
-
-                                    <div class="slide-15-sim-table-card">
-                                        <div class="slide-15-sim-table-head">
-                                            <span>主机名</span>
-                                            <span>运行天数</span>
-                                            <span>健康值</span>
-                                            <span>CPU</span>
-                                            <span>内存</span>
-                                            <span>负载</span>
-                                            <span>GPU 使用率</span>
-                                            <span>磁盘使用率</span>
-                                            <span>下载带宽</span>
-                                        </div>
-
-                                        <div class="slide-15-sim-table-body">
-                                            <div class="slide-15-sim-row">
-                                                <div class="sim-host-cell">
-                                                    <strong>k8s-node1</strong>
-                                                    <span>192.168.10.13:9100</span>
+                                    <div class="slide-15-sim-panel-grid">
+                                        <article class="slide-15-sim-panel sim-panel-server">
+                                            <div class="sim-window-shell">
+                                                <div class="sim-shell-header">
+                                                    <div class="sim-browser-tabs">
+                                                        <div class="sim-browser-tab active">
+                                                            <span class="sim-browser-favicon"></span>
+                                                            <span>Infra</span>
+                                                        </div>
+                                                        <div class="sim-browser-tab ghost">
+                                                            <span class="sim-browser-favicon alt"></span>
+                                                            <span>Overview</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sim-browser-toolbar">
+                                                        <div class="sim-browser-nav">
+                                                            <span>&lsaquo;</span>
+                                                            <span>&rsaquo;</span>
+                                                            <span>&#8635;</span>
+                                                        </div>
+                                                        <div class="sim-browser-address">https://rune.internal/observability/cluster/infra</div>
+                                                    </div>
+                                                    <div class="sim-shell-dots" aria-hidden="true">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
                                                 </div>
-                                                <strong class="sim-green">338.01</strong>
-                                                <span class="sim-pill sim-warn">89.8</span>
-                                                <strong class="sim-blue">8 Core</strong>
-                                                <strong class="sim-blue">29 Gi</strong>
-                                                <strong class="sim-load hot">3.15</strong>
-                                                <div class="sim-meter yellow"><span style="width: 59%"></span><em>59.6%</em></div>
-                                                <div class="sim-meter amber"><span style="width: 42%"></span><em>42.1%</em></div>
-                                                <span class="sim-bandwidth sim-warm">57.01 MiBps</span>
-                                            </div>
-
-                                            <div class="slide-15-sim-row">
-                                                <div class="sim-host-cell">
-                                                    <strong>k8s-node5</strong>
-                                                    <span>192.168.10.19:9100</span>
+                                                <div class="sim-panel-body sim-panel-body-server">
+                                                    <div class="sim-panel-section-head">
+                                                        <h5>服务器资源总览表</h5>
+                                                        <span>主机总数：7</span>
+                                                    </div>
+                                                    <div class="sim-server-table">
+                                                        <div class="sim-server-row sim-server-head">
+                                                            <span>主机名</span>
+                                                            <span>IP</span>
+                                                            <span>启动(天)</span>
+                                                            <span>健康值</span>
+                                                            <span>CPU使用率</span>
+                                                            <span>内存使用率</span>
+                                                            <span>下载带宽</span>
+                                                        </div>
+                                                        <div class="sim-server-row">
+                                                            <strong>k8s-node1</strong>
+                                                            <span>192.168.10.13</span>
+                                                            <em>360.86</em>
+                                                            <span class="sim-health-pill warn">89.1</span>
+                                                            <div class="sim-inline-meter lime"><span style="width: 31%"></span><em>31.1%</em></div>
+                                                            <div class="sim-inline-meter yellow"><span style="width: 39%"></span><em>38.9%</em></div>
+                                                            <span class="sim-flow-pill hot">61.24 MiBps</span>
+                                                        </div>
+                                                        <div class="sim-server-row">
+                                                            <strong>k8s-node5</strong>
+                                                            <span>192.168.10.19</span>
+                                                            <em>23.19</em>
+                                                            <span class="sim-health-pill ok">93.8</span>
+                                                            <div class="sim-inline-meter green"><span style="width: 11%"></span><em>10.5%</em></div>
+                                                            <div class="sim-inline-meter yellow"><span style="width: 38%"></span><em>37.6%</em></div>
+                                                            <span class="sim-flow-pill">14.07 MiBps</span>
+                                                        </div>
+                                                        <div class="sim-server-row">
+                                                            <strong>k8s-node8</strong>
+                                                            <span>192.168.0.107</span>
+                                                            <em>145.1</em>
+                                                            <span class="sim-health-pill ok">98.3</span>
+                                                            <div class="sim-inline-meter green"><span style="width: 7%"></span><em>7.4%</em></div>
+                                                            <div class="sim-inline-meter lime"><span style="width: 29%"></span><em>29%</em></div>
+                                                            <span class="sim-flow-pill">6.84 MiBps</span>
+                                                        </div>
+                                                        <div class="sim-server-row">
+                                                            <strong>k8s-node4</strong>
+                                                            <span>192.168.10.18</span>
+                                                            <em>14.11</em>
+                                                            <span class="sim-health-pill ok">98.7</span>
+                                                            <div class="sim-inline-meter green"><span style="width: 3%"></span><em>3%</em></div>
+                                                            <div class="sim-inline-meter yellow"><span style="width: 32%"></span><em>31.5%</em></div>
+                                                            <span class="sim-flow-pill">3.99 MiBps</span>
+                                                        </div>
+                                                        <div class="sim-server-row">
+                                                            <strong>k8s-node2</strong>
+                                                            <span>192.168.10.15</span>
+                                                            <em>1.08</em>
+                                                            <span class="sim-health-pill ok">98.7</span>
+                                                            <div class="sim-inline-meter green"><span style="width: 5%"></span><em>5.1%</em></div>
+                                                            <div class="sim-inline-meter green"><span style="width: 14%"></span><em>13.9%</em></div>
+                                                            <span class="sim-flow-pill">3.44 MiBps</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sim-server-mini-grid">
+                                                        <article class="sim-mini-card">
+                                                            <div class="sim-mini-head">
+                                                                <h6>最近 7 天 P99 资源使用率</h6>
+                                                            </div>
+                                                            <div class="sim-mini-rank">
+                                                                <div><span>k8s-node8</span><strong>92.4%</strong></div>
+                                                                <div><span>k8s-node2</span><strong>79.5%</strong></div>
+                                                                <div><span>k8s-node1</span><strong>76.3%</strong></div>
+                                                            </div>
+                                                        </article>
+                                                        <article class="sim-mini-card">
+                                                            <div class="sim-mini-head">
+                                                                <h6>整体总负载与平均 CPU</h6>
+                                                            </div>
+                                                            <svg viewBox="0 0 220 86" aria-hidden="true">
+                                                                <path class="sim-grid-line" d="M10 16 H210 M10 41 H210 M10 66 H210" />
+                                                                <path class="sim-line orange" d="M14 36 C48 36, 76 35, 108 36 S168 36, 206 36" />
+                                                                <path class="sim-line blue" d="M14 66 C46 64, 74 67, 108 63 S166 58, 206 61" />
+                                                            </svg>
+                                                        </article>
+                                                        <article class="sim-mini-card">
+                                                            <div class="sim-mini-head">
+                                                                <h6>整体总内存与平均内存</h6>
+                                                            </div>
+                                                            <svg viewBox="0 0 220 86" aria-hidden="true">
+                                                                <path class="sim-grid-line" d="M10 16 H210 M10 41 H210 M10 66 H210" />
+                                                                <path class="sim-line orange" d="M14 26 C48 26, 76 26, 108 26 S168 26, 206 26" />
+                                                                <path class="sim-line blue" d="M14 61 C46 60, 74 59, 108 58 S166 58, 206 57" />
+                                                            </svg>
+                                                        </article>
+                                                    </div>
                                                 </div>
-                                                <strong class="sim-green">0.34</strong>
-                                                <span class="sim-pill sim-ok">96.4</span>
-                                                <strong class="sim-blue">24 Core</strong>
-                                                <strong class="sim-blue">55 Gi</strong>
-                                                <strong class="sim-load warm">1.33</strong>
-                                                <div class="sim-meter green"><span style="width: 33%"></span><em>33.7%</em></div>
-                                                <div class="sim-meter yellow"><span style="width: 52%"></span><em>52.1%</em></div>
-                                                <span class="sim-bandwidth">5.85 MiBps</span>
                                             </div>
-
-                                            <div class="slide-15-sim-row">
-                                                <div class="sim-host-cell">
-                                                    <strong>k8s-node4</strong>
-                                                    <span>192.168.10.18:9100</span>
-                                                </div>
-                                                <strong class="sim-green">27.3</strong>
-                                                <span class="sim-pill sim-ok">98.3</span>
-                                                <strong class="sim-blue">24 Core</strong>
-                                                <strong class="sim-blue">31 Gi</strong>
-                                                <strong class="sim-load warm">2.46</strong>
-                                                <div class="sim-meter yellow"><span style="width: 41%"></span><em>41.5%</em></div>
-                                                <div class="sim-meter orange"><span style="width: 79%"></span><em>79.4%</em></div>
-                                                <span class="sim-bandwidth">7.87 MiBps</span>
-                                            </div>
-
-                                            <div class="slide-15-sim-row">
-                                                <div class="sim-host-cell">
-                                                    <strong>k8s-node6</strong>
-                                                    <span>192.168.10.20:9100</span>
-                                                </div>
-                                                <strong class="sim-green">13.16</strong>
-                                                <span class="sim-pill sim-ok">98.5</span>
-                                                <strong class="sim-blue">20 Core</strong>
-                                                <strong class="sim-blue">94 Gi</strong>
-                                                <strong class="sim-load cool">1.05</strong>
-                                                <div class="sim-meter green"><span style="width: 12%"></span><em>12.2%</em></div>
-                                                <div class="sim-meter yellow"><span style="width: 42%"></span><em>42.2%</em></div>
-                                                <span class="sim-bandwidth">13.95 MiBps</span>
-                                            </div>
-
-                                            <div class="slide-15-sim-row">
-                                                <div class="sim-host-cell">
-                                                    <strong>k8s-node8</strong>
-                                                    <span>192.168.0.107:9100</span>
-                                                </div>
-                                                <strong class="sim-green">122.25</strong>
-                                                <span class="sim-pill sim-ok">98.7</span>
-                                                <strong class="sim-blue">16 Core</strong>
-                                                <strong class="sim-blue">63 Gi</strong>
-                                                <strong class="sim-load cool">0.80</strong>
-                                                <div class="sim-meter green"><span style="width: 10%"></span><em>10.9%</em></div>
-                                                <div class="sim-meter green"><span style="width: 23%"></span><em>22.9%</em></div>
-                                                <span class="sim-bandwidth">5.38 MiBps</span>
-                                            </div>
-
-                                            <div class="slide-15-sim-row">
-                                                <div class="sim-host-cell">
-                                                    <strong>k8s-node2</strong>
-                                                    <span>192.168.10.15:9100</span>
-                                                </div>
-                                                <strong class="sim-green">32.43</strong>
-                                                <span class="sim-pill sim-ok">98.7</span>
-                                                <strong class="sim-blue">24 Core</strong>
-                                                <strong class="sim-blue">63 Gi</strong>
-                                                <strong class="sim-load cool">0.75</strong>
-                                                <div class="sim-meter green"><span style="width: 12%"></span><em>12.4%</em></div>
-                                                <div class="sim-meter yellow"><span style="width: 55%"></span><em>55.1%</em></div>
-                                                <span class="sim-bandwidth">3.45 MiBps</span>
-                                            </div>
-
-                                            <div class="slide-15-sim-row">
-                                                <div class="sim-host-cell">
-                                                    <strong>k8s-node7</strong>
-                                                    <span>192.168.10.21:9100</span>
-                                                </div>
-                                                <strong class="sim-green">42.83</strong>
-                                                <span class="sim-pill sim-ok">98.9</span>
-                                                <strong class="sim-blue">20 Core</strong>
-                                                <strong class="sim-blue">94 Gi</strong>
-                                                <strong class="sim-load cool">0.63</strong>
-                                                <div class="sim-meter green"><span style="width: 8%"></span><em>7.7%</em></div>
-                                                <div class="sim-meter yellow"><span style="width: 40%"></span><em>39.7%</em></div>
-                                                <span class="sim-bandwidth">8.20 MiBps</span>
-                                            </div>
-
-                                            <div class="slide-15-sim-row">
-                                                <div class="sim-host-cell">
-                                                    <strong>k8s-node3</strong>
-                                                    <span>192.168.10.17:9100</span>
-                                                </div>
-                                                <strong class="sim-green">18.72</strong>
-                                                <span class="sim-pill sim-ok">97.9</span>
-                                                <strong class="sim-blue">12 Core</strong>
-                                                <strong class="sim-blue">48 Gi</strong>
-                                                <strong class="sim-load cool">0.91</strong>
-                                                <div class="sim-meter yellow"><span style="width: 28%"></span><em>28.4%</em></div>
-                                                <div class="sim-meter green"><span style="width: 34%"></span><em>34.9%</em></div>
-                                                <span class="sim-bandwidth">4.62 MiBps</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="slide-15-sim-chart-grid">
-                                        <article class="slide-15-sim-chart-card list-card">
-                                            <div class="sim-chart-head">
-                                                <h5>最近 7 天 P99 资源使用率</h5>
-                                            </div>
-                                            <div class="sim-ranking-list">
-                                                <div class="sim-ranking-item"><span>k8s-node7</span><strong>92.4%</strong></div>
-                                                <div class="sim-ranking-item"><span>k8s-node6</span><strong>88.1%</strong></div>
-                                                <div class="sim-ranking-item"><span>k8s-node8</span><strong>84.7%</strong></div>
-                                                <div class="sim-ranking-item"><span>k8s-node2</span><strong>79.5%</strong></div>
-                                            </div>
+                                            <div class="sim-window-caption">服务器概览</div>
                                         </article>
 
-                                        <article class="slide-15-sim-chart-card">
-                                            <div class="sim-chart-head">
-                                                <h5>整体总负载与平均 CPU 使用率</h5>
-                                                <span>09:05 - 09:55</span>
+                                        <article class="slide-15-sim-panel sim-panel-gpu-ref">
+                                            <div class="sim-window-shell">
+                                                <div class="sim-shell-header">
+                                                    <div class="sim-browser-tabs">
+                                                        <div class="sim-browser-tab active">
+                                                            <span class="sim-browser-favicon gpu"></span>
+                                                            <span>GPU</span>
+                                                        </div>
+                                                        <div class="sim-browser-tab ghost">
+                                                            <span class="sim-browser-favicon alt"></span>
+                                                            <span>Pool</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sim-browser-toolbar">
+                                                        <div class="sim-browser-nav">
+                                                            <span>&lsaquo;</span>
+                                                            <span>&rsaquo;</span>
+                                                            <span>&#8635;</span>
+                                                        </div>
+                                                        <div class="sim-browser-address">https://rune.internal/observability/cluster/gpu</div>
+                                                    </div>
+                                                    <div class="sim-shell-dots" aria-hidden="true">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="sim-panel-body sim-panel-body-gpu">
+                                                    <div class="sim-panel-section-head">
+                                                        <h5>GPU 资源总览</h5>
+                                                        <span>Accelerator Pool</span>
+                                                    </div>
+                                                    <div class="sim-gpu-kpi-grid">
+                                                        <div class="sim-gpu-kpi-box"><label>GPU 总数</label><strong>4</strong></div>
+                                                        <div class="sim-gpu-kpi-box warn"><label>GPU 平均使用率
+                                                        </label><strong>0%</strong></div>
+                                                        <div class="sim-gpu-kpi-box power"><label>集群总功耗</label><strong>78.38<span>W</span></strong></div>
+                                                        <div class="sim-gpu-kpi-box"><label>故障 GPU 数量</label><strong>0</strong></div>
+                                                        <div class="sim-gpu-kpi-box warn"><label>最高温度</label><strong>49.0<span>°C</span></strong></div>
+                                                        <div class="sim-gpu-kpi-box ok"><label>GPU 节点数</label><strong>4</strong></div>
+                                                    </div>
+                                                    <div class="sim-gpu-chart-grid">
+                                                        <article class="sim-gpu-chart-card pie-card">
+                                                            <div class="sim-mini-head"><h6>显卡类型分布</h6></div>
+                                                            <div class="sim-gpu-pie-wrap">
+                                                                <div class="sim-gpu-pie"></div>
+                                                                <div class="sim-gpu-legend">
+                                                                    <span><i class="blue"></i>RTX 3080 × 2</span>
+                                                                    <span><i class="purple"></i>RTX 4090 × 2</span>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                        <article class="sim-gpu-chart-card">
+                                                            <div class="sim-mini-head"><h6>GPU 使用率趋势</h6></div>
+                                                            <svg viewBox="0 0 260 110" aria-hidden="true">
+                                                                <path class="sim-grid-line" d="M12 18 H248 M12 43 H248 M12 68 H248 M12 93 H248" />
+                                                                <path class="sim-line orange" d="M18 95 C56 95, 92 95, 130 95 S196 95, 242 95" />
+                                                            </svg>
+                                                        </article>
+                                                        <article class="sim-gpu-chart-card">
+                                                            <div class="sim-mini-head"><h6>功耗趋势</h6></div>
+                                                            <svg viewBox="0 0 260 110" aria-hidden="true">
+                                                                <path class="sim-grid-line" d="M12 18 H248 M12 43 H248 M12 68 H248 M12 93 H248" />
+                                                                <path class="sim-line cyan" d="M18 34 C58 35, 90 33, 130 34 S196 34, 242 34" />
+                                                                <path class="sim-line orange" d="M18 54 C60 53, 94 54, 130 54 S198 55, 242 54" />
+                                                                <path class="sim-line blue" d="M18 79 C58 77, 92 78, 130 77 S198 78, 242 77" />
+                                                            </svg>
+                                                        </article>
+                                                    </div>
+                                                    <div class="sim-gpu-detail-table">
+                                                        <div class="sim-gpu-detail-row sim-gpu-detail-head">
+                                                            <span>GPU 型号</span>
+                                                            <span>所在主机</span>
+                                                            <span>使用率</span>
+                                                            <span>温度</span>
+                                                            <span>实时功率</span>
+                                                        </div>
+                                                        <div class="sim-gpu-detail-row">
+                                                            <strong>RTX 4090</strong>
+                                                            <span>k8s-node4</span>
+                                                            <span>0</span>
+                                                            <span>38</span>
+                                                            <span>15.96</span>
+                                                        </div>
+                                                        <div class="sim-gpu-detail-row">
+                                                            <strong>RTX 4090</strong>
+                                                            <span>k8s-node2</span>
+                                                            <span>0</span>
+                                                            <span>38</span>
+                                                            <span>10.28</span>
+                                                        </div>
+                                                        <div class="sim-gpu-detail-row">
+                                                            <strong>RTX 3080</strong>
+                                                            <span>k8s-node5</span>
+                                                            <span>0</span>
+                                                            <span>49</span>
+                                                            <span>27.46</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <svg viewBox="0 0 320 140" aria-hidden="true">
-                                                <path class="sim-grid-line" d="M18 20 H302 M18 56 H302 M18 92 H302 M18 128 H302" />
-                                                <path class="sim-line orange" d="M24 54 C66 55, 94 54, 136 54 S218 54, 296 54" />
-                                                <path class="sim-line blue" d="M24 108 C64 101, 92 109, 138 104 S220 98, 296 106" />
-                                            </svg>
+                                            <div class="sim-window-caption">GPU设备</div>
                                         </article>
 
-                                        <article class="slide-15-sim-chart-card">
-                                            <div class="sim-chart-head">
-                                                <h5>整体总内存与平均内存使用率</h5>
-                                                <span>09:05 - 09:55</span>
+                                        <article class="slide-15-sim-panel sim-panel-app-ref">
+                                            <div class="sim-window-shell">
+                                                <div class="sim-shell-header">
+                                                    <div class="sim-browser-tabs">
+                                                        <div class="sim-browser-tab active">
+                                                            <span class="sim-browser-favicon app"></span>
+                                                            <span>App</span>
+                                                        </div>
+                                                        <div class="sim-browser-tab ghost">
+                                                            <span class="sim-browser-favicon alt"></span>
+                                                            <span>Monitor</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sim-browser-toolbar">
+                                                        <div class="sim-browser-nav">
+                                                            <span>&lsaquo;</span>
+                                                            <span>&rsaquo;</span>
+                                                            <span>&#8635;</span>
+                                                        </div>
+                                                        <div class="sim-browser-address">https://rune.internal/observability/apps/runtime</div>
+                                                    </div>
+                                                    <div class="sim-shell-dots" aria-hidden="true">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="sim-panel-body sim-panel-body-app">
+                                                    <div class="sim-panel-section-head">
+                                                        <h5>应用监控数据</h5>
+                                                        <span>Service Runtime</span>
+                                                    </div>
+                                                    <div class="sim-app-kpi-grid">
+                                                        <article class="sim-app-kpi-card">
+                                                            <h6>CPU Usage</h6>
+                                                            <span class="sim-app-kpi-meta">windows-f76b98b48-z4bjx
+</span>
+                                                            <strong class="blue">2.07%</strong>
+                                                        </article>
+                                                        <article class="sim-app-kpi-card">
+                                                            <h6>Memory Usage</h6>
+                                                            <span class="sim-app-kpi-meta">windows-f76b98b48-z4bjx</span>
+                                                            <strong class="cyan">95.09%</strong>
+                                                        </article>
+                                                        <article class="sim-app-kpi-card">
+                                                            <h6>Health</h6>
+                                                            <span class="sim-app-kpi-meta">windows-f76b98b48-z4bjx</span>
+                                                            <strong class="green">Yes</strong>
+                                                        </article>
+                                                    </div>
+                                                    <div class="sim-app-chart-grid">
+                                                        <article class="sim-app-chart-card">
+                                                            <div class="sim-mini-head"><h6>CPU Usage Trend</h6></div>
+                                                            <svg viewBox="0 0 230 102" aria-hidden="true">
+                                                                <path class="sim-grid-line" d="M12 16 H218 M12 40 H218 M12 64 H218 M12 88 H218" />
+                                                                <path class="sim-line blue" d="M16 72 C34 64, 48 71, 64 66 S94 54, 110 78 S136 18, 150 54 S182 67, 214 69" />
+                                                            </svg>
+                                                        </article>
+                                                        <article class="sim-app-chart-card">
+                                                            <div class="sim-mini-head"><h6>Memory Usage Trend</h6></div>
+                                                            <svg viewBox="0 0 230 102" aria-hidden="true">
+                                                                <path class="sim-grid-line" d="M12 16 H218 M12 40 H218 M12 64 H218 M12 88 H218" />
+                                                                <path class="sim-line blue" d="M16 48 C34 62, 54 32, 74 44 S108 20, 126 28 S154 36, 174 72 S198 48, 214 58" />
+                                                            </svg>
+                                                        </article>
+                                                    </div>
+                                                    <article class="sim-app-chart-card network-wide">
+                                                        <div class="sim-mini-head"><h6>Network IO</h6></div>
+                                                        <svg viewBox="0 0 478 118" aria-hidden="true">
+                                                            <path class="sim-grid-line" d="M14 18 H464 M14 48 H464 M14 78 H464 M14 108 H464" />
+                                                            <path class="sim-line blue" d="M18 108 C76 108, 112 108, 148 106 S216 42, 252 70 S316 108, 348 106 S412 107, 460 108" />
+                                                            <path class="sim-line orange" d="M18 108 C76 108, 112 108, 148 108 S216 32, 252 56 S316 107, 348 108 S412 108, 460 108" />
+                                                        </svg>
+                                                    </article>
+                                                </div>
                                             </div>
-                                            <svg viewBox="0 0 320 140" aria-hidden="true">
-                                                <path class="sim-grid-line" d="M18 20 H302 M18 56 H302 M18 92 H302 M18 128 H302" />
-                                                <path class="sim-line orange" d="M24 36 C70 36, 94 36, 142 36 S230 36, 296 36" />
-                                                <path class="sim-line blue" d="M24 94 C72 92, 98 94, 142 93 S222 92, 296 94" />
-                                                <path class="sim-line cyan" d="M24 126 C66 126, 98 126, 144 126 S226 126, 296 126" />
-                                            </svg>
+                                            <div class="sim-window-caption">应用监控数据</div>
                                         </article>
 
-                                        <article class="slide-15-sim-chart-card">
-                                            <div class="sim-chart-head">
-                                                <h5>整体总磁盘与平均磁盘使用率</h5>
-                                                <span>09:05 - 09:55</span>
+                                        <article class="slide-15-sim-panel sim-log-panel sim-panel-log-ref">
+                                            <div class="sim-window-shell">
+                                                <div class="sim-shell-header">
+                                                    <div class="sim-browser-tabs">
+                                                        <div class="sim-browser-tab active">
+                                                            <span class="sim-browser-favicon log"></span>
+                                                            <span>Logs</span>
+                                                        </div>
+                                                        <div class="sim-browser-tab ghost">
+                                                            <span class="sim-browser-favicon alt"></span>
+                                                            <span>Query</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sim-browser-toolbar">
+                                                        <div class="sim-browser-nav">
+                                                            <span>&lsaquo;</span>
+                                                            <span>&rsaquo;</span>
+                                                            <span>&#8635;</span>
+                                                        </div>
+                                                        <div class="sim-browser-address">https://rune.internal/observability/logs/query</div>
+                                                    </div>
+                                                    <div class="sim-shell-dots" aria-hidden="true">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="sim-panel-body sim-panel-body-log">
+                                                    <div class="sim-panel-section-head">
+                                                        <h5>日志查询</h5>
+                                                        <span>Log Explorer</span>
+                                                    </div>
+                                                    <div class="sim-log-toolbar">
+                                                        <div class="sim-log-input">输入简单的正则查询，例如：error|exception</div>
+                                                        <div class="sim-log-controls">
+                                                            <span class="sim-log-chip">5 分钟</span>
+                                                            <span class="sim-log-chip">100</span>
+                                                            <button class="sim-log-btn dark" type="button">查询</button>
+                                                            <button class="sim-log-btn ghost" type="button">实时</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sim-log-loaded-bar">
+                                                        <span>已加载 47 条</span>
+                                                        <div class="sim-log-loaded-actions">
+                                                            <span>折行</span>
+                                                            <span>下载</span>
+                                                            <span>清除日志</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sim-log-table">
+                                                        <div class="sim-log-table-row">
+                                                            <span>04/21 14:42:32.943</span>
+                                                            <code>[2026/04/21 06:42:32:8949] N: HTTP / - 192.168.10.18</code>
+                                                        </div>
+                                                        <div class="sim-log-table-row">
+                                                            <span>04/21 14:42:22.943</span>
+                                                            <code>[2026/04/21 06:42:22:8942] N: HTTP / - 192.168.10.18</code>
+                                                        </div>
+                                                        <div class="sim-log-table-row">
+                                                            <span>04/21 14:42:12.944</span>
+                                                            <code>[2026/04/21 06:42:12:8949] N: HTTP / - 192.168.10.18</code>
+                                                        </div>
+                                                        <div class="sim-log-table-row">
+                                                            <span>04/21 14:41:52.944</span>
+                                                            <code>[2026/04/21 06:41:52:8947] N: HTTP / - 192.168.10.18</code>
+                                                        </div>
+                                                        <div class="sim-log-table-row">
+                                                            <span>04/21 14:41:22.944</span>
+                                                            <code>[2026/04/21 06:41:22:8947] N: HTTP / - 192.168.10.18</code>
+                                                        </div>
+                                                        <div class="sim-log-table-row">
+                                                            <span>04/21 14:40:52.944</span>
+                                                            <code>[2026/04/21 06:40:52:8947] N: HTTP / - 192.168.10.18</code>
+                                                        </div>
+                                                        <div class="sim-log-table-row">
+                                                            <span>04/21 14:40:22.944</span>
+                                                            <code>[2026/04/21 06:40:22:8948] N: HTTP / - 192.168.10.18</code>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <svg viewBox="0 0 320 140" aria-hidden="true">
-                                                <path class="sim-grid-line" d="M18 20 H302 M18 56 H302 M18 92 H302 M18 128 H302" />
-                                                <path class="sim-line orange" d="M24 26 C66 26, 98 26, 142 26 S220 26, 296 26" />
-                                                <path class="sim-line blue" d="M24 84 C70 84, 100 84, 142 84 S224 84, 296 84" />
-                                                <path class="sim-line cyan" d="M24 126 C70 126, 100 126, 142 126 S224 126, 296 126" />
-                                            </svg>
+                                            <div class="sim-window-caption">日志查询</div>
                                         </article>
                                     </div>
                                 </div>
@@ -2973,7 +3152,7 @@
 
                         <aside class="slide-15-rail slide-15-audit-rail">
                             <div class="slide-15-rail-head">
-                                <span class="rail-kicker">Audit Timeline</span>
+                                <span class="rail-kicker">审计追踪</span>
                                 <h3>从事件到责任归属都能回放</h3>
                                 <p>右侧时间线承接 API、实例和配置三类行为，帮助平台团队在一个窗口内完成追溯和复盘。</p>
                             </div>
@@ -3002,15 +3181,11 @@
                             </div>
 
                             <div class="slide-15-compliance-card">
-                                <span class="rail-kicker">Audit Coverage</span>
+                                <span class="rail-kicker">合规留痕</span>
                                 <strong>100% 关键动作留痕</strong>
                                 <p>API 调用、实例启停、配置变更、权限策略调整统一写入审计流，满足企业内部治理和外部合规检查。</p>
                             </div>
                         </aside>
-                    </div>
-
-                    <div class="slide-15-footer">
-                        Rune 把集群指标、资源利用、调用链与审计事件压缩进同一张可观测画布，让平台运行状态从“看日志猜问题”变成“看全景即定位”
                     </div>
                 </section>
 
